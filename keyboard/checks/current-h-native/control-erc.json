@@ -1,0 +1,34 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-21T04:07:57-0400",
+    "kicad_version": "9.0.7",
+    "sheets": [
+        {
+            "path": "/ESP32-C3 Bluetooth / serial bridge/",
+            "uuid_path": "/c8ff1759-6c66-428f-82f5-0e0860e083e8/ebb5308e-17d9-483e-901d-4a02ba1fea7b",
+            "violations": []
+        },
+        {
+            "path": "/Keyboard, power, rotary and indicator harnesses/",
+            "uuid_path": "/c8ff1759-6c66-428f-82f5-0e0860e083e8/a146bacf-4acc-4ee6-b11b-eea26037911f",
+            "violations": []
+        },
+        {
+            "path": "/Programming and boot control/",
+            "uuid_path": "/c8ff1759-6c66-428f-82f5-0e0860e083e8/fb51aa4a-4952-4f0f-8720-d29d6b84c1a8",
+            "violations": []
+        },
+        {
+            "path": "/Learn and transmit infrared/",
+            "uuid_path": "/c8ff1759-6c66-428f-82f5-0e0860e083e8/28cf96e5-a4ee-4836-be4f-0a1c739c4583",
+            "violations": []
+        },
+        {
+            "path": "/",
+            "uuid_path": "/c8ff1759-6c66-428f-82f5-0e0860e083e8",
+            "violations": []
+        }
+    ],
+    "source": "control.kicad_sch"
+}

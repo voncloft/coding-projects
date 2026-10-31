@@ -1,0 +1,189 @@
+{
+  "shapes": [
+    {
+      "name": "LowerShell",
+      "valid": true,
+      "volume": 458486.93619111774,
+      "solids": 1
+    },
+    {
+      "name": "TopFrame",
+      "valid": true,
+      "volume": 99809.45157959603,
+      "solids": 1
+    },
+    {
+      "name": "SwitchPlate",
+      "valid": true,
+      "volume": 53334.77708400361,
+      "solids": 1
+    },
+    {
+      "name": "TouchDisplay2_ManufacturerModel",
+      "valid": true,
+      "volume": 48394.860365641405,
+      "solids": 18
+    },
+    {
+      "name": "keyboard_KiCad_Assembly",
+      "valid": true,
+      "volume": 306937.06331875117,
+      "solids": 1336
+    },
+    {
+      "name": "usb_io_KiCad_Assembly",
+      "valid": true,
+      "volume": 17748.607164992623,
+      "solids": 332
+    },
+    {
+      "name": "power_KiCad_Assembly",
+      "valid": true,
+      "volume": 14724.608136619669,
+      "solids": 250
+    },
+    {
+      "name": "cm4_carrier_KiCad_Assembly",
+      "valid": true,
+      "volume": 9706.680886164095,
+      "solids": 50
+    },
+    {
+      "name": "stereo_audio_KiCad_Assembly",
+      "valid": true,
+      "volume": 4334.52792530677,
+      "solids": 17
+    },
+    {
+      "name": "control_KiCad_Assembly",
+      "valid": true,
+      "volume": 6443.647329356671,
+      "solids": 66
+    },
+    {
+      "name": "rotary_KiCad_Assembly",
+      "valid": true,
+      "volume": 2566.154522065134,
+      "solids": 16
+    },
+    {
+      "name": "battery_light_KiCad_Assembly",
+      "valid": true,
+      "volume": 381.3959433192155,
+      "solids": 6
+    },
+    {
+      "name": "Battery_CU_JAS503_Bounds",
+      "valid": true,
+      "volume": 147060.0,
+      "solids": 1
+    },
+    {
+      "name": "CM4_Manufacturer_Assembly",
+      "valid": true,
+      "volume": 3109.5176781983914,
+      "solids": 2262
+    },
+    {
+      "name": "CM4_HeatSink_Allowance",
+      "valid": true,
+      "volume": 4032.0,
+      "solids": 1
+    },
+    {
+      "name": "IndicatorLightPipe",
+      "valid": true,
+      "volume": 472.63612137115314,
+      "solids": 1
+    },
+    {
+      "name": "SpeakerStrap0",
+      "valid": true,
+      "volume": 584.7946915566254,
+      "solids": 1
+    },
+    {
+      "name": "SpeakerStrap1",
+      "valid": true,
+      "volume": 584.7946915566254,
+      "solids": 1
+    },
+    {
+      "name": "RubberFoot0",
+      "valid": true,
+      "volume": 452.38934211693015,
+      "solids": 1
+    },
+    {
+      "name": "RubberFoot1",
+      "valid": true,
+      "volume": 452.38934211692975,
+      "solids": 1
+    },
+    {
+      "name": "RubberFoot2",
+      "valid": true,
+      "volume": 452.38934211693027,
+      "solids": 1
+    },
+    {
+      "name": "RubberFoot3",
+      "valid": true,
+      "volume": 452.3893421169298,
+      "solids": 1
+    }
+  ],
+  "case_collisions": [],
+  "scope": "All eight populated boards, display, battery, speaker and heatsink envelopes checked against one another and the lower/top shell. CM4 orientation corrected in the saved FCStd. Supplementary reports cover spacers, knob/key travel, cable allocations and mounting-hole alignment. Physical prototype validation remains pending.",
+  "module_collisions_before_cm4_rotation_fix": [
+    [
+      "cm4_carrier_KiCad_Assembly",
+      "CM4_Manufacturer_Assembly",
+      2.90592
+    ]
+  ],
+  "unintended_module_collisions_after_correction": [],
+  "reviewed_mating_connector_intersections": [
+    {
+      "a_solid": 1914,
+      "b_solid": 10,
+      "volume_mm3": 0.7946680408764522,
+      "bounds_mm": [
+        343.245,
+        -103.7,
+        8.4854,
+        344.89,
+        -82.32,
+        9.275
+      ]
+    },
+    {
+      "a_solid": 1915,
+      "b_solid": 9,
+      "volume_mm3": 0.6179271065189839,
+      "bounds_mm": [
+        309.04,
+        -103.69,
+        8.4954,
+        310.675,
+        -82.33,
+        9.265
+      ]
+    }
+  ],
+  "followup_report": "final-mechanical-audit.json",
+  "cover_revision": {
+    "valid": true,
+    "solids": 1,
+    "pocket_size_mm": [
+      12.2,
+      10,
+      1
+    ],
+    "cover_material_over_pocket_mm": 2,
+    "rotary_wire_clearance_mm": 1.2,
+    "wire_overlap": [],
+    "pressed_knob_overlap": []
+  },
+  "cable_allocation_collisions": []
+}

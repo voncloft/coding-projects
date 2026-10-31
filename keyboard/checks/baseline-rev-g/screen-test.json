@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "errors": [],
+  "host": 2,
+  "macro": {
+    "id": "copy",
+    "name": "Copy selection",
+    "color": "#215f78",
+    "steps": [
+      {
+        "type": "shortcut",
+        "value": "CTRL+C"
+      },
+      {
+        "type": "delay",
+        "ms": 100
+      }
+    ]
+  },
+  "remotes": [
+    "Projector test"
+  ],
+  "simulatedTap": true,
+  "horizontalOverflow": false
+}

@@ -1,0 +1,160 @@
+[
+  {
+    "board": "battery-light",
+    "pcb_sha256": "e3c79cf692632c61a423cd24964cd81708f13e756df73a6ce360eaac02961d79",
+    "copper_layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "thickness_mm": 1.5642,
+    "width_mm": 16.0,
+    "height_mm": 13.0,
+    "tracks": 44,
+    "zones": 2,
+    "footprints": 7,
+    "position_origin": "KiCad absolute board origin. CSV X positive right, Y positive up; view from front. Bottom rotations are native KiCad, not mirrored.",
+    "stackup_status": "Explicit native stackup. 4-layer JLC04161H-3313 reference or 2-layer FR4. See STACKUP-REQUIREMENTS.md; supplier impedance confirmation and physical qualification remain open.",
+    "native_title_revision": "",
+    "system_release": "H audit; manufacturing release on hold"
+  },
+  {
+    "board": "cm4-carrier",
+    "pcb_sha256": "3b4d1fdd73d2b8a0002618f1ba0cd54da272fec4af129c39ab6a916e7a7ea481",
+    "copper_layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "thickness_mm": 1.5642,
+    "width_mm": 80.0,
+    "height_mm": 70.0,
+    "tracks": 1139,
+    "zones": 2,
+    "footprints": 52,
+    "position_origin": "KiCad absolute board origin. CSV X positive right, Y positive up; view from front. Bottom rotations are native KiCad, not mirrored.",
+    "stackup_status": "Explicit native stackup. 4-layer JLC04161H-3313 reference or 2-layer FR4. See STACKUP-REQUIREMENTS.md; supplier impedance confirmation and physical qualification remain open.",
+    "native_title_revision": "",
+    "system_release": "H audit; manufacturing release on hold"
+  },
+  {
+    "board": "control",
+    "pcb_sha256": "f7c868291ef30811c09d348c69ef31fd823fdccdf57d89efe36f04a41f39df2e",
+    "copper_layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "thickness_mm": 1.5642,
+    "width_mm": 64.0,
+    "height_mm": 48.0,
+    "tracks": 355,
+    "zones": 2,
+    "footprints": 33,
+    "position_origin": "KiCad absolute board origin. CSV X positive right, Y positive up; view from front. Bottom rotations are native KiCad, not mirrored.",
+    "stackup_status": "Explicit native stackup. 4-layer JLC04161H-3313 reference or 2-layer FR4. See STACKUP-REQUIREMENTS.md; supplier impedance confirmation and physical qualification remain open.",
+    "native_title_revision": "",
+    "system_release": "H audit; manufacturing release on hold"
+  },
+  {
+    "board": "keyboard",
+    "pcb_sha256": "0b42f651a0dfdb58c55e6161bb4d2164664e1db90f89f6c4e7c90a1362348acd",
+    "copper_layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "thickness_mm": 1.5642,
+    "width_mm": 445.1,
+    "height_mm": 132.3,
+    "tracks": 8710,
+    "zones": 3,
+    "footprints": 481,
+    "position_origin": "KiCad absolute board origin. CSV X positive right, Y positive up; view from front. Bottom rotations are native KiCad, not mirrored.",
+    "stackup_status": "Explicit native stackup. 4-layer JLC04161H-3313 reference or 2-layer FR4. See STACKUP-REQUIREMENTS.md; supplier impedance confirmation and physical qualification remain open.",
+    "native_title_revision": "D",
+    "system_release": "H audit; manufacturing release on hold"
+  },
+  {
+    "board": "power",
+    "pcb_sha256": "163e758a1996df055eaead28000a9d12474a173cbcff8998ac9d0d8379e9a8c4",
+    "copper_layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "thickness_mm": 1.5642,
+    "width_mm": 114.0,
+    "height_mm": 62.0,
+    "tracks": 1820,
+    "zones": 14,
+    "footprints": 127,
+    "position_origin": "KiCad absolute board origin. CSV X positive right, Y positive up; view from front. Bottom rotations are native KiCad, not mirrored.",
+    "stackup_status": "Explicit native stackup. 4-layer JLC04161H-3313 reference or 2-layer FR4. See STACKUP-REQUIREMENTS.md; supplier impedance confirmation and physical qualification remain open.",
+    "native_title_revision": "H - audit in progress",
+    "system_release": "H audit; manufacturing release on hold"
+  },
+  {
+    "board": "rotary",
+    "pcb_sha256": "d52029b7e49dab3ad727d745172433136e8f4e0840eafe7b25f13b42cd8df609",
+    "copper_layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "thickness_mm": 1.5642,
+    "width_mm": 28.0,
+    "height_mm": 30.0,
+    "tracks": 59,
+    "zones": 2,
+    "footprints": 12,
+    "position_origin": "KiCad absolute board origin. CSV X positive right, Y positive up; view from front. Bottom rotations are native KiCad, not mirrored.",
+    "stackup_status": "Explicit native stackup. 4-layer JLC04161H-3313 reference or 2-layer FR4. See STACKUP-REQUIREMENTS.md; supplier impedance confirmation and physical qualification remain open.",
+    "native_title_revision": "",
+    "system_release": "H audit; manufacturing release on hold"
+  },
+  {
+    "board": "stereo-audio",
+    "pcb_sha256": "635d5af6b378fa1af04bdda1f3ff110e8901688b668118fa31b1544043333bf9",
+    "copper_layers": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "thickness_mm": 1.6,
+    "width_mm": 54.0,
+    "height_mm": 50.0,
+    "tracks": 336,
+    "zones": 0,
+    "footprints": 20,
+    "position_origin": "KiCad absolute board origin. CSV X positive right, Y positive up; view from front. Bottom rotations are native KiCad, not mirrored.",
+    "stackup_status": "Explicit native stackup. 4-layer JLC04161H-3313 reference or 2-layer FR4. See STACKUP-REQUIREMENTS.md; supplier impedance confirmation and physical qualification remain open.",
+    "native_title_revision": "D",
+    "system_release": "H audit; manufacturing release on hold"
+  },
+  {
+    "board": "usb-io",
+    "pcb_sha256": "b4023b210bf59178b0821c5aee6f9a6c1cc10338dd1738f3e778d51a55f72721",
+    "copper_layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "thickness_mm": 1.5642,
+    "width_mm": 196.0,
+    "height_mm": 42.0,
+    "tracks": 4559,
+    "zones": 4,
+    "footprints": 138,
+    "position_origin": "KiCad absolute board origin. CSV X positive right, Y positive up; view from front. Bottom rotations are native KiCad, not mirrored.",
+    "stackup_status": "Explicit native stackup. 4-layer JLC04161H-3313 reference or 2-layer FR4. See STACKUP-REQUIREMENTS.md; supplier impedance confirmation and physical qualification remain open.",
+    "native_title_revision": "G",
+    "system_release": "H audit; manufacturing release on hold"
+  }
+]

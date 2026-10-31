@@ -1,0 +1,20 @@
+{
+  "board": "cm4-carrier",
+  "pcb_sha256": "3b4d1fdd73d2b8a0002618f1ba0cd54da272fec4af129c39ab6a916e7a7ea481",
+  "copper_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "thickness_mm": 1.5642,
+  "width_mm": 80.0,
+  "height_mm": 70.0,
+  "tracks": 1139,
+  "zones": 2,
+  "footprints": 52,
+  "position_origin": "KiCad absolute board origin. CSV X positive right, Y positive up; view from front. Bottom rotations are native KiCad, not mirrored.",
+  "stackup_status": "Explicit native stackup. 4-layer JLC04161H-3313 reference or 2-layer FR4. See STACKUP-REQUIREMENTS.md; supplier impedance confirmation and physical qualification remain open.",
+  "native_title_revision": "",
+  "system_release": "H audit; manufacturing release on hold"
+}

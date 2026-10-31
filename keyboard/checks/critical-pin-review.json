@@ -1,0 +1,261 @@
+{
+  "passed": true,
+  "scope": "Selected critical IC pad-to-net assignments checked against manufacturer pin functions, plus TCA firmware bit assignment, stereo channel resistors and USB hub straps. This is not a complete electrical certification.",
+  "pin_checks": [
+    {
+      "board": "power",
+      "ref": "U3",
+      "value": "TCA9534PWR",
+      "checked_pin_count": 16,
+      "pin_assignments": {
+        "1": "GND",
+        "2": "GND",
+        "3": "GND",
+        "4": "INPUT_BOOST",
+        "5": "CHARGE_ENABLE",
+        "6": "WATCH_ENABLE",
+        "7": "EXT_USB_ENABLE",
+        "8": "GND",
+        "9": "RGB_ENABLE",
+        "10": "AUDIO_ENABLE",
+        "11": "IO_RAIL_ENABLE",
+        "12": "WATCH_FAULT_N",
+        "13": "POWER_IRQ",
+        "14": "I2C_SCL",
+        "15": "I2C_SDA",
+        "16": "+3V3_AON"
+      },
+      "source": "https://www.ti.com/lit/ds/symlink/tca9534.pdf"
+    },
+    {
+      "board": "power",
+      "ref": "U2",
+      "value": "AP63203WU-7",
+      "checked_pin_count": 6,
+      "pin_assignments": {
+        "1": "+3V3_AON",
+        "2": "SYS",
+        "3": "SYS",
+        "4": "GND",
+        "5": "AON_SW",
+        "6": "AON_BST"
+      },
+      "source": "https://www.diodes.com/datasheet/download/AP63200-AP63201-AP63203-AP63205.pdf"
+    },
+    {
+      "board": "usb-io",
+      "ref": "U2",
+      "value": "AP63203WU-7",
+      "checked_pin_count": 6,
+      "pin_assignments": {
+        "1": "+3V3_HUB",
+        "2": "SERVICE_IN",
+        "3": "SERVICE_IN",
+        "4": "GND",
+        "5": "HUB_SW",
+        "6": "HUB_BST"
+      },
+      "source": "https://www.diodes.com/datasheet/download/AP63200-AP63201-AP63203-AP63205.pdf"
+    },
+    {
+      "board": "cm4-carrier",
+      "ref": "U3",
+      "value": "SN74AXC1T45DCKR",
+      "checked_pin_count": 6,
+      "pin_assignments": {
+        "1": "+3V3_AON",
+        "2": "GND",
+        "3": "C3_TX",
+        "4": "CM4_RX",
+        "5": "+3V3_AON",
+        "6": "+3V3_CM4"
+      },
+      "source": "https://www.ti.com/lit/ds/symlink/sn74axc1t45.pdf"
+    },
+    {
+      "board": "usb-io",
+      "ref": "U1",
+      "value": "USB2517-JZX",
+      "checked_pin_count": 40,
+      "pin_assignments": {
+        "1": "DN1_DM",
+        "2": "DN1_DP",
+        "3": "DN2_DM",
+        "4": "DN2_DP",
+        "5": "+3V3_HUB",
+        "6": "DN3_DM",
+        "7": "DN3_DP",
+        "8": "DN4_DM",
+        "9": "DN4_DP",
+        "10": "+3V3_HUB",
+        "11": "DN5_DM",
+        "12": "DN5_DP",
+        "13": "CFG_SEL2",
+        "19": "GND",
+        "24": "+3V3_HUB",
+        "25": "VDD18",
+        "34": "GANG",
+        "40": "NON_REM1",
+        "41": "CFG_SEL0",
+        "42": "CFG_SEL1",
+        "43": "RESET_N",
+        "44": "UPSTREAM_PRESENT",
+        "45": "NON_REM0",
+        "46": "+3V3_HUB",
+        "48": "BOOST1",
+        "50": "BOOST0",
+        "52": "+3V3_HUB",
+        "53": "DN6_DM",
+        "54": "DN6_DP",
+        "55": "DN7_DM",
+        "56": "DN7_DP",
+        "57": "+3V3_HUB",
+        "58": "UP_DM",
+        "59": "UP_DP",
+        "60": "XTAL2",
+        "61": "XTAL1",
+        "62": "VDD18PLL",
+        "63": "RBIAS",
+        "64": "+3V3_HUB",
+        "65": "GND"
+      },
+      "source": "https://ww1.microchip.com/downloads/aemDocuments/documents/UNG/ProductDocuments/DataSheets/USB2517-USB2517i-Data-Sheet-00001598C.pdf"
+    },
+    {
+      "board": "stereo-audio",
+      "ref": "U1",
+      "value": "MAX98357AETE+",
+      "checked_pin_count": 13,
+      "pin_assignments": {
+        "1": "I2S_DATA",
+        "2": "+3V3_AUDIO",
+        "3": "GND",
+        "4": "SD_L",
+        "7": "+3V3_AUDIO",
+        "8": "+3V3_AUDIO",
+        "9": "SPK_L_P",
+        "10": "SPK_L_N",
+        "11": "GND",
+        "14": "I2S_LRCLK",
+        "15": "GND",
+        "16": "I2S_BCLK",
+        "17": "GND"
+      },
+      "source": "https://www.analog.com/media/en/technical-documentation/data-sheets/max98357a-max98357b.pdf"
+    },
+    {
+      "board": "stereo-audio",
+      "ref": "U2",
+      "value": "MAX98357AETE+",
+      "checked_pin_count": 13,
+      "pin_assignments": {
+        "1": "I2S_DATA",
+        "2": "+3V3_AUDIO",
+        "3": "GND",
+        "4": "SD_R",
+        "7": "+3V3_AUDIO",
+        "8": "+3V3_AUDIO",
+        "9": "SPK_R_P",
+        "10": "SPK_R_N",
+        "11": "GND",
+        "14": "I2S_LRCLK",
+        "15": "GND",
+        "16": "I2S_BCLK",
+        "17": "GND"
+      },
+      "source": "https://www.analog.com/media/en/technical-documentation/data-sheets/max98357a-max98357b.pdf"
+    }
+  ],
+  "pins_checked": 100,
+  "hub_straps": [
+    {
+      "ref": "R1",
+      "signal": "CFG_SEL0",
+      "rail": "GND",
+      "value": "10k"
+    },
+    {
+      "ref": "R2",
+      "signal": "CFG_SEL1",
+      "rail": "GND",
+      "value": "10k"
+    },
+    {
+      "ref": "R3",
+      "signal": "CFG_SEL2",
+      "rail": "GND",
+      "value": "10k"
+    },
+    {
+      "ref": "R4",
+      "signal": "NON_REM0",
+      "rail": "GND",
+      "value": "10k"
+    },
+    {
+      "ref": "R5",
+      "signal": "NON_REM1",
+      "rail": "+3V3_HUB",
+      "value": "10k"
+    },
+    {
+      "ref": "R6",
+      "signal": "GANG",
+      "rail": "GND",
+      "value": "10k"
+    },
+    {
+      "ref": "R16",
+      "signal": "DN6_DM",
+      "rail": "+3V3_HUB",
+      "value": "10k"
+    },
+    {
+      "ref": "R17",
+      "signal": "DN6_DP",
+      "rail": "+3V3_HUB",
+      "value": "10k"
+    },
+    {
+      "ref": "R18",
+      "signal": "DN7_DM",
+      "rail": "+3V3_HUB",
+      "value": "10k"
+    },
+    {
+      "ref": "R19",
+      "signal": "DN7_DP",
+      "rail": "+3V3_HUB",
+      "value": "10k"
+    },
+    {
+      "ref": "R20",
+      "signal": "RBIAS",
+      "rail": "GND",
+      "value": "12k 1%"
+    },
+    {
+      "ref": "R21",
+      "signal": "RESET_N",
+      "rail": "+3V3_HUB",
+      "value": "10k"
+    }
+  ],
+  "firmware_defines": {
+    "GPIOX": 32,
+    "INPUT_BOOST": 1,
+    "CHARGE_EN": 2,
+    "WATCH_EN": 4,
+    "USB_EN": 8,
+    "RGB_EN": 16,
+    "AUDIO_EN": 32,
+    "IO_EN": 64
+  },
+  "pcb_hashes": {
+    "power": "163e758a1996df055eaead28000a9d12474a173cbcff8998ac9d0d8379e9a8c4",
+    "usb-io": "b4023b210bf59178b0821c5aee6f9a6c1cc10338dd1738f3e778d51a55f72721",
+    "cm4-carrier": "3b4d1fdd73d2b8a0002618f1ba0cd54da272fec4af129c39ab6a916e7a7ea481",
+    "stereo-audio": "635d5af6b378fa1af04bdda1f3ff110e8901688b668118fa31b1544043333bf9"
+  },
+  "power_source_sha256": "0e7b024a5ef9447191f69fea03c0a3aeabce918867beda9e23cc5d18f2eeae88"
+}

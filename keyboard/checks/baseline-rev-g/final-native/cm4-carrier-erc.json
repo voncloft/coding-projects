@@ -1,0 +1,49 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-15T01:21:26-0400",
+    "kicad_version": "9.0.7",
+    "sheets": [
+        {
+            "path": "/CM4 GPIO and power/",
+            "uuid_path": "/b0ff769c-2be2-4959-bf8a-9212a23b0d73/4fcc1eb7-8ffc-44e1-9047-650478a28acb",
+            "violations": []
+        },
+        {
+            "path": "/CM4 USB and DSI/",
+            "uuid_path": "/b0ff769c-2be2-4959-bf8a-9212a23b0d73/abd88b82-4702-449e-9d66-fc698b464c06",
+            "violations": []
+        },
+        {
+            "path": "/Carrier power and display protection/",
+            "uuid_path": "/b0ff769c-2be2-4959-bf8a-9212a23b0d73/5e4996c0-42f3-4308-accc-45459cde47c1",
+            "violations": []
+        },
+        {
+            "path": "/DSI1 four-lane display socket/",
+            "uuid_path": "/b0ff769c-2be2-4959-bf8a-9212a23b0d73/7388d48c-8f74-4931-91f9-eb51433f8c00",
+            "violations": []
+        },
+        {
+            "path": "/USB peripheral audio and recovery/",
+            "uuid_path": "/b0ff769c-2be2-4959-bf8a-9212a23b0d73/ba5f2b70-c9b5-48c2-843b-027c3d7869bc",
+            "violations": []
+        },
+        {
+            "path": "/Stereo I2S output/",
+            "uuid_path": "/b0ff769c-2be2-4959-bf8a-9212a23b0d73/cdbaa799-48cb-4389-ba14-8526ded48f22",
+            "violations": []
+        },
+        {
+            "path": "/Isolated CM4 to always-on bridge/",
+            "uuid_path": "/b0ff769c-2be2-4959-bf8a-9212a23b0d73/36be8400-b52e-4d3f-a1e7-39f2e3b2b334",
+            "violations": []
+        },
+        {
+            "path": "/",
+            "uuid_path": "/b0ff769c-2be2-4959-bf8a-9212a23b0d73",
+            "violations": []
+        }
+    ],
+    "source": "cm4-carrier.kicad_sch"
+}

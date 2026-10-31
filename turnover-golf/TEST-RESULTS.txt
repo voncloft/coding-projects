@@ -1,0 +1,39 @@
+Turnover Golf 1.0.8 verification
+
+Native Qt 6.11.2 / C++17 release build: passed
+CTest: 2 of 2 suites passed
+Game/rules/UI: 32 passed, 0 failed
+Online multiplayer: 11 passed, 0 failed
+
+Verified Settings → Players offers only 2, 3, and 4 total players, with computer or online-human opponents. Exercised every offered player count, table orientation, and final-card finish. Mixed online setup still starts a four-player match with a host, one guest, and two computers.
+
+Verified that a zero-opponent request and old solo preferences create a two-player match with a computer. Valid legacy solo saves and solo network views are rejected without changing the active game. Existing multiplayer save/resume, AI strategy, scoring, card conservation, and TCP tests pass.
+
+Inspected the Qt offscreen setup screenshot. Desktop metadata validation and git diff --check passed. Rebuilt the local test executable and verified ./run-test.sh --version reports TurnoverGolf 1.0.8. No system installation performed.
+
+Earlier release verification (1.0.7 and prior; retained as historical evidence):
+
+Turnover Golf 1.0.7 verification
+
+Native Qt 6.11.2 / C++17 release build: passed
+CTest: 2 of 2 suites passed
+Totals: 31 passed, 0 failed, 0 skipped, 0 blacklisted, 8513ms
+Totals: 11 passed, 0 failed, 0 skipped, 0 blacklisted, 10404ms
+
+Verified Settings → Players selects 1–4 total players including the local player, with solo practice and per-seat computer/online-human roles. Native setup tested with a host, one guest and two computers.
+
+Verified two-, three- and four-player compass arrangements. Local hand always south; north rotates 180 degrees, west 90 degrees, east 270 degrees. Card pair positions rotate with the whole hand. Verified online guest orientation. Visible table labels show player names and scores without compass-direction words; all two-, three- and four-player tables fit without scrolling at the native desktop font.
+
+Verified flipping the original final card without drawing for every player, including an online human: no stock or discard changes, every player reveals, and scores synchronize. Draw-and-replace finishing remains supported.
+
+Includes 48 complete nine-round AI matches. Each voluntary AI finish was at most 6 points and followed at least six completed turns. AI can safely flip without drawing using revealed information only. Includes scoring, matching bonuses, deck recycling, card conservation and save/resume.
+
+TCP tested on localhost with mixed tables, invalid-request rejection, masked face-down values, disconnect/reconnect and synchronized round settings. Connections between separate internet locations were not tested.
+
+Native KDE visual checks completed with the user desktop font. No installation performed.
+
+Repository preparation: clean exported source tree configured and built successfully, with both CTest suites passing. Verified the launcher before and after building, including invocation from a different directory. BUILD_TESTING=OFF configures without Qt Test or test targets. Desktop metadata validation and shell syntax checks passed. Existing GPLv3 license and master branch history preserved. Compiled binaries, build trees, and personal saves are ignored by Git.
+
+Scratchpkg recipe 1.0.6-1 (Voncloft-OS-dev/kde-apps/turnover-golf): downloaded the pinned published source archive, verified its .checksums entry, and ran the exact recipe build() in an isolated staging directory. CMake/Ninja compilation and staging passed; verified all five packaged files, the executable version, shared-library resolution, desktop metadata, and the license. Recipe passes bash -n and sh -n, declares existing cmake/ninja/qt6 dependencies, and rejects an unset staging directory. No system installation or package registration performed. Verified the relocated project launcher still reports version 1.0.6.
+
+Winner-message checks for 1.0.7: verified round winners, an overall winner different from the final-round winner, a three-way tie, online host/guest name and local-player perspectives, and solo results. The main completion message and scorecard agree on final winners and totals. Inspected native KDE screenshots for winning and tied results, including wrapped scorecard text. Rebuilt and verified the uninstalled test executable in the moved project folder; the installed application was not replaced.

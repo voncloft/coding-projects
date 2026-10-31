@@ -1,0 +1,5 @@
+Comment,Designator,Footprint,LCSC Part #,Quantity,Specification
+LTST-C190KRKT,D1,LED_0603_1608Metric,C94869,1,Exact part and native footprint; no electrical substitution without review.
+LTST-C190KGKT,D2,LED_0603_1608Metric,,1,Exact part and native footprint; no electrical substitution without review.
+BM03B-GHS-TBT(LF)(SN),J1,JST_GH_BM03B-GHS-TBT_1x03-1MP_P1.25mm_Vertical,,1,Exact part and native footprint; no electrical substitution without review.
+"PROCUREMENT SPEC: 680 ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C.","R1,R2",R_0603_1608Metric,,2,"680 ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C."

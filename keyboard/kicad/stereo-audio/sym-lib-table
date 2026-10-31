@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "KeyboardAudio") (type "KiCad") (uri "${KIPRJMOD}/KeyboardAudio.kicad_sym") (options "") (descr "MAX98357A exposed pad is grounded per manufacturer")))

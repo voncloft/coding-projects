@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=VArpeggio
+Comment=Practice, play, record, and read piano music
+Exec=varpeggio
+Icon=com.voncloft.VArpeggio
+Terminal=false
+Categories=AudioVideo;Audio;Music;Education;
+Keywords=MIDI;Piano;Sheet Music;Practice;Notation;
+StartupWMClass=VArpeggio

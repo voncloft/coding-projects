@@ -1,0 +1,6 @@
+Designator,Mid X,Mid Y,Layer,Rotation
+R1,5.000000mm,-3.000000mm,bottom,-90.000000
+R2,9.000000mm,-3.000000mm,bottom,-90.000000
+D1,6.100000mm,-3.000000mm,top,90.000000
+D2,7.899999mm,-3.000000mm,top,90.000000
+J1,7.000000mm,-9.000000mm,top,0.000000

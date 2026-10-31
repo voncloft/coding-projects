@@ -1,0 +1,30 @@
+Endpoint,Housing,Quantity,Contact,Contacts fitted,Pins,Wire
+usb-io:J9,VHR-2N,1,SVH-21T-P1.1,2,"1,2",18 AWG per JST VH drawing
+power:J1,VHR-2N,1,SVH-21T-P1.1,2,"1,2",18 AWG per JST VH drawing
+power:J2,VHR-4N,1,SVH-21T-P1.1,4,"1,2,3,4",18 AWG per JST VH drawing
+usb-io:J10,VHR-4N,1,SVH-21T-P1.1,4,"1,2,3,4",18 AWG per JST VH drawing
+power:J3,GHR-08V-S,1,SSHL-002T-P0.2,8,"1,2,3,4,5,6,7,8",26-30 AWG per JST GH drawing
+usb-io:J11,GHR-08V-S,1,SSHL-002T-P0.2,8,"1,2,3,4,5,6,7,8",26-30 AWG per JST GH drawing
+usb-io:J7,GHR-03V-S,1,SSHL-002T-P0.2,3,"1,2,3",26-30 AWG per JST GH drawing
+keyboard:J2,3-position 2.54 mm crimp female housing for 0.64 mm square posts,1,Matched supplier contacts; >=2 A where carrying audio power,3,"1,2,3",24-28 AWG per selected contact; 26 AWG at GH other end
+power:J4,GHR-08V-S,1,SSHL-002T-P0.2,8,"1,2,3,4,5,6,7,8",26-30 AWG per JST GH drawing
+keyboard:J3,8-position 2.54 mm crimp female housing for 0.64 mm square posts,1,Matched supplier contacts; >=2 A where carrying audio power,8,"1,2,3,4,5,6,7,8",24-28 AWG per selected contact; 26 AWG at GH other end
+power:J5,GHR-04V-S,1,SSHL-002T-P0.2,4,"1,2,3,4",26-30 AWG per JST GH drawing
+control:J2,GHR-04V-S,1,SSHL-002T-P0.2,4,"1,2,3,4",26-30 AWG per JST GH drawing
+power:J7,VHR-2N,1,SVH-21T-P1.1,2,"1,2",18 AWG per JST VH drawing
+stereo-audio:J3,7-position 2.54 mm crimp female housing for 0.64 mm square posts,1,Matched supplier contacts; >=2 A where carrying audio power,7,"1,2,3,4,5,6,7",24-28 AWG per selected contact; 26 AWG at GH other end
+control:J1,GHR-06V-S,1,SSHL-002T-P0.2,6,"1,2,3,4,5,6",26-30 AWG per JST GH drawing
+keyboard:J4,6-position 2.54 mm crimp female housing for 0.64 mm square posts,1,Matched supplier contacts; >=2 A where carrying audio power,6,"1,2,3,4,5,6",24-28 AWG per selected contact; 26 AWG at GH other end
+control:J3,GHR-06V-S,1,SSHL-002T-P0.2,6,"1,2,3,4,5,6",26-30 AWG per JST GH drawing
+cm4-carrier:J7,GHR-06V-S,1,SSHL-002T-P0.2,6,"1,2,3,4,5,6",26-30 AWG per JST GH drawing
+control:J4,GHR-05V-S,1,SSHL-002T-P0.2,5,"1,2,3,4,5",26-30 AWG per JST GH drawing
+rotary:J1,GHR-05V-S,1,SSHL-002T-P0.2,5,"1,2,3,4,5",26-30 AWG per JST GH drawing
+control:J5,GHR-03V-S,1,SSHL-002T-P0.2,3,"1,2,3",26-30 AWG per JST GH drawing
+battery-light:J1,GHR-03V-S,1,SSHL-002T-P0.2,3,"1,2,3",26-30 AWG per JST GH drawing
+control:J7,GHR-02V-S,1,SSHL-002T-P0.2,2,"1,2",26-30 AWG per JST GH drawing
+cm4-carrier:J10,GHR-02V-S,1,SSHL-002T-P0.2,2,"1,2",26-30 AWG per JST GH drawing
+power:J6,VHR-2N,1,SVH-21T-P1.1,2,"1,2",18 AWG per JST VH drawing
+cm4-carrier:J3,VHR-2N,1,SVH-21T-P1.1,2,"1,2",18 AWG per JST VH drawing
+usb-io:J8,GHR-04V-S,1,SSHL-002T-P0.2,4,"1,2,3,4",26-30 AWG per JST GH drawing
+cm4-carrier:J4,GHR-04V-S,1,SSHL-002T-P0.2,4,"1,2,3,4",26-30 AWG per JST GH drawing
+cm4-carrier:J6,GHR-05V-S,1,SSHL-002T-P0.2,5,"1,2,3,4,5",26-30 AWG per JST GH drawing

@@ -1,0 +1,967 @@
+{
+  "passed": true,
+  "status": "Engineering audit consistency passed. Manufacturing HOLD; no physical acceptance passed.",
+  "scope": "Hash, count and report correspondence; eight Gerber ZIP CRC/content comparisons. No new electrical or physical qualification.",
+  "pcb_sha256": {
+    "battery-light": "e3c79cf692632c61a423cd24964cd81708f13e756df73a6ce360eaac02961d79",
+    "cm4-carrier": "3b4d1fdd73d2b8a0002618f1ba0cd54da272fec4af129c39ab6a916e7a7ea481",
+    "control": "f7c868291ef30811c09d348c69ef31fd823fdccdf57d89efe36f04a41f39df2e",
+    "keyboard": "0b42f651a0dfdb58c55e6161bb4d2164664e1db90f89f6c4e7c90a1362348acd",
+    "power": "163e758a1996df055eaead28000a9d12474a173cbcff8998ac9d0d8379e9a8c4",
+    "rotary": "d52029b7e49dab3ad727d745172433136e8f4e0840eafe7b25f13b42cd8df609",
+    "stereo-audio": "635d5af6b378fa1af04bdda1f3ff110e8901688b668118fa31b1544043333bf9",
+    "usb-io": "b4023b210bf59178b0821c5aee6f9a6c1cc10338dd1738f3e778d51a55f72721"
+  },
+  "fcstd_sha256": "99b49521f007a1829d3121d7184bf726f8cc0e564069d3b3854c71adc0680754",
+  "source_sha256": {
+    "qmk/bridge.c": "e733f95998a101db567c1fc9682d88afd705a2e765ff96a344f531a73f56a4ac",
+    "qmk/config.h": "91e20f81b53f780c52c5fc2b318eb46a53e6189b070b004e83db79170c05a649",
+    "qmk/full_keyboard.c": "ad6d688163176537a179bed6a557842095496ac786afc62108de8c25cfaa2571",
+    "qmk/halconf.h": "2c416aff639ccc1712dbeb28a1e74a67766c1b9145a0a63300474586bcba0f20",
+    "qmk/keyboard.json": "a195bded103d0513e5f742b3cf23df66a90ec2d38f6d2bf52549b3b8188c6a35",
+    "qmk/keymaps/via/keymap.c": "bb62f6bb805368eb2fa82bd35f9a1c2f467efd96caa7c38a462b844fcdc8e259",
+    "qmk/keymaps/via/rules.mk": "c694b71bc1323fe6d0c312d9d2c0fbc039eb4a08bef54b99ec8fa99c9930ed6a",
+    "qmk/mcuconf.h": "0e456cafe7df5f7248fbc1e115bf97fa2b0aecc954f881c902b31b89bb53685a",
+    "qmk/power.c": "0e7b024a5ef9447191f69fea03c0a3aeabce918867beda9e23cc5d18f2eeae88",
+    "qmk/project.h": "90b9fe1f3fdff1521f5680e8f497d73d45094935d28d6c6a37a93f47f223a415",
+    "qmk/rules.mk": "d13cbb8662bd73121067e3c1aa6e8dc5c250986e9db9eb7f6a79c0e805c67660",
+    "qmk/via-definition.json": "d1f2657f5f425891c1cbc84c1edd1908ae8547ac25d09955837ac9f3bc99369d",
+    "qmk/wire.h": "122b0f6081cb4e3116cff6d570a061dfe2a980cb7be5749636c21768ba58c2eb",
+    "esp32/platformio.ini": "3f7f36a9962f5d4737eef4ada76c2eaaf413c79483ce08d2e0761b718b674776",
+    "esp32/src/main.cpp": "2ba3ccd606cfceda1f76cb5b91378b62825a5727e52e2e39640594344514e9fb",
+    "esp32/src/wire.h": "122b0f6081cb4e3116cff6d570a061dfe2a980cb7be5749636c21768ba58c2eb"
+  },
+  "binary_sha256": {
+    "esp32/boot_app0.bin": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
+    "esp32/bootloader.bin": "41c3e57e9942de98fddff1a8a0a2e72bc72b25c36e354e7b8130d116662d6451",
+    "esp32/firmware.bin": "1032d6d0a50bd0421136af8917391c9fb9ff08e72acaf58860afcaca8734f4ab",
+    "esp32/partitions.bin": "148b959cbff1c38aa8e1d5c0ba9d612c54997b945e56a63f41223eef650653a1",
+    "keyboard-rev-h-audit.uf2": "a8da502b2622fdf10adbe2ca8083f36fd65ebe8d24481a20dc019ec5d6ff87ee"
+  },
+  "ods_sha256": "ddfeb2550fbfc414e22253037baf13d3bde914761fa50b887339d9d72110e59f",
+  "exports": [
+    {
+      "path": "manufacturing/battery-light/all-bom.csv",
+      "sha256": "0541f733fdb1663a069f873400bc69b2a587714a94c7bf81a4c9847ead5a028f"
+    },
+    {
+      "path": "manufacturing/battery-light/all-cpl.csv",
+      "sha256": "6c9ee6f09261b3a093366e5a0ca704ed6ce6c8052c1ed6479e9ed7eca1d43946"
+    },
+    {
+      "path": "manufacturing/battery-light/assembly.pdf",
+      "sha256": "783aae287fd29f10cdcf27aefe19ea6aaf828a2cc4f52c6ec00171f522aba940"
+    },
+    {
+      "path": "manufacturing/battery-light/battery-light-gerbers.zip",
+      "sha256": "88fa406f6f47d33e9bb4941ab95098f2f800964fc284cdf810b0369d5bc0af6c"
+    },
+    {
+      "path": "manufacturing/battery-light/board-info.json",
+      "sha256": "88b5f80ce4a55469024babc6064d4cb738d5f6ec35439a222c68a6812fd518ac"
+    },
+    {
+      "path": "manufacturing/battery-light/electrical-test.ipc",
+      "sha256": "6f2230d2da6ae3c1960b5fe89bc2840889f332b0244b8437736a769190d4adb3"
+    },
+    {
+      "path": "manufacturing/battery-light/export.log",
+      "sha256": "a2166ad2b30619486f9ee47665b63b32121e9941ba6fff239c0d4f893e4cf97a"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-B_Cu.gbl",
+      "sha256": "549759e349b6186f8fa88b448979149f192aee4bce0b87fec30c475221599f90"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-B_Mask.gbs",
+      "sha256": "bd989e7af57f1318a437cf7fd28709e31ac5f5cd94ce21c815394dfef790b40c"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-B_Paste.gbp",
+      "sha256": "5ba655f27de70480879730b21c7ed2a5af7b3db6989d3801b4ee8c48f4820ff5"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-B_Silkscreen.gbo",
+      "sha256": "12a99bcc29e2a669fa2f6dc31d23e276b5d45e5dbade1986b58f14cbe21b5f42"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-Edge_Cuts.gm1",
+      "sha256": "3f632d040b86f76c09175beab4f14b1dc0c595d0dc32ab5cb5a7c7112c0852ea"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-F_Cu.gtl",
+      "sha256": "fcf1c347d1a9a913aee2e799302c7a5a3a770a92f4a27203ab700ba983dbf90f"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-F_Mask.gts",
+      "sha256": "60ce6f3b94a0d97660be10fe3a7a500038d04cc789deba0d7af320017843f914"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-F_Paste.gtp",
+      "sha256": "f2a9fc950a4128609a866f149432241fa015c930822edf4947ce60a65d811f72"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-F_Silkscreen.gto",
+      "sha256": "b6e99eb267642d27f2900627646ff433fb0fa7fdc142e166f91ac1ad7b128811"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-In1_Cu.g1",
+      "sha256": "86f80165071d69a1013ed9de650f84b9490be9265701324ed3f0039759730923"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-In2_Cu.g2",
+      "sha256": "504c58abdd1d81d8d7936e084b9a57a7ba86fdc117b26d0415e8c6c2cde9df5a"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-NPTH-drl_map.pdf",
+      "sha256": "95c9180e66a467252fb3b44aebd0ffb8aa60d355f7429b94162651b87f2c1a35"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-NPTH.drl",
+      "sha256": "8ba94a50a39c9ab02c1a417085098cdd801fb836ebf082ef8fc3aa6b74474f3f"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-PTH-drl_map.pdf",
+      "sha256": "3447fc05b1e9aba69e6198b59317e4d9876c97092a24ca9eb06521595c79c3b9"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-PTH.drl",
+      "sha256": "9ced9b35eae7beb282281e2093975a71d5f2a729d9152454db8d1a1ce288ad73"
+    },
+    {
+      "path": "manufacturing/battery-light/gerbers/battery-light-job.gbrjob",
+      "sha256": "98e5af9afc4f40c484cb9b9b45e6598aef70d9878a1f64c07d718e99a2fc8589"
+    },
+    {
+      "path": "manufacturing/battery-light/jlc-smt-bom.csv",
+      "sha256": "0541f733fdb1663a069f873400bc69b2a587714a94c7bf81a4c9847ead5a028f"
+    },
+    {
+      "path": "manufacturing/battery-light/jlc-smt-cpl.csv",
+      "sha256": "6c9ee6f09261b3a093366e5a0ca704ed6ce6c8052c1ed6479e9ed7eca1d43946"
+    },
+    {
+      "path": "manufacturing/battery-light/manual-bom.csv",
+      "sha256": "cb8b3e5e72ce5a75afab372d25b1903f38ad115e05e7aa123fac7de148009879"
+    },
+    {
+      "path": "manufacturing/battery-light/manual-cpl.csv",
+      "sha256": "751724d980d268073e5a6f052a4ad931701e530152065f5be04ba76cac805843"
+    },
+    {
+      "path": "manufacturing/battery-light/native-positions.csv",
+      "sha256": "14c618687a89f0bc980fa0431796c95a7dd26d94a2975f60f13494d09d1ff20a"
+    },
+    {
+      "path": "manufacturing/battery-light/schematic.pdf",
+      "sha256": "a663b78cd6897f7a921596145ae06556f7adbc30b61de96b862f020772b3630d"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/all-bom.csv",
+      "sha256": "9189929fd48d1adf2919d7fbd807268b737b89cbada36472867858cbb47cec56"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/all-cpl.csv",
+      "sha256": "3ccf55b149654a703260c7a3f2330e95b9be001aac3909df7b30407f1846e7d9"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/assembly.pdf",
+      "sha256": "9fc25a5cc603219b66911b57b6f3aba4d58fc79225d30593cd769d77c55225da"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/board-info.json",
+      "sha256": "e889c304b84956fecd5e46c9512cb15f57125cc723980a5152b97ab7afa25975"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/cm4-carrier-gerbers.zip",
+      "sha256": "cee399ec048009b7ba69b9629ffb08e1cb27c7e5f5cb82f77626bcd9531526bb"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/electrical-test.ipc",
+      "sha256": "52f3d1a6eb935bcbd62145690741007b1939bcf33d5678d5e3b6ecbbf9edea9a"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/export.log",
+      "sha256": "f9fd94ac469d552c906818dfea382c14b76e4e0af2e1204cc029786d6009cf1c"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-B_Cu.gbl",
+      "sha256": "e64f160e1f4d7bd1f938908ab055cc0363f0fcb1a553c91ed5cadd340a19278b"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-B_Mask.gbs",
+      "sha256": "e98c92a6add6dfed73e0061d659d856d57f880738f309d1ca7b05feb274d0095"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-B_Paste.gbp",
+      "sha256": "7c0692cc7016fce8328f8ddc1adec05f695685ec3a939ef8485c8fa31d3cc55f"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-B_Silkscreen.gbo",
+      "sha256": "b0a05c5bca56fa1ae091ef3b1c465f5033ec72ecec0ffbe6ddc8e8442c5a0433"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-Edge_Cuts.gm1",
+      "sha256": "cb49ec293835428bff7e2ff92d00aa6062fd73d00942f2b086c27e9e4f10dfc7"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-F_Cu.gtl",
+      "sha256": "d207737652a025d565449f59723e83a77a90faa118fdd9eb00ff99ef1a8e60a2"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-F_Mask.gts",
+      "sha256": "a4abf34036fc3c6b473eaccbf3ad99281bf0dd0ba62bd882d44c68728443182d"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-F_Paste.gtp",
+      "sha256": "57b60e3511f2bbefca4ba0c750e1c4a0b1de91e9712feacd27dfb557fa70afd6"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-F_Silkscreen.gto",
+      "sha256": "509c1a8f54a364ee478e1db3ae1f07fb666b72abcd39902de5a89ac16a4f552f"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-In1_Cu.g1",
+      "sha256": "0a137a5321eda5ea8ec0bf058024216536c6ddea2a77623d5fcd44910245be6a"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-In2_Cu.g2",
+      "sha256": "94a8ccfd49ef3d16a548411409d6fb2448e57a29e4c4bbc266f987065165c44c"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-NPTH-drl_map.pdf",
+      "sha256": "3f926bdc1f2562585d6a85dfb501738293e9c661e8ba07df04839991e6203f2a"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-NPTH.drl",
+      "sha256": "113e7a41d4b04ea4cb4b66bfeb60744b76b195dd871805fb1e765c55cc2f12ca"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-PTH-drl_map.pdf",
+      "sha256": "ae639871562bd95266a82692eacbbace7cb739aa1765ed61ff8868881c81be6a"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-PTH.drl",
+      "sha256": "42f5b478b39414f866b2c8f260a9f3d46194e0a0687b5fe9f5ab2344f2ddb3c0"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/gerbers/cm4-carrier-job.gbrjob",
+      "sha256": "c866f053c737cc0a47d250f53f5553a1d553d985312cf16b46d18c64888873ae"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/jlc-smt-bom.csv",
+      "sha256": "62c73b179b829402d961476bbe5dc5567621a19d7ee762019831528d1cc09c65"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/jlc-smt-cpl.csv",
+      "sha256": "da68dd98980d72ca3e3676601f76942a9127e7c8bc71d9e4495e275fb95a0e75"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/manual-bom.csv",
+      "sha256": "96974fae4f715074108cc9c76511a1e2a587ad2a4e25e66d15c04828eb80d858"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/manual-cpl.csv",
+      "sha256": "7300e8f37132c8f1fb60a13dca00bf84cdaae9662f6b9a7935ecc452b1b9666f"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/native-positions.csv",
+      "sha256": "84d78dd226933dc435a478e3ffa8dc71680f4d41ce0d5a62921dbb5faf16fc6b"
+    },
+    {
+      "path": "manufacturing/cm4-carrier/schematic.pdf",
+      "sha256": "c4975b67c86bee0917baee27ec49fa4eafbe9d20d814c93292d498087a79fc9e"
+    },
+    {
+      "path": "manufacturing/control/all-bom.csv",
+      "sha256": "45d44a37f8324c69a1c70f3c8fb40e8fb9ec2b3dba7e094bd8487d33faf791b1"
+    },
+    {
+      "path": "manufacturing/control/all-cpl.csv",
+      "sha256": "4df99f54bdbf371d0fc1ee39d0bf2014cd821becb6e007d664c3971eeeab78f1"
+    },
+    {
+      "path": "manufacturing/control/assembly.pdf",
+      "sha256": "5870325887757f5b3a181f08b99161e81b12754ed1f28ca9a6490ea7ef7b775b"
+    },
+    {
+      "path": "manufacturing/control/board-info.json",
+      "sha256": "024d6e33e4358e759f252aa7cabe9af93c9f2bb5a5c740f78bf7dfe9de43755e"
+    },
+    {
+      "path": "manufacturing/control/control-gerbers.zip",
+      "sha256": "93969e36839d3ba7dbb16f90e3ebc0dfcfcfe883ec8e905fb78c394e7fe49c1a"
+    },
+    {
+      "path": "manufacturing/control/electrical-test.ipc",
+      "sha256": "b26699a2654348be4619c83ade4b1d26627a2012b49f74b957621f676da64e8c"
+    },
+    {
+      "path": "manufacturing/control/export.log",
+      "sha256": "7b798550388f6a17279d814d1ff48592f5ee5bf9e89a04b9ba30af2524f0c9ea"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-B_Cu.gbl",
+      "sha256": "bc57f5930ec7b046ba49f663447ccb3e2b148ae1ce549f2b257710e6ee3fca66"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-B_Mask.gbs",
+      "sha256": "b6849fdaf85f1fa3167a16338e179d2f08bd55b33a1192d2ac153170baed0212"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-B_Paste.gbp",
+      "sha256": "a02b864b8836783841cd4b109f2b309a22694f34b5596f26472190e377ca87d4"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-B_Silkscreen.gbo",
+      "sha256": "0de6990045c597ce6a5818f1b01d0cf354c256f2588efca3137b83578ac58bc1"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-Edge_Cuts.gm1",
+      "sha256": "2425223cb0631fcc7403ef7b65afe6b6e9b004f71ace1077357ed2a2a96d64e3"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-F_Cu.gtl",
+      "sha256": "27bd482f184e72f36fdf505f5b6076d3ea36b2a83ccdbe920888f8088d71dc39"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-F_Mask.gts",
+      "sha256": "6039d5903664bd3e203b4bad0386b67e67c04ebe7b03b308654d598046695e22"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-F_Paste.gtp",
+      "sha256": "04365d4ee31a40142e88b5dfe9cc8a5b6d993483a9acfd71a87f4f01f52de8f0"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-F_Silkscreen.gto",
+      "sha256": "8da0a6f477d5edce2e5a32980880a6b4aca953c5568d3a6bfed74bad077097c0"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-In1_Cu.g1",
+      "sha256": "26d68b4ab64d044ebf91afdcd681dd353ea49cc38b0e4cdd48fd2a0192068f13"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-In2_Cu.g2",
+      "sha256": "d2c058d9ce8d4a339bb4323a11bea0af674513c9e617476b8927a68bca9ca721"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-NPTH-drl_map.pdf",
+      "sha256": "b9bb75449df65b8675473b9d0f80c893f2fdc77e7eb3aee2e4a1b76c47ca5a57"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-NPTH.drl",
+      "sha256": "0c19041616d94483359422f61193f5c81bb39901df8e30568bd6015981784ae3"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-PTH-drl_map.pdf",
+      "sha256": "95208f1815c4d5c23d2a6dbe231dd259a0d796979456a55503b920269d4b4143"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-PTH.drl",
+      "sha256": "7ada906bd299576819b1b3e7367031ec3dec2cfc132c38283581ba532228b991"
+    },
+    {
+      "path": "manufacturing/control/gerbers/control-job.gbrjob",
+      "sha256": "01699f686d4cff1c43f9e811c0a176c2ccf6d736879074cdac00d4834fe01751"
+    },
+    {
+      "path": "manufacturing/control/jlc-smt-bom.csv",
+      "sha256": "0a76272b7b910228856ba91c1c21c75625f26f44692a10b0b86c5046b199c9ab"
+    },
+    {
+      "path": "manufacturing/control/jlc-smt-cpl.csv",
+      "sha256": "0dbad59e7a240d69e9f1acdb2663ee90189333fc189e632a688ed2c43932655c"
+    },
+    {
+      "path": "manufacturing/control/manual-bom.csv",
+      "sha256": "d039d9832ea8f3940d0e7189602f8742a7700597cf0a5a50dfb2e6f81c213c4b"
+    },
+    {
+      "path": "manufacturing/control/manual-cpl.csv",
+      "sha256": "f10a971444bf172526cece67a8da8af382e2ca3b9e9e63e7d8161383ea989a36"
+    },
+    {
+      "path": "manufacturing/control/native-positions.csv",
+      "sha256": "89a03a7f93cd5b9104a14ba67691318323e9f2045ec965a1a616f5428bed8df1"
+    },
+    {
+      "path": "manufacturing/control/schematic.pdf",
+      "sha256": "1b636a78bb5c3b5a4ba7b16801101ec01e5fef4f2f6ea3cd98e4290882d491dd"
+    },
+    {
+      "path": "manufacturing/keyboard/all-bom.csv",
+      "sha256": "e04d1afb8283b4c81629acd1d00f2e014c8b38fbd962aca323ab9d0efd4eb823"
+    },
+    {
+      "path": "manufacturing/keyboard/all-cpl.csv",
+      "sha256": "a0227be61c4c8d9ec01fbe4c26192ff27ff7229578f04f7e3da87f98ce5f092e"
+    },
+    {
+      "path": "manufacturing/keyboard/assembly.pdf",
+      "sha256": "b3b7f43901c7366a8326d30dfe290b207f15e29c4c7fc3cf152133f590b9b599"
+    },
+    {
+      "path": "manufacturing/keyboard/board-info.json",
+      "sha256": "7c816959d26b1fff07830814b44b2b6d4fa11be2408ccaea31a7270c9783fe6e"
+    },
+    {
+      "path": "manufacturing/keyboard/electrical-test.ipc",
+      "sha256": "a43a2200fb11a8faec76bb36472703b1c79aab1b5353161290b18e500a8d4610"
+    },
+    {
+      "path": "manufacturing/keyboard/export.log",
+      "sha256": "34c0cbf7c3f25a1c5af80b755a61a2d2a407ad541c244276455440c1b6ab5600"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-B_Cu.gbl",
+      "sha256": "64160d01c0e3488660903309e6f230b5d64248564d0ad910a54e61a97c7954ee"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-B_Mask.gbs",
+      "sha256": "80f02725f40fe87cd7aa9979c346c41868d9505f139ff7bda7b0a665e5e8e3d5"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-B_Paste.gbp",
+      "sha256": "c30d2cae03f77dc8533190c36d8273b056a9c39024cdb52e334ab9f17942b6e5"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-B_Silkscreen.gbo",
+      "sha256": "4705043d04b27abacc9da01178afde61fee57f822fa927cc8f0a9ebef27b6181"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-Edge_Cuts.gm1",
+      "sha256": "455f249e184f3d4320ef2322f0c49770a022b2c64adfbcad6a46a42a7796ea12"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-F_Cu.gtl",
+      "sha256": "e239c678d703da181df1e28637c42a0aa3e7012ba0e56dd67d0764d98e40e91d"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-F_Mask.gts",
+      "sha256": "3cf6774c13860ed18443975fb2aa56416401effe5956a54ae95d80a4533c46f5"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-F_Paste.gtp",
+      "sha256": "54ff781c55baa10bec34c7d8acbd242c870fcbd1d3d7dc2da632acf1713e4e83"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-F_Silkscreen.gto",
+      "sha256": "f20ef2eaa88a03c531b1f7a7ecfaea53bcbe5f096f8cdb7b9b8e0e86d21b030d"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-In1_Cu.g1",
+      "sha256": "846965d6df84c333aea0e04a8a6d740296958097bf245c222efa2189182011cc"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-In2_Cu.g2",
+      "sha256": "a245a57b3d59a5c19c91dacfdf5745e2d0749a551b6dbb7decef975eba6b3d82"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-NPTH-drl_map.pdf",
+      "sha256": "7dc39459587528b132be78dcfe02b1067d1b242bb6bacee98e671b5fcf5147ba"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-NPTH.drl",
+      "sha256": "f5d2de759ae8feaed86468fdee5b693dcf9244ed26a461c7bd529e6d65e3d9c1"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-PTH-drl_map.pdf",
+      "sha256": "047d99c16f7fe154a23625b388d34b06ea89855d2284190f004eb306390e338e"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-PTH.drl",
+      "sha256": "8c2854b9903f746475325936055469150cc6a3f8776a8b3b2436eee93de095fc"
+    },
+    {
+      "path": "manufacturing/keyboard/gerbers/keyboard-job.gbrjob",
+      "sha256": "c591ef0a8d36bb1053635a1262b3a5bd4438362f73642efced41235780f53513"
+    },
+    {
+      "path": "manufacturing/keyboard/jlc-smt-bom.csv",
+      "sha256": "39f0ad6e59aaaa9835677ba5500483dbe290e07df88917f5ec401bf4a2ec0593"
+    },
+    {
+      "path": "manufacturing/keyboard/jlc-smt-cpl.csv",
+      "sha256": "9d7d5c63d2ad3cc2647d1486f3a1d9651f3492af3ae3738ca2b3cffa6f3ac7a3"
+    },
+    {
+      "path": "manufacturing/keyboard/keyboard-gerbers.zip",
+      "sha256": "2cdd901e02b9962ce5ad37c8533d8f7f6186240dc4261f2687791689aab27fd1"
+    },
+    {
+      "path": "manufacturing/keyboard/manual-bom.csv",
+      "sha256": "94f009e5d79d3e53ed0cc64a31b8ee15e1b5510836c71448e605d07427fffbd3"
+    },
+    {
+      "path": "manufacturing/keyboard/manual-cpl.csv",
+      "sha256": "191676e0b70e3ce614304f57db8a5311b973714fea689b4f5f53917277eef771"
+    },
+    {
+      "path": "manufacturing/keyboard/native-positions.csv",
+      "sha256": "1ef6a2741adbbabb8c251476342c8d2ca706004a91b38d71453bf151a7f0e430"
+    },
+    {
+      "path": "manufacturing/keyboard/schematic.pdf",
+      "sha256": "a0622d65703541a66bf08ef89fccde84f42adca85a0a030a5935bf004f00de5a"
+    },
+    {
+      "path": "manufacturing/power/all-bom.csv",
+      "sha256": "cfcbc4da1871e3b77ec7794fae6871d71495944725ddce812fd0d0766089b016"
+    },
+    {
+      "path": "manufacturing/power/all-cpl.csv",
+      "sha256": "b4e33e9e8adf391b7512d5f1934c3a2a10db6e0384b66547efb773f40b8574d1"
+    },
+    {
+      "path": "manufacturing/power/assembly.pdf",
+      "sha256": "3c968a0fe7c4207892c29926e3762263b9d1a7d401e745677642ea917e06de58"
+    },
+    {
+      "path": "manufacturing/power/board-info.json",
+      "sha256": "54cb8126fdce37d4d9a0b78b33f04b217f954ec53e976b0f3e233ad585c1cfff"
+    },
+    {
+      "path": "manufacturing/power/electrical-test.ipc",
+      "sha256": "b7b4a43475d8617ea7b627b39521ac2bee7e0a38dcedbbbaa3138eaea2ccdf3c"
+    },
+    {
+      "path": "manufacturing/power/export.log",
+      "sha256": "79db07aaf0bc9b4d2a681147cfc96cb3f896b7d1c8f815e108d1eaa3082b1014"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-B_Cu.gbl",
+      "sha256": "193024346a03688f16b3332e68b6c44baccbc08aae3a40072220817ca3500f29"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-B_Mask.gbs",
+      "sha256": "d7cccc7ab0e7e38e171582df19497aee255407dafb755dc353279e9f7db8282d"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-B_Paste.gbp",
+      "sha256": "dbd438ba84a3d2b97ac5298209a8d11627c0897bc6b688dcb6cce639b835cc81"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-B_Silkscreen.gbo",
+      "sha256": "77c078d67437a6c2393a8ae50a54aa4ea659efb5893f0aa8c89cb5f38fd27e82"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-Edge_Cuts.gm1",
+      "sha256": "33dd8dc5bee430c7793a6d2e375e8b336db6d26d1e67c1bfbd99ddc0703c2cce"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-F_Cu.gtl",
+      "sha256": "eb90df9b3dd1dab29c4c0165b86c1cf975ee85d83fa7912b945f0d152cc2d9b4"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-F_Mask.gts",
+      "sha256": "bbec3aafa6306769c6ae8d15f305426e44ca4f82ca821eb06909940ae3e89539"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-F_Paste.gtp",
+      "sha256": "ea94fff3444c8863d96d170bc7ed017be71be9da7f6f61837b604ab2912bdd32"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-F_Silkscreen.gto",
+      "sha256": "093f6535d18b6d3d609bcdb2bce236a2eb83d8f1405d6a8f2ad2a776315a3a63"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-In1_Cu.g1",
+      "sha256": "ce46bbdfbb308baa7d5a0784422c8647e45a9df4a95a33e026fce8e83e5e61af"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-In2_Cu.g2",
+      "sha256": "a5a57be5f5a27a2d0b019a7f2f0df7e8f440173fd4f47ef307097d365127206a"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-NPTH-drl_map.pdf",
+      "sha256": "51bba96fdc25c0091a9050ce30451aef50651dc406a3e28b95aaaeca70ba3cc1"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-NPTH.drl",
+      "sha256": "a564032dc8901e69d38a483104fa2368f0158d2e8c6a57ce0ca655a740d6d27c"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-PTH-drl_map.pdf",
+      "sha256": "bbeca9fd36fcb0eaf3635b2d681674f44ce3d31d97bfd74e447acf585e2a9faf"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-PTH.drl",
+      "sha256": "31aeb122b6e4eea0dbd5b4040f5e40822156e4fc1af60b9e42d9860cfc2951ba"
+    },
+    {
+      "path": "manufacturing/power/gerbers/power-job.gbrjob",
+      "sha256": "281efd4127c9b75645867779c67205cb84a1f74b1a9c41bbc52d0ff07c5f5b4f"
+    },
+    {
+      "path": "manufacturing/power/jlc-smt-bom.csv",
+      "sha256": "8667e8057249aeb53ef6f7333c32a67a8abf815e54d6560c08a850dcf1abaa5a"
+    },
+    {
+      "path": "manufacturing/power/jlc-smt-cpl.csv",
+      "sha256": "1c5f4e9c3e5774d84c1b26cd53b4e2ce35a248aaf624ca24ffd2cfaa2d65a32b"
+    },
+    {
+      "path": "manufacturing/power/manual-bom.csv",
+      "sha256": "71ac2553b5a920b3578b5c658dc0495cea72acca510c0af50e96a1c03fcad9e3"
+    },
+    {
+      "path": "manufacturing/power/manual-cpl.csv",
+      "sha256": "7ca416927a0f44df4c38621f6e1f35f136d130be1d4768516f8354e635aa3dcb"
+    },
+    {
+      "path": "manufacturing/power/native-positions.csv",
+      "sha256": "c1454b0b8f4c19473f2ed602066d066c35bb39efd57967af3aca5d420f29860a"
+    },
+    {
+      "path": "manufacturing/power/power-gerbers.zip",
+      "sha256": "b7c1a8d036220e13b0c0a6bcbf32a65726e5f6832eb2786377af98110611170a"
+    },
+    {
+      "path": "manufacturing/power/schematic.pdf",
+      "sha256": "afc39bd5759e8d1b16f054682d59ee89cacad1911bbaea80bb9d0428989d1c62"
+    },
+    {
+      "path": "manufacturing/rotary/all-bom.csv",
+      "sha256": "9b155dab7fe4dc2c08ff7596a37b8c1895f64927717f009904a5e7c92396a019"
+    },
+    {
+      "path": "manufacturing/rotary/all-cpl.csv",
+      "sha256": "ab97fde284dea814ca36e73439729fdfe4488cd603d5ae7f21f659bd9b1c50a9"
+    },
+    {
+      "path": "manufacturing/rotary/assembly.pdf",
+      "sha256": "725277d866c8d525440a6f1743a87ed9b58dcc7106e04e2edefe228ee647149f"
+    },
+    {
+      "path": "manufacturing/rotary/board-info.json",
+      "sha256": "545012442be53ebe6a75f12189f7db1bee1ffcbb408a9ea86bce93a9ce42e871"
+    },
+    {
+      "path": "manufacturing/rotary/electrical-test.ipc",
+      "sha256": "b2d9afb9343c5bd5c2037c10772ed6a0ebaea27df533e39fd97e4767acf7236c"
+    },
+    {
+      "path": "manufacturing/rotary/export.log",
+      "sha256": "7a4d75df19ce4eb139c5645846388c65bf80c269a506bdc94410852f302ac980"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-B_Cu.gbl",
+      "sha256": "05a57033f9d456b3ba2ce4f67135b962e9ced7672422ceb6b26231a44fe74600"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-B_Mask.gbs",
+      "sha256": "b1d59f532d9368c557dca2973d22c219dbf81beec19dedbf490bddebc4e15e33"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-B_Paste.gbp",
+      "sha256": "fa74bfb2ea8492a234c2d24a37122c47c6f1a1c03ca77cbfd6fac2c1a7360d06"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-B_Silkscreen.gbo",
+      "sha256": "4879cb79cc0293fb88c8a20703c02c72cc9d069a42ca96aefd275a47dea1340d"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-Edge_Cuts.gm1",
+      "sha256": "f0d1a478e3f532acc95e78fe961e1277ccfb1b8dfd8ea6173ed55b0562415d99"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-F_Cu.gtl",
+      "sha256": "c78d6db07465c93c41b86bdf8adab5b15cbd02bd86d4323f838afb4efa1a6c79"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-F_Mask.gts",
+      "sha256": "75921b54f3344aee2023f19abbbea1680dd6715c02b7168accd129bcf03ede97"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-F_Paste.gtp",
+      "sha256": "1c88890d551b2efd13cf9b804b8ed88e802985089d0fdce9b7512f6ef6ff3984"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-F_Silkscreen.gto",
+      "sha256": "405b7396b726e3ce4b23cbb5f8e32bf2d849b7273f72dbb780fbf791ac276c0c"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-In1_Cu.g1",
+      "sha256": "5e0bf99e8e98d5e0e4baee780a84a6908fbed8dd90edb0c34864b329c710c1ed"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-In2_Cu.g2",
+      "sha256": "d862e3667d3945f2ac79859d9dda3e8757c51a327a553ce331f186a407e83550"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-NPTH-drl_map.pdf",
+      "sha256": "15ea263e20028de950af4689a9aa78520d629e3fab5388f14400dcea841363a4"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-NPTH.drl",
+      "sha256": "923781a1317909dbe5fa5ad708308c470047f5a72463537667fc70127a5d699e"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-PTH-drl_map.pdf",
+      "sha256": "aeb7b5021ee71b39299ac9b13bf3b5d869838f1cc7e6665f2a266d190f5d9321"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-PTH.drl",
+      "sha256": "67a6400a013f10216c33bdad05ffb74d5f9ec2ce347ca6f3e2c143500570b363"
+    },
+    {
+      "path": "manufacturing/rotary/gerbers/rotary-job.gbrjob",
+      "sha256": "8b0997c030bf8b3f9460f1cbede12ab081e77bd42174250e3eac5e5c7172bb46"
+    },
+    {
+      "path": "manufacturing/rotary/jlc-smt-bom.csv",
+      "sha256": "1f5a4f7d2f8bfef26c1d5a0048422ac037964317bc0a174e5ce097a4ced4d113"
+    },
+    {
+      "path": "manufacturing/rotary/jlc-smt-cpl.csv",
+      "sha256": "8d68d20173db66d9285ae01f1800e4e8e8e2ecf9ca4b33489c0319e3a6c63c33"
+    },
+    {
+      "path": "manufacturing/rotary/manual-bom.csv",
+      "sha256": "dbb4ed9a26f694dff6d57608d2b4d7c9e6085d88ab7fa879ea9228120b86eac2"
+    },
+    {
+      "path": "manufacturing/rotary/manual-cpl.csv",
+      "sha256": "9d7079e23b9e293e885fbb9ba98718c28e1e769509b67f8e2176a3c7b62cc626"
+    },
+    {
+      "path": "manufacturing/rotary/native-positions.csv",
+      "sha256": "945e28d26d59522f28efbd015c0084d587ba4794d551ad56613891dd1bcbaffc"
+    },
+    {
+      "path": "manufacturing/rotary/rotary-gerbers.zip",
+      "sha256": "a5bf09787113ab8478b6ae038efee14391d07ccc4f506eac4afec173c49e5ad7"
+    },
+    {
+      "path": "manufacturing/rotary/schematic.pdf",
+      "sha256": "df01e712844c37039424af98872c0bc0c8a8ed66832219dc26343f9597480414"
+    },
+    {
+      "path": "manufacturing/stereo-audio/all-bom.csv",
+      "sha256": "6d73af67b627be0f44a529d10328c4acc5f8821a608bef287f21d76a0bb57c8e"
+    },
+    {
+      "path": "manufacturing/stereo-audio/all-cpl.csv",
+      "sha256": "86ab09dd75014195d077951f07612ae0c550890bf3376a0f695c7f9168af2717"
+    },
+    {
+      "path": "manufacturing/stereo-audio/assembly.pdf",
+      "sha256": "c33f923b7265204c66d81724dedd83981d20051bfdd3f845c28456c8053acf81"
+    },
+    {
+      "path": "manufacturing/stereo-audio/board-info.json",
+      "sha256": "737691d072be6674955a2212cf5306292998231bccfa947c29fba053506f3bbe"
+    },
+    {
+      "path": "manufacturing/stereo-audio/electrical-test.ipc",
+      "sha256": "458902c031d5f2093a156e59dbc4febd0355f189f190d0155b8e8023fa3fb3e2"
+    },
+    {
+      "path": "manufacturing/stereo-audio/export.log",
+      "sha256": "791e4e2731b0ec7037197ec4eb060b3d0d532c45e9395e28059b3ef79bc030fe"
+    },
+    {
+      "path": "manufacturing/stereo-audio/gerbers/stereo-audio-B_Cu.gbl",
+      "sha256": "a0a8c82876d103c33d8b55d2c7dc596182bc61c2ea7dde24e305c55da1f00399"
+    },
+    {
+      "path": "manufacturing/stereo-audio/gerbers/stereo-audio-B_Mask.gbs",
+      "sha256": "32ca34e98a4df913ac63dfe31f13d6e5907e5e0f8c331febcb63f3037076998a"
+    },
+    {
+      "path": "manufacturing/stereo-audio/gerbers/stereo-audio-B_Paste.gbp",
+      "sha256": "b7cdf7b10104b7674be66430954fd7d6e972ad6c799e7d585da25b7ae1ee76a9"
+    },
+    {
+      "path": "manufacturing/stereo-audio/gerbers/stereo-audio-B_Silkscreen.gbo",
+      "sha256": "94ed20442328a559cd53899b9ac89806affe1ca7e62db443665a8eec9b599112"
+    },
+    {
+      "path": "manufacturing/stereo-audio/gerbers/stereo-audio-Edge_Cuts.gm1",
+      "sha256": "6b0ca795f9d428a6ebc668358860ff3c21c94a16ff9779b7e74aaaf615ff7806"
+    },
+    {
+      "path": "manufacturing/stereo-audio/gerbers/stereo-audio-F_Cu.gtl",
+      "sha256": "b471b12f5037cc53643007c4322d5c5ffe70ea3e53868f8ff42a12c6042d0d97"
+    },
+    {
+      "path": "manufacturing/stereo-audio/gerbers/stereo-audio-F_Mask.gts",
+      "sha256": "d14052b25a212403b9e76918aac8ae83f66a537aa17776af4c793457c07a50a6"
+    },
+    {
+      "path": "manufacturing/stereo-audio/gerbers/stereo-audio-F_Paste.gtp",
+      "sha256": "26e97dcf11df9348a3e4b38b69e8ca0d0dc984a5f57d87a044d70bb3fc05254a"
+    },
+    {
+      "path": "manufacturing/stereo-audio/gerbers/stereo-audio-F_Silkscreen.gto",
+      "sha256": "5f6c7ef579861b6f112063824e940f1cf5f8aee989ff4ea3bcab369a0fcb9755"
+    },
+    {
+      "path": "manufacturing/stereo-audio/gerbers/stereo-audio-NPTH-drl_map.pdf",
+      "sha256": "023abc29c96b9394907e4e2ae150d1eb70e2d1f4529aaf4b5b2587c4f581574f"
+    },
+    {
+      "path": "manufacturing/stereo-audio/gerbers/stereo-audio-NPTH.drl",
+      "sha256": "1222065976a1a4530f998d5dd905a5e352c5dd95d9978c6d9ebaf34f8d26da81"
+    },
+    {
+      "path": "manufacturing/stereo-audio/gerbers/stereo-audio-PTH-drl_map.pdf",
+      "sha256": "71d73bfda2e583dbd008a344ce9aaf92172d0263c502c48ad08a0d27b6e864db"
+    },
+    {
+      "path": "manufacturing/stereo-audio/gerbers/stereo-audio-PTH.drl",
+      "sha256": "06859c4b16a0239b15eb730a56e668c6a13cf93ebc8e7d72021f20a264c22eb7"
+    },
+    {
+      "path": "manufacturing/stereo-audio/gerbers/stereo-audio-job.gbrjob",
+      "sha256": "ae804ecdb93ddc722eb201cfd0799dbc75d1d5305c63ced560a14955bd726277"
+    },
+    {
+      "path": "manufacturing/stereo-audio/jlc-smt-bom.csv",
+      "sha256": "6f35f8c2a9bd50cdcef5a62299984b3215e92cdc8cb2d9ecbc800995c6fc619c"
+    },
+    {
+      "path": "manufacturing/stereo-audio/jlc-smt-cpl.csv",
+      "sha256": "829e743fbe0f656ae98f5246746cd6422bfc95d9225c7b85e896b19e28bc2e4e"
+    },
+    {
+      "path": "manufacturing/stereo-audio/manual-bom.csv",
+      "sha256": "2aef78b61654de12ade6e86b3e3df3293b024de19005858ce3aad09bd7ae5d1d"
+    },
+    {
+      "path": "manufacturing/stereo-audio/manual-cpl.csv",
+      "sha256": "75e5f4cc64b169bf63335efc5c0341ac00c5078db93ab09188808351f914fa66"
+    },
+    {
+      "path": "manufacturing/stereo-audio/native-positions.csv",
+      "sha256": "996ef4396790729098c349475b6ed6a645cba7d387f677fc18a93d2fa18678db"
+    },
+    {
+      "path": "manufacturing/stereo-audio/schematic.pdf",
+      "sha256": "5c9bd0581c7da38f5880c204ad5cc344a97a70f337d964a289a885f08a6b1c07"
+    },
+    {
+      "path": "manufacturing/stereo-audio/stereo-audio-gerbers.zip",
+      "sha256": "141c8e020b30f3bdcb67a6bd6ddbc111d399d7ff90ab505738eb337a1a06d301"
+    },
+    {
+      "path": "manufacturing/usb-io/all-bom.csv",
+      "sha256": "97fe6fafa423f940b108cdb4e2ecbe5e9bc5cb99c97c2a1758d6080063b7aab7"
+    },
+    {
+      "path": "manufacturing/usb-io/all-cpl.csv",
+      "sha256": "a204dd1f9c67503d0f62291d817e4962e2944d558707b059fd2be341fc387e66"
+    },
+    {
+      "path": "manufacturing/usb-io/assembly.pdf",
+      "sha256": "7852fd7930469503de9d640603b77bc9133e15a4e1c76ec29fcc5973fcca0362"
+    },
+    {
+      "path": "manufacturing/usb-io/board-info.json",
+      "sha256": "df39df1e29313c7b824a4f46b463e5df36b24520052b7aea0a5289b85448189e"
+    },
+    {
+      "path": "manufacturing/usb-io/electrical-test.ipc",
+      "sha256": "ac4eab266714e650cd60a6733d27801071ff04be7d9639f947ad8e7b21a622f2"
+    },
+    {
+      "path": "manufacturing/usb-io/export.log",
+      "sha256": "c4ad0a7cc587e1302153b2d676e1e0eba69f89d93691c160e3d01cb8bade9dd0"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-B_Cu.gbl",
+      "sha256": "c9418bb5875b0ffc5d24dd5a8ed93eb95b53834834c3389eb9cb988510e8bad3"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-B_Mask.gbs",
+      "sha256": "46c5be7d85be6a6fb3a6f354791a4dfab563c4ba2215f9fbee81d20593d95644"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-B_Paste.gbp",
+      "sha256": "91b41ca7e8939d1dea7930e7528b6b9941eb323bca323fe30d004fd28eb958ed"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-B_Silkscreen.gbo",
+      "sha256": "e68d51f8212bada0619ab17ddf8334f5946855d043d8934364d5a785e832a091"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-Edge_Cuts.gm1",
+      "sha256": "9ea93d40bde498a9dac51b482b6cdbf3a63e52e4d167df9c32d3ec8c3c7a5f33"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-F_Cu.gtl",
+      "sha256": "32d00e39d77bec3a0c3a1d1a0901c43f7a58d3c5c3908158c92aa299b258cad5"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-F_Mask.gts",
+      "sha256": "758a7dd22f959651669595f87eee8c13692c2edba60191859eae2bcf1206734a"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-F_Paste.gtp",
+      "sha256": "9347a63c97766336dcdd9f95cb5ac43359b5efeda371d013bf438d0a5ace941e"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-F_Silkscreen.gto",
+      "sha256": "75f829865adc92101af5773afe83ca6c115f76e7a2043b3e588f93e03c6e0b1f"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-In1_Cu.g1",
+      "sha256": "f84972bd80f5402a2adfd5020ef34662952f39ee9b944ef76d3e6cb8598c1f70"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-In2_Cu.g2",
+      "sha256": "4bfef3d340d5202bc1f57810e8a6aa783a51c1602c36a1f474e63366474941f9"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-NPTH-drl_map.pdf",
+      "sha256": "bcaf58d5ef7c76bad489a2eea763d2fe5ca5eebaac59e976f376c75459fea80a"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-NPTH.drl",
+      "sha256": "e5db392de08d82e18ad69e9650e6ddd8f428d09ec858ef28bc4806e8f2bb8538"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-PTH-drl_map.pdf",
+      "sha256": "a141b122dd15966f43e732525583d58167964da1fc51e1ab583bebce2bce69c4"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-PTH.drl",
+      "sha256": "e1d98d0b433cd6541864efa5b08c6bcc3c71f085e766947c26f9a6ae511eb94a"
+    },
+    {
+      "path": "manufacturing/usb-io/gerbers/usb-io-job.gbrjob",
+      "sha256": "2edb85d8ad399b2510efcbfe4d1f2ff3f1b6fb4aa4e5a556e6b73bcc9263d292"
+    },
+    {
+      "path": "manufacturing/usb-io/jlc-smt-bom.csv",
+      "sha256": "f1650483d08c8fe99c0d8c07b5f58b64db41d667741fe1f3d88e4960e34bf779"
+    },
+    {
+      "path": "manufacturing/usb-io/jlc-smt-cpl.csv",
+      "sha256": "686c7d54fe91daf12ae779f02f0f3266896cc2a3300dbc413653f7a409b215d8"
+    },
+    {
+      "path": "manufacturing/usb-io/manual-bom.csv",
+      "sha256": "14e1218056cccd67bba63fa5c88c03192577311ff34cc016b018c6accbaca4db"
+    },
+    {
+      "path": "manufacturing/usb-io/manual-cpl.csv",
+      "sha256": "f713a771047a616ffbd6c89d99d90a4cbccd21a7f8d0bf5b632badcbd3410d09"
+    },
+    {
+      "path": "manufacturing/usb-io/native-positions.csv",
+      "sha256": "8ce493051bc7c3716f4c8e7252080c42f0777f7e112dc6b12588ca9995a88a4c"
+    },
+    {
+      "path": "manufacturing/usb-io/schematic.pdf",
+      "sha256": "fd44581c02400d26b53ef4e7a899f718430664e0589a9df0ac1c0feb32634d67"
+    },
+    {
+      "path": "manufacturing/usb-io/usb-io-gerbers.zip",
+      "sha256": "d557c0aff9668e99e6f266c3ff7fda6ba4998f20f63675786789cd7f851f47e4"
+    }
+  ],
+  "acceptance_rows_not_tested": 26,
+  "manufacturing_ready": false,
+  "release_zip_issued": false
+}

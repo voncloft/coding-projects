@@ -1,0 +1,61 @@
+{
+  "qmk_commit": "08c662f286ddfd12a985f57b584b02eca5af0ae6",
+  "qmk_submodules": [
+    "6170ddf92d55be54c89b708d1882eea229edeb2c lib/chibios (heads/qmk-master)",
+    " 5a9ad82b6ba4f649cdb800e8c2bbc9be2d3ce767 lib/chibios-contrib (heads/qmk-master)",
+    "-6910c9d9165801d8827d628cb72eb7ea9dd538c5 lib/googletest",
+    " 549b97320d515bfca2f95c145a67bd13be968faa lib/lufa (heads/qmk-master)",
+    "-e19410f8f8a256609da72cff549598e0df6fa4cf lib/lvgl",
+    " d0c5cac430cc955b65efa0e899748853d9a80928 lib/pico-sdk (heads/qmk-master)",
+    " c2e3b4e10d281e7f0f694d3ecbd9f320977288cc lib/printf (heads/qmk-master)",
+    "-819dbc1e5d5926b17e27e00ca6d3d2988adae04e lib/vusb"
+  ],
+  "qmk_target": "personal/full_keyboard:via",
+  "rp2040_flash": "16 MiB W25Q128JVSIQ",
+  "esp32_platform": "espressif32@6.12.0",
+  "arduino_framework": "3.20017.241212+sha.dcc1105b",
+  "nimble": "2.5.0",
+  "chip": "esp32c3",
+  "flash_mode": "dio",
+  "flash_frequency": "80m",
+  "flash_size": "4MB",
+  "flash_images": {
+    "0x0000": "esp32/bootloader.bin",
+    "0x8000": "esp32/partitions.bin",
+    "0xe000": "esp32/boot_app0.bin",
+    "0x10000": "esp32/firmware.bin"
+  },
+  "flash_offset_evidence": "PlatformIO framework tools/platformio-build.py FLASH_EXTRA_IMAGES and default.csv factory app offset. See upstream source version above.",
+  "status": "Audit builds. Physical tests not performed; manufacturing release is on hold.",
+  "revision": "H - audit, not manufacturing release",
+  "source_files": {
+    "qmk/bridge.c": "e733f95998a101db567c1fc9682d88afd705a2e765ff96a344f531a73f56a4ac",
+    "qmk/config.h": "91e20f81b53f780c52c5fc2b318eb46a53e6189b070b004e83db79170c05a649",
+    "qmk/full_keyboard.c": "ad6d688163176537a179bed6a557842095496ac786afc62108de8c25cfaa2571",
+    "qmk/halconf.h": "2c416aff639ccc1712dbeb28a1e74a67766c1b9145a0a63300474586bcba0f20",
+    "qmk/keyboard.json": "a195bded103d0513e5f742b3cf23df66a90ec2d38f6d2bf52549b3b8188c6a35",
+    "qmk/keymaps/via/keymap.c": "bb62f6bb805368eb2fa82bd35f9a1c2f467efd96caa7c38a462b844fcdc8e259",
+    "qmk/keymaps/via/rules.mk": "c694b71bc1323fe6d0c312d9d2c0fbc039eb4a08bef54b99ec8fa99c9930ed6a",
+    "qmk/mcuconf.h": "0e456cafe7df5f7248fbc1e115bf97fa2b0aecc954f881c902b31b89bb53685a",
+    "qmk/power.c": "0e7b024a5ef9447191f69fea03c0a3aeabce918867beda9e23cc5d18f2eeae88",
+    "qmk/project.h": "90b9fe1f3fdff1521f5680e8f497d73d45094935d28d6c6a37a93f47f223a415",
+    "qmk/rules.mk": "d13cbb8662bd73121067e3c1aa6e8dc5c250986e9db9eb7f6a79c0e805c67660",
+    "qmk/via-definition.json": "d1f2657f5f425891c1cbc84c1edd1908ae8547ac25d09955837ac9f3bc99369d",
+    "qmk/wire.h": "122b0f6081cb4e3116cff6d570a061dfe2a980cb7be5749636c21768ba58c2eb",
+    "esp32/platformio.ini": "3f7f36a9962f5d4737eef4ada76c2eaaf413c79483ce08d2e0761b718b674776",
+    "esp32/src/main.cpp": "2ba3ccd606cfceda1f76cb5b91378b62825a5727e52e2e39640594344514e9fb",
+    "esp32/src/wire.h": "122b0f6081cb4e3116cff6d570a061dfe2a980cb7be5749636c21768ba58c2eb"
+  },
+  "archives": [
+    {
+      "archive": "qmk-build-sources.tar.gz",
+      "updated_files_verified": 13,
+      "sha256": "8b56719bccee88b1280e93f90165b66768d86bba06d5e533d0ad712e2d3a751d"
+    },
+    {
+      "archive": "esp32-project-libraries.tar.gz",
+      "updated_files_verified": 245,
+      "sha256": "38958887cda3782c72a0269b870fe39a8ba2054856b1fcb480aef00b04bcff27"
+    }
+  ]
+}

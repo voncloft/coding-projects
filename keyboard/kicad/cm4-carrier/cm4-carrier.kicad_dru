@@ -1,0 +1,8 @@
+(version 1)
+# Raspberry Pi CM4 datasheet sections 2.4 and 4.1: P/N skew < 0.15 mm.
+(rule "DSI intra-pair length matching"
+ (condition "A.inDiffPair('DSI_*')")
+ (constraint skew (max 0.15mm) (within_diff_pairs)))
+(rule "CM4 USB intra-pair length matching"
+ (condition "A.NetName == 'USB_DP' || A.NetName == 'USB_DM'")
+ (constraint skew (max 0.15mm)))

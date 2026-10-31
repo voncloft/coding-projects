@@ -1,0 +1,4 @@
+Found 0 violations
+Found 0 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to /home/von/Documents/Codex/2026-09-12/loo/work/full-system/checks/stereo-audio-drc.json

@@ -1,0 +1,5 @@
+{
+  "change": "Net labels corrected; physical copper and connector pin positions unchanged",
+  "GPIO24": "BRIDGE_TX -> J4.1",
+  "GPIO25": "BRIDGE_RX -> J4.2"
+}

@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "original_board_rejected": true,
+  "skew_violations": [
+    {
+      "description": "Skew between tracks out of range (rule 'DSI intra-pair length matching' max skew 0.1500 mm; actual -0.3053 mm; target net length 30.9820 mm (from DSI_CLK_N); actual 30.6768 mm)",
+      "items": [
+        {
+          "description": "Track [DSI_CLK_P] on B.Cu, length 4.1485 mm",
+          "pos": {
+            "x": 60.026998,
+            "y": 44.8
+          },
+          "uuid": "d4bb3e8f-37a5-400e-a3cc-adbc74a6e036"
+        }
+      ],
+      "severity": "error",
+      "type": "skew_out_of_range"
+    },
+    {
+      "description": "Skew between tracks out of range (rule 'DSI intra-pair length matching' max skew 0.1500 mm; actual -0.3053 mm; target net length 31.1798 mm (from DSI_D0_N); actual 30.8746 mm)",
+      "items": [
+        {
+          "description": "Track [DSI_D0_P] on B.Cu, length 0.7018 mm",
+          "pos": {
+            "x": 72.8,
+            "y": 40.7
+          },
+          "uuid": "ffe30089-0a78-4dfa-a712-72a4748e2536"
+        }
+      ],
+      "severity": "error",
+      "type": "skew_out_of_range"
+    },
+    {
+      "description": "Skew between tracks out of range (rule 'DSI intra-pair length matching' max skew 0.1500 mm; actual -0.3053 mm; target net length 31.0715 mm (from DSI_D1_N); actual 30.7662 mm)",
+      "items": [
+        {
+          "description": "Track [DSI_D1_P] on B.Cu, length 8.7660 mm",
+          "pos": {
+            "x": 64.033989,
+            "y": 42.2
+          },
+          "uuid": "ffcd377f-717a-40c7-bf68-460a4e85fac8"
+        }
+      ],
+      "severity": "error",
+      "type": "skew_out_of_range"
+    },
+    {
+      "description": "Skew between tracks out of range (rule 'DSI intra-pair length matching' max skew 0.1500 mm; actual -0.3053 mm; target net length 30.9128 mm (from DSI_D2_N); actual 30.6075 mm)",
+      "items": [
+        {
+          "description": "Track [DSI_D2_P] on B.Cu, length 0.7018 mm",
+          "pos": {
+            "x": 72.8,
+            "y": 45.2
+          },
+          "uuid": "f35a19b0-3a5f-48ce-a1dd-219a885806b0"
+        }
+      ],
+      "severity": "error",
+      "type": "skew_out_of_range"
+    },
+    {
+      "description": "Skew between tracks out of range (rule 'DSI intra-pair length matching' max skew 0.1500 mm; actual -0.9062 mm; target net length 26.1776 mm (from DSI_D3_N); actual 25.2715 mm)",
+      "items": [
+        {
+          "description": "Track [DSI_D3_P] on B.Cu, length 0.7018 mm",
+          "pos": {
+            "x": 72.8,
+            "y": 46.7
+          },
+          "uuid": "d3532184-e4f2-4a6b-9e6b-2c2300b8dd68"
+        }
+      ],
+      "severity": "error",
+      "type": "skew_out_of_range"
+    },
+    {
+      "description": "Skew between tracks out of range (rule 'CM4 USB intra-pair length matching' max skew 0.1500 mm; actual -0.1542 mm; target net length 52.7356 mm (from USB_DP); actual 52.5814 mm)",
+      "items": [
+        {
+          "description": "Track [USB_DM] on B.Cu, length 1.0198 mm",
+          "pos": {
+            "x": 50.5,
+            "y": 27.4
+          },
+          "uuid": "d4edcddb-f1da-4ef7-aedb-277e3cd2a0ab"
+        }
+      ],
+      "severity": "error",
+      "type": "skew_out_of_range"
+    }
+  ]
+}

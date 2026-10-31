@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 360px;
+  font: 14px/1.4 "Segoe UI", sans-serif;
+  background: #121417;
+  color: #f3f4f6;
+}
+
+.panel {
+  padding: 16px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font: inherit;
+  cursor: pointer;
+  color: #121417;
+  background: #f6b73c;
+}
+
+button:hover {
+  background: #ffc857;
+}
+
+.secondary-button {
+  color: #f3f4f6;
+  background: #374151;
+}
+
+.secondary-button:hover {
+  background: #4b5563;
+}
+
+.hint {
+  margin: 12px 0 16px;
+  color: #c7cbd1;
+}
+
+code {
+  font-family: "Cascadia Code", monospace;
+  font-size: 12px;
+}
+
+.user-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #2d333b;
+  border-radius: 10px;
+  background: #1b2027;
+}
+
+.user-row button {
+  background: #f87171;
+  color: #fff;
+}
+
+.user-row button:hover {
+  background: #ef4444;
+}
+
+.empty-state {
+  margin: 0;
+  color: #9ca3af;
+}

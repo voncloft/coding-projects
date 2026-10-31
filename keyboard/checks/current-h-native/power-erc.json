@@ -1,0 +1,59 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-21T04:08:03-0400",
+    "kicad_version": "9.0.7",
+    "sheets": [
+        {
+            "path": "/BQ25798 two-cell charger and power path/",
+            "uuid_path": "/135a6f82-12dc-4820-8dea-c02646392a74/3a1c2312-3f1d-4c09-8f09-d2e6c1fa7597",
+            "violations": []
+        },
+        {
+            "path": "/Charger bootstrap, limits and battery temperature/",
+            "uuid_path": "/135a6f82-12dc-4820-8dea-c02646392a74/eddaba61-3bcf-47f7-a3e7-5567b2863e46",
+            "violations": []
+        },
+        {
+            "path": "/Always-on 3.3 V/",
+            "uuid_path": "/135a6f82-12dc-4820-8dea-c02646392a74/2ddb92ce-862b-4c9b-82ff-3976aadd6721",
+            "violations": []
+        },
+        {
+            "path": "/Power controls and fuel gauge/",
+            "uuid_path": "/135a6f82-12dc-4820-8dea-c02646392a74/6462266e-efbb-4ef8-b23b-550808717b96",
+            "violations": []
+        },
+        {
+            "path": "/+5V_CORE regulated supply/",
+            "uuid_path": "/135a6f82-12dc-4820-8dea-c02646392a74/17601371-20f7-4796-8b8e-cccba7f9efe2",
+            "violations": []
+        },
+        {
+            "path": "/+5V_IO regulated supply/",
+            "uuid_path": "/135a6f82-12dc-4820-8dea-c02646392a74/43a65173-e566-4793-b71e-93260a29dce6",
+            "violations": []
+        },
+        {
+            "path": "/+3V3_AUDIO regulated supply/",
+            "uuid_path": "/135a6f82-12dc-4820-8dea-c02646392a74/264d450c-b016-4338-aa4d-06a6e3675521",
+            "violations": []
+        },
+        {
+            "path": "/Hardware RGB current limit/",
+            "uuid_path": "/135a6f82-12dc-4820-8dea-c02646392a74/9bd1c74c-0d33-4898-8ab1-c4ba17e755c6",
+            "violations": []
+        },
+        {
+            "path": "/Power connectors, fuse and mechanical mounting/",
+            "uuid_path": "/135a6f82-12dc-4820-8dea-c02646392a74/64cc98e1-1666-40e9-ac27-41b297f5abb3",
+            "violations": []
+        },
+        {
+            "path": "/",
+            "uuid_path": "/135a6f82-12dc-4820-8dea-c02646392a74",
+            "violations": []
+        }
+    ],
+    "source": "power.kicad_sch"
+}

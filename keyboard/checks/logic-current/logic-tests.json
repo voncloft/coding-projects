@@ -1,0 +1,193 @@
+{
+  "scope": "Actual firmware source with mocked hardware APIs. Address/undefined behavior sanitizers enabled; LeakSanitizer disabled because sandbox ptrace is unavailable. No radio or electrical hardware is exercised.",
+  "sources": {
+    "firmware/qmk/bridge.c": "e733f95998a101db567c1fc9682d88afd705a2e765ff96a344f531a73f56a4ac",
+    "firmware/qmk/config.h": "91e20f81b53f780c52c5fc2b318eb46a53e6189b070b004e83db79170c05a649",
+    "firmware/qmk/full_keyboard.c": "ad6d688163176537a179bed6a557842095496ac786afc62108de8c25cfaa2571",
+    "firmware/qmk/halconf.h": "2c416aff639ccc1712dbeb28a1e74a67766c1b9145a0a63300474586bcba0f20",
+    "firmware/qmk/keyboard.json": "a195bded103d0513e5f742b3cf23df66a90ec2d38f6d2bf52549b3b8188c6a35",
+    "firmware/qmk/keymaps/via/keymap.c": "bb62f6bb805368eb2fa82bd35f9a1c2f467efd96caa7c38a462b844fcdc8e259",
+    "firmware/qmk/keymaps/via/rules.mk": "c694b71bc1323fe6d0c312d9d2c0fbc039eb4a08bef54b99ec8fa99c9930ed6a",
+    "firmware/qmk/mcuconf.h": "0e456cafe7df5f7248fbc1e115bf97fa2b0aecc954f881c902b31b89bb53685a",
+    "firmware/qmk/power.c": "0e7b024a5ef9447191f69fea03c0a3aeabce918867beda9e23cc5d18f2eeae88",
+    "firmware/qmk/project.h": "90b9fe1f3fdff1521f5680e8f497d73d45094935d28d6c6a37a93f47f223a415",
+    "firmware/qmk/rules.mk": "d13cbb8662bd73121067e3c1aa6e8dc5c250986e9db9eb7f6a79c0e805c67660",
+    "firmware/qmk/via-definition.json": "d1f2657f5f425891c1cbc84c1edd1908ae8547ac25d09955837ac9f3bc99369d",
+    "firmware/qmk/wire.h": "122b0f6081cb4e3116cff6d570a061dfe2a980cb7be5749636c21768ba58c2eb",
+    "firmware/esp32/platformio.ini": "3f7f36a9962f5d4737eef4ada76c2eaaf413c79483ce08d2e0761b718b674776",
+    "firmware/esp32/src/main.cpp": "2ba3ccd606cfceda1f76cb5b91378b62825a5727e52e2e39640594344514e9fb",
+    "firmware/esp32/src/wire.h": "122b0f6081cb4e3116cff6d570a061dfe2a980cb7be5749636c21768ba58c2eb",
+    "tests/qmk_logic/harness.c": "2a6902a80dae0b73cca37128e5fba8eec5c623862128376cd2a1678db1ceaf43",
+    "tests/qmk_logic/stubs/bluetooth.h": "aaba31db1986df007e16cdbedce16a7fb6fc3e8df9b09a65d65b05e3636d01d3",
+    "tests/qmk_logic/stubs/dynamic_keymap.h": "f2771c7d566cf86737ae6b36dbae892d0f858c274257fd050ffc9cc3d6c2dad9",
+    "tests/qmk_logic/stubs/hardware/watchdog.h": "0ab9dc8c025b1a25c6fede9876925c9de4ce3347b8e7a8be28defa1ef1b34932",
+    "tests/qmk_logic/stubs/keymap_introspection.h": "8b7e5f2939a12a62cb855f0ea71a2200b11c3203f2809da997bb50560f5836d7",
+    "tests/qmk_logic/stubs/quantum.h": "e0dfa1fb666ed3cd2d42954f8166eafc922e2f6bd56efb6419418c37113eb199",
+    "tests/esp_logic/harness.cpp": "ce50f0a52e4407cf1c70f10f9a5417598ba085da89ef11f07c8b869b29fa744f",
+    "tests/esp_logic/stubs/Arduino.h": "98605d3c60bb685f887729f870bb007ae0efd6ef06dbae161a8a0d0fd91e2dc8",
+    "tests/esp_logic/stubs/NimBLEDevice.h": "054e4638bb723998e02a30e279bb280f9fd100655ca4cd3b3face709ba59d4a5",
+    "tests/esp_logic/stubs/NimBLEHIDDevice.h": "f50542e3bc49d2481bf50c8c9927c1101e17cb3df6895598babe02da31018743",
+    "tests/esp_logic/stubs/Preferences.h": "e98bfe080b69578a2aac31d4e3f9de6c4ece429a787ddf3389bf716966c912f5",
+    "tests/esp_logic/stubs/driver/rmt.h": "fc75141ea3b812a843f154e679cb82dae13c1a53bfa972736f4edfa3e7ae7c09",
+    "tests/esp_logic/stubs/freertos/queue.h": "73024f5ec84bed3ef458adb4d804984625851b81a0eb723e6844e5daf4adea4d"
+  },
+  "results": [
+    {
+      "family": "qmk",
+      "case": "release-during-off",
+      "exit": 0,
+      "output": "PASS release-during-off\n"
+    },
+    {
+      "family": "qmk",
+      "case": "host-at-timer-zero",
+      "exit": 0,
+      "output": "PASS host-at-timer-zero\n"
+    },
+    {
+      "family": "qmk",
+      "case": "queued-encoder-steps",
+      "exit": 0,
+      "output": "PASS queued-encoder-steps\n"
+    },
+    {
+      "family": "qmk",
+      "case": "banks-and-keymap",
+      "exit": 0,
+      "output": "PASS banks-and-keymap\n"
+    },
+    {
+      "family": "qmk",
+      "case": "tap-gates",
+      "exit": 0,
+      "output": "PASS tap-gates\n"
+    },
+    {
+      "family": "qmk",
+      "case": "encoder-hold-wrap",
+      "exit": 0,
+      "output": "PASS encoder-hold-wrap\n"
+    },
+    {
+      "family": "qmk",
+      "case": "host-short-and-wrap",
+      "exit": 0,
+      "output": "PASS host-short-and-wrap\n"
+    },
+    {
+      "family": "qmk",
+      "case": "rgb-cap",
+      "exit": 0,
+      "output": "PASS rgb-cap\n"
+    },
+    {
+      "family": "esp",
+      "case": "sequence-255",
+      "exit": 0,
+      "output": "PASS sequence-255\n"
+    },
+    {
+      "family": "esp",
+      "case": "soc-all-values",
+      "exit": 0,
+      "output": "PASS soc-all-values\n"
+    },
+    {
+      "family": "esp",
+      "case": "soc-stale-at-zero",
+      "exit": 0,
+      "output": "PASS soc-stale-at-zero\n"
+    },
+    {
+      "family": "esp",
+      "case": "soc-wrap",
+      "exit": 0,
+      "output": "PASS soc-wrap\n"
+    },
+    {
+      "family": "esp",
+      "case": "ir-cancel-upload-on-learn",
+      "exit": 0,
+      "output": "PASS ir-cancel-upload-on-learn\n"
+    },
+    {
+      "family": "esp",
+      "case": "ir-malformed-learn",
+      "exit": 0,
+      "output": "PASS ir-malformed-learn\n"
+    },
+    {
+      "family": "esp",
+      "case": "ir-malformed-commit",
+      "exit": 0,
+      "output": "PASS ir-malformed-commit\n"
+    },
+    {
+      "family": "esp",
+      "case": "ir-upload-boundaries",
+      "exit": 0,
+      "output": "PASS ir-upload-boundaries\n"
+    },
+    {
+      "family": "esp",
+      "case": "ir-incomplete-and-offset",
+      "exit": 0,
+      "output": "PASS ir-incomplete-and-offset\n"
+    },
+    {
+      "family": "esp",
+      "case": "ir-duration-and-driver-faults",
+      "exit": 0,
+      "output": "PASS ir-duration-and-driver-faults\n"
+    },
+    {
+      "family": "esp",
+      "case": "ir-learn-valid",
+      "exit": 0,
+      "output": "PASS ir-learn-valid\n"
+    },
+    {
+      "family": "esp",
+      "case": "ir-learn-short-pulse",
+      "exit": 0,
+      "output": "PASS ir-learn-short-pulse\n"
+    },
+    {
+      "family": "esp",
+      "case": "ble-host-isolation",
+      "exit": 0,
+      "output": "PASS ble-host-isolation\n"
+    },
+    {
+      "family": "esp",
+      "case": "ble-stale-auth-epoch",
+      "exit": 0,
+      "output": "PASS ble-stale-auth-epoch\n"
+    },
+    {
+      "family": "esp",
+      "case": "ble-passkey",
+      "exit": 0,
+      "output": "PASS ble-passkey\n"
+    },
+    {
+      "family": "esp",
+      "case": "ble-overflow-and-timeout",
+      "exit": 0,
+      "output": "PASS ble-overflow-and-timeout\n"
+    },
+    {
+      "family": "esp",
+      "case": "ble-report-timeout",
+      "exit": 0,
+      "output": "PASS ble-report-timeout\n"
+    },
+    {
+      "family": "esp",
+      "case": "encoder-and-debounce",
+      "exit": 0,
+      "output": "PASS encoder-and-debounce\n"
+    }
+  ],
+  "passed": true
+}

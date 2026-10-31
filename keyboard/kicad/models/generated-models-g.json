@@ -1,0 +1,15 @@
+[
+  {
+    "file": "Texas_UQFN-10_1.5x2mm_P0.5mm.step",
+    "source": "TI TS3USB221A datasheet RSE0010A outline 4220307/A 03/2020",
+    "description": "Dimensioned maximum body envelope and simplified terminals, generated for assembly clearance checks",
+    "bounds_mm": [
+      -0.775,
+      -1.025,
+      0,
+      0.775,
+      1.025,
+      0.6
+    ]
+  }
+]

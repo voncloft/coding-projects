@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "archives": [
+    {
+      "archive": "qmk-build-sources.tar.gz",
+      "updated_files_verified": 13,
+      "sha256": "8b56719bccee88b1280e93f90165b66768d86bba06d5e533d0ad712e2d3a751d"
+    },
+    {
+      "archive": "esp32-project-libraries.tar.gz",
+      "updated_files_verified": 245,
+      "sha256": "38958887cda3782c72a0269b870fe39a8ba2054856b1fcb480aef00b04bcff27"
+    }
+  ],
+  "scope": "Replaced project sources and relink objects verified byte for byte against the current successful build. No physical flashing."
+}

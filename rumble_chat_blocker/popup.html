@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rumble Chat Blocker</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="panel">
+      <header class="panel-header">
+        <h1>Blocked Users</h1>
+        <div class="actions">
+          <button id="open-options" type="button" class="secondary-button">Preferences</button>
+          <button id="copy-filters" type="button">Copy uBO Filters</button>
+        </div>
+      </header>
+      <p class="hint">Rules are generated as <code>rumble.com##button.js-user-tag:has-text(name):upward(.chat-history--row)</code>.</p>
+      <ul id="blocked-users" class="user-list"></ul>
+      <p id="empty-state" class="empty-state">No blocked users yet.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

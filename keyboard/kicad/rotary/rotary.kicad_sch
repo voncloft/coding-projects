@@ -1,0 +1,5 @@
+(kicad_sch (version 20250114) (generator "eeschema") (uuid e89718d9-bc1e-4107-a932-3a67c82d1b3b) (paper "A2") (lib_symbols)
+(text "Rotary input: 30 detents, push button" (at 20 20 0) (effects (font (size 3 3)) (justify left)) (uuid 9d63f3c0-1106-43ba-8d96-9975cecd9d19))
+(text "Rev F integrated keyboard computer. See validation reports." (at 20 30 0) (effects (font (size 1.4 1.4)) (justify left)) (uuid 5b3c45a0-ebc6-4b71-9783-7a1326379750))
+(sheet (at 20 50) (size 120 26) (fields_autoplaced yes) (stroke (width 0.15) (type default)) (fill (color 0 0 0 0.0000)) (uuid ce5de7dc-332d-43c0-8bd0-314835e6727c) (property "Sheetname" "ALPS rotary input" (at 20 49 0) (effects (font (size 1.3 1.3)) (justify left bottom))) (property "Sheetfile" "encoder.kicad_sch" (at 20 77 0) (effects (font (size 1.1 1.1)) (justify left top))) (instances (project "rotary" (path "/e89718d9-bc1e-4107-a932-3a67c82d1b3b" (page "2")))))
+)

@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "KeyboardF") (type "KiCad") (uri "${KIPRJMOD}/KeyboardF.kicad_sym") (options "") (descr "Verified manufacturer pin maps")))

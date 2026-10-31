@@ -1,0 +1,45 @@
+Comment,Designator,Footprint,LCSC Part #,Quantity,Specification
+"PROCUREMENT SPEC: 4.7uF, >= 10.0 V, X5R, 20%, 0603, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification.",C2,C_0603_1608Metric,,1,"4.7uF, >= 10.0 V, X5R, 20%, 0603, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification."
+"PROCUREMENT SPEC: 100nF, >= 25.0 V, X7R, 10%, 0402, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification.","C3,C4,C5,C6,C7,C8,C9",C_0402_1005Metric,,7,"100nF, >= 25.0 V, X7R, 10%, 0402, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification."
+"PROCUREMENT SPEC: 2.2uF, >= 10.0 V, X5R, 20%, 0603, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification.","C10,C11",C_0603_1608Metric,,2,"2.2uF, >= 10.0 V, X5R, 20%, 0603, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification."
+"PROCUREMENT SPEC: 30pF, >= 50 V, C0G, 5%, 0603, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification.","C12,C13",C_0603_1608Metric,,2,"30pF, >= 50 V, C0G, 5%, 0603, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification."
+CC0603KRX7R9BB104,"C14,C15,C16,C17,C18,C21,C24,C27,C33,C34",C_0603_1608Metric,C14663,10,"100nF, >= 25.0 V, X7R, 10%, 0603, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification."
+EEE-FK1A151P,"C19,C22,C25,C29,C36",CP_Elec_6.3x5.4,,5,Exact part and native footprint; no electrical substitution without review.
+"PROCUREMENT SPEC: 1uF, >= 10.0 V, X5R, 20%, 0603, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification.","C20,C23,C26,C35",C_0603_1608Metric,,4,"1uF, >= 10.0 V, X5R, 20%, 0603, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification."
+"PROCUREMENT SPEC: 10uF, >= 10.0 V, X5R, 20%, 0805, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification.",C28,C_0805_2012Metric,,1,"10uF, >= 10.0 V, X5R, 20%, 0805, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification."
+"PROCUREMENT SPEC: 1uF, >= 50.0 V, X5R, 20%, 0805, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification.","C30,C32",C_0805_2012Metric,,2,"1uF, >= 50.0 V, X5R, 20%, 0805, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification."
+CC0603KRX7R9BB104,"C31,C51,C54,C55,C56",C_0603_1608Metric,C14663,5,"100nF, >= 50.0 V, X7R, 10%, 0603, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification."
+CL31B106KBHNNNE,C50,C_1206_3216Metric,C89632,1,"10uF, >= 50.0 V, X7R, 20%, 1206, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification."
+GRM32ER71E226KE15K,"C52,C53",C_1210_3225Metric,C5646288,2,"22uF, >= 25.0 V, X7R, 20%, 1210, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification."
+BZT52C12,D1,D_SOD-123,,1,Exact part and native footprint; no electrical substitution without review.
+SS14,"D10,D11,D12",D_SMA,C2480,3,Exact part and native footprint; no electrical substitution without review.
+USB4105-GF-A-060,"J1,J5,J6",USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal,C3025063,3,Exact part and native footprint; no electrical substitution without review.
+67643-3910,"J2,J3,J4",USB_A_Molex_67643_Horizontal,,3,Exact part and native footprint; no electrical substitution without review.
+BM03B-GHS-TBT(LF)(SN),J7,JST_GH_BM03B-GHS-TBT_1x03-1MP_P1.25mm_Vertical,,1,Exact part and native footprint; no electrical substitution without review.
+BM04B-GHS-TBT(LF)(SN),J8,JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical,,1,Exact part and native footprint; no electrical substitution without review.
+B2P-VH(LF)(SN),J9,JST_VH_B2P-VH_1x02_P3.96mm_Vertical,,1,Exact part and native footprint; no electrical substitution without review.
+B4P-VH(LF)(SN),J10,JST_VH_B4P-VH_1x04_P3.96mm_Vertical,,1,Exact part and native footprint; no electrical substitution without review.
+BM08B-GHS-TBT(LF)(SN),J11,JST_GH_BM08B-GHS-TBT_1x08-1MP_P1.25mm_Vertical,,1,Exact part and native footprint; no electrical substitution without review.
+SRP5030T-4R7M,L1,L_Bourns_SRP5030T,C2045677,1,Exact part and native footprint; no electrical substitution without review.
+AO4407A,"Q1,Q2",SOIC-8_3.9x4.9mm_P1.27mm,C16072,2,Exact part and native footprint; no electrical substitution without review.
+MMBT3904(RANGE:100-300),"Q10,Q11",SOT-23,C20526,2,Exact part and native footprint; no electrical substitution without review.
+0603WAF1002T5E,"R1,R2,R3,R4,R5,R6,R7,R8,R9,R10,R11,R12,R13,R14,R15,R16,R17,R18,R19,R21,R24,R25,R28,R31,R34,R37,R44,R54,R56",R_0603_1608Metric,C25804,29,"10k ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C."
+0603WAF1202T5E,R20,R_0603_1608Metric,C22790,1,"12k ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C."
+"PROCUREMENT SPEC: 5.1k ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C.","R22,R23,R39",R_0603_1608Metric,C23186,3,"5.1k ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C."
+"PROCUREMENT SPEC: 43.2k ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C.","R26,R29,R32,R42",R_0603_1608Metric,,4,"43.2k ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C."
+0603WAF1003T5E,"R27,R30,R33,R35,R36,R41,R43,R51,R52,R53",R_0603_1608Metric,C25803,10,"100k ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C."
+"PROCUREMENT SPEC: 22.6k ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C.",R38,R_0603_1608Metric,,1,"22.6k ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C."
+"PROCUREMENT SPEC: 49.9k ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C.",R40,R_0603_1608Metric,,1,"49.9k ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C."
+0603WAF2203T5E,R50,R_0603_1608Metric,C22961,1,"220k ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C."
+0603WAF1502T5E,R55,R_0603_1608Metric,C22809,1,"15k ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C."
+JS102011SAQN,SW1,SW_SPDT_CK_JS102011SAQN,,1,Exact part and native footprint; no electrical substitution without review.
+USB2517-JZX,U1,QFN-64-1EP_9x9mm_P0.5mm_EP4.7x4.7mm,C1521556,1,Exact part and native footprint; no electrical substitution without review.
+AP63203WU-7,U2,TSOT-23-6,C780769,1,Exact part and native footprint; no electrical substitution without review.
+USBLC6-2SC6,"U3,U42,U50,U51,U52",SOT-23-6,C7519,5,Exact part and native footprint; no electrical substitution without review.
+"74LVC1G08GV,125","U4,U5,U6",SOT-23-5,,3,Exact part and native footprint; no electrical substitution without review.
+TPS25810RVCR,U20,QFN-20-1EP_3x4mm_P0.5mm_EP1.65x2.65mm,C473913,1,Exact part and native footprint; no electrical substitution without review.
+HUSB238_002DD,U21,WDFN-10-1EP_3x3mm_P0.5mm_EP1.8x2.5mm,C7471904,1,Exact part and native footprint; no electrical substitution without review.
+TPS2553DBVR,"U33,U34,U35,U36",SOT-23-6,C55266,4,Exact part and native footprint; no electrical substitution without review.
+TS3USB221ARSER,U40,Texas_UQFN-10_1.5x2mm_P0.5mm,C128396,1,Exact part and native footprint; no electrical substitution without review.
+SN74LVC1G04DBVR,U41,SOT-23-5,C7827,1,Exact part and native footprint; no electrical substitution without review.
+ABM8-24.000MHZ-18-D2Y-T,Y1,Crystal_SMD_3225-4Pin_3.2x2.5mm,,1,Exact part and native footprint; no electrical substitution without review.

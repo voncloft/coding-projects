@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="pre-audience">
+  <?dbhtml filename="audience.html"?>
+
+  <title>Audience</title>
+
+  <para>
+    Installing vanilla LFS has all its perks and upsides, alongside an
+    educational benefit. This book aims to solve another problem, where users
+    may need to build or run something for 32-bit on a 64-bit machine, where
+    64-bit is the architecture they built LFS for. <xref
+    linkend="pre-multilib"/> covers why this may be the case and how multilib
+    works.
+  </para>
+
+  <para>
+    MLFS is recommended to be installed after having installed LFS at least
+    once beforehand to be better equipped with the knowledge of how LFS is
+    supposed to work.
+  </para>
+
+</sect1>
+

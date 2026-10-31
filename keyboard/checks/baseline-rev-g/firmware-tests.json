@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "power_scenarios": [
+    "startup",
+    "pd",
+    "charge-while-off",
+    "wrong-part",
+    "wrong-cell-count",
+    "no-battery",
+    "open-ntc",
+    "hot-ntc",
+    "low-start",
+    "low-shutdown",
+    "overcurrent",
+    "fault",
+    "bus-loss",
+    "halt-sequence",
+    "ready-generation",
+    "shed-loads",
+    "no-restart-after-low",
+    "programming-halt",
+    "programming-timeout",
+    "default-usb",
+    "typec-1a5",
+    "false-pd-voltage"
+  ],
+  "cross_language_packet_vectors": 771,
+  "corruption_recovery_trials": 400,
+  "scope": "Shipped C power state machine against a register/GPIO fixture; C and Python wire format compatibility. No electrical hardware exercised."
+}

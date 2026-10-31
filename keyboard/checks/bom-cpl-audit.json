@@ -1,0 +1,58 @@
+[
+  {
+    "board": "battery-light",
+    "populated": 5,
+    "smt": 5,
+    "manual_or_mixed": 0,
+    "bom_cpl_match": true
+  },
+  {
+    "board": "cm4-carrier",
+    "populated": 44,
+    "smt": 41,
+    "manual_or_mixed": 3,
+    "bom_cpl_match": true
+  },
+  {
+    "board": "control",
+    "populated": 29,
+    "smt": 25,
+    "manual_or_mixed": 4,
+    "bom_cpl_match": true
+  },
+  {
+    "board": "keyboard",
+    "populated": 471,
+    "smt": 466,
+    "manual_or_mixed": 5,
+    "bom_cpl_match": true
+  },
+  {
+    "board": "power",
+    "populated": 123,
+    "smt": 118,
+    "manual_or_mixed": 5,
+    "bom_cpl_match": true
+  },
+  {
+    "board": "rotary",
+    "populated": 8,
+    "smt": 7,
+    "manual_or_mixed": 1,
+    "bom_cpl_match": true
+  },
+  {
+    "board": "stereo-audio",
+    "populated": 16,
+    "smt": 15,
+    "manual_or_mixed": 1,
+    "bom_cpl_match": true
+  },
+  {
+    "board": "usb-io",
+    "populated": 133,
+    "smt": 125,
+    "manual_or_mixed": 8,
+    "bom_cpl_match": true
+  }
+]

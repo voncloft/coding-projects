@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rumble Chat Clock</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="panel">
+      <p class="eyebrow">Rumble Chat Clock</p>
+      <h1>Clock Settings</h1>
+      <p class="intro">Configure timezone, date layout, weekday display, month names, time details, and colors for the clock injected on <code>https://rumble.com/chat</code>.</p>
+
+      <section class="group">
+        <p class="group-title">Timezone</p>
+        <div class="grid">
+          <label class="field" for="time-zone-select">
+            <span>Preset</span>
+            <select id="time-zone-select">
+              <option value="LOCAL">Browser local time</option>
+              <option value="America/Indiana/Indianapolis">Fort Wayne, Indiana</option>
+              <option value="UTC">UTC</option>
+              <option value="America/New_York">New York</option>
+              <option value="America/Chicago">Chicago</option>
+              <option value="America/Denver">Denver</option>
+              <option value="America/Los_Angeles">Los Angeles</option>
+              <option value="__custom__">Custom IANA timezone</option>
+            </select>
+          </label>
+
+          <label class="field" for="custom-time-zone">
+            <span>Custom timezone</span>
+            <input
+              id="custom-time-zone"
+              type="text"
+              placeholder="America/Chicago"
+              spellcheck="false"
+              autocomplete="off"
+            >
+          </label>
+        </div>
+      </section>
+
+      <section class="group">
+        <div class="group-head">
+          <p class="group-title">Date</p>
+          <label class="toggle" for="show-date-input">
+            <input id="show-date-input" type="checkbox">
+            <span>Show date</span>
+          </label>
+        </div>
+
+        <fieldset id="date-controls" class="stack">
+          <div class="grid">
+            <label class="field" for="weekday-style-select">
+              <span>Weekday</span>
+              <select id="weekday-style-select">
+                <option value="off">Off</option>
+                <option value="short">Mon</option>
+                <option value="long">Monday</option>
+                <option value="narrow">M</option>
+              </select>
+            </label>
+
+            <label class="field" for="date-order-select">
+              <span>Date order</span>
+              <select id="date-order-select">
+                <option value="MDY">Month / Day / Year</option>
+                <option value="DMY">Day / Month / Year</option>
+                <option value="YMD">Year / Month / Day</option>
+                <option value="YDM">Year / Day / Month</option>
+                <option value="MYD">Month / Year / Day</option>
+                <option value="DYM">Day / Year / Month</option>
+              </select>
+            </label>
+
+            <label class="field" for="month-style-select">
+              <span>Month</span>
+              <select id="month-style-select">
+                <option value="2-digit">05</option>
+                <option value="numeric">5</option>
+                <option value="short">May</option>
+                <option value="long">May</option>
+                <option value="narrow">M</option>
+                <option value="off">Off</option>
+              </select>
+            </label>
+
+            <label class="field" for="day-style-select">
+              <span>Day</span>
+              <select id="day-style-select">
+                <option value="2-digit">09</option>
+                <option value="numeric">9</option>
+                <option value="off">Off</option>
+              </select>
+            </label>
+
+            <label class="field" for="year-style-select">
+              <span>Year</span>
+              <select id="year-style-select">
+                <option value="numeric">2026</option>
+                <option value="2-digit">26</option>
+                <option value="off">Off</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="grid">
+            <label class="field" for="date-separator-input">
+              <span>Date separator</span>
+              <input id="date-separator-input" type="text" maxlength="8" value="/" spellcheck="false">
+            </label>
+
+            <label class="field" for="weekday-separator-input">
+              <span>Weekday separator</span>
+              <input id="weekday-separator-input" type="text" maxlength="8" value=", " spellcheck="false">
+            </label>
+
+            <label class="field" for="date-time-separator-input">
+              <span>Date/time separator</span>
+              <input id="date-time-separator-input" type="text" maxlength="8" value=" " spellcheck="false">
+            </label>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="group">
+        <div class="group-head">
+          <p class="group-title">Time</p>
+          <label class="toggle" for="show-time-input">
+            <input id="show-time-input" type="checkbox">
+            <span>Show time</span>
+          </label>
+        </div>
+
+        <fieldset id="time-controls" class="stack">
+          <div class="grid">
+            <label class="field" for="hour-cycle-select">
+              <span>Clock mode</span>
+              <select id="hour-cycle-select">
+                <option value="24">24-hour</option>
+                <option value="12">12-hour</option>
+              </select>
+            </label>
+
+            <label class="field" for="hour-style-select">
+              <span>Hour</span>
+              <select id="hour-style-select">
+                <option value="2-digit">09</option>
+                <option value="numeric">9</option>
+              </select>
+            </label>
+
+            <label class="field" for="minute-style-select">
+              <span>Minute</span>
+              <select id="minute-style-select">
+                <option value="2-digit">07</option>
+                <option value="numeric">7</option>
+              </select>
+            </label>
+
+            <label class="field" for="second-style-select">
+              <span>Second</span>
+              <select id="second-style-select">
+                <option value="2-digit">05</option>
+                <option value="numeric">5</option>
+              </select>
+            </label>
+
+            <label class="field" for="meridiem-style-select">
+              <span>AM/PM</span>
+              <select id="meridiem-style-select">
+                <option value="upper">AM</option>
+                <option value="lower">am</option>
+                <option value="dots">a.m.</option>
+                <option value="off">Off</option>
+              </select>
+            </label>
+
+            <label class="field" for="time-zone-name-style-select">
+              <span>Timezone label</span>
+              <select id="time-zone-name-style-select">
+                <option value="off">Off</option>
+                <option value="short">EST</option>
+                <option value="long">Eastern Standard Time</option>
+                <option value="shortOffset">GMT-5</option>
+                <option value="longOffset">GMT-05:00</option>
+                <option value="shortGeneric">ET</option>
+                <option value="longGeneric">Eastern Time</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="grid">
+            <label class="field" for="time-separator-input">
+              <span>Time separator</span>
+              <input id="time-separator-input" type="text" maxlength="8" value=":" spellcheck="false">
+            </label>
+
+            <label class="field" for="time-zone-label-separator-input">
+              <span>Timezone separator</span>
+              <input id="time-zone-label-separator-input" type="text" maxlength="8" value=" " spellcheck="false">
+            </label>
+          </div>
+
+          <label class="toggle" for="show-seconds-input">
+            <input id="show-seconds-input" type="checkbox">
+            <span>Show seconds</span>
+          </label>
+        </fieldset>
+      </section>
+
+      <section class="group">
+        <p class="group-title">Colors</p>
+        <div class="grid">
+          <label class="field" for="text-color-input">
+            <span>Text color</span>
+            <input id="text-color-input" type="color" value="#ffffff">
+          </label>
+
+          <label class="field" for="background-color-input">
+            <span>Background color</span>
+            <input id="background-color-input" type="color" value="#000000">
+          </label>
+        </div>
+
+        <label class="field" for="background-opacity-input">
+          <span>Background opacity</span>
+          <div class="range-row">
+            <input
+              id="background-opacity-input"
+              type="range"
+              min="0"
+              max="100"
+              step="1"
+              value="78"
+            >
+            <output id="background-opacity-value" for="background-opacity-input">78%</output>
+          </div>
+        </label>
+      </section>
+
+      <section class="preview" aria-live="polite">
+        <p class="preview-label">Preview</p>
+        <p id="preview-value" class="preview-value">--</p>
+        <p id="preview-zone" class="preview-zone"></p>
+      </section>
+
+      <div class="actions">
+        <button id="save-button" type="button">Save</button>
+        <button id="reset-button" type="button" class="secondary">Reset Defaults</button>
+        <p id="status-message" class="status" aria-live="polite"></p>
+      </div>
+    </main>
+
+    <script src="clock-core.js"></script>
+    <script src="options.js"></script>
+  </body>
+  </html>

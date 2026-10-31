@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "boards": [
+    {
+      "board": "battery-light",
+      "pcb_sha256": "e3c79cf692632c61a423cd24964cd81708f13e756df73a6ce360eaac02961d79",
+      "drc_violations": 0,
+      "unconnected": 0,
+      "parity": 0,
+      "erc_violations": 0,
+      "step_sha256": "f6f394a43370ba62f843a936108b65ecfb96e3010107c4d65bb120c01b9b57b7"
+    },
+    {
+      "board": "cm4-carrier",
+      "pcb_sha256": "3b4d1fdd73d2b8a0002618f1ba0cd54da272fec4af129c39ab6a916e7a7ea481",
+      "drc_violations": 0,
+      "unconnected": 0,
+      "parity": 0,
+      "erc_violations": 0,
+      "step_sha256": "04849d488cb7d3ffb27c83ea698b08dc0ea20e2c6d9366c530e008a1f9b76c1f"
+    },
+    {
+      "board": "control",
+      "pcb_sha256": "f7c868291ef30811c09d348c69ef31fd823fdccdf57d89efe36f04a41f39df2e",
+      "drc_violations": 0,
+      "unconnected": 0,
+      "parity": 0,
+      "erc_violations": 0,
+      "step_sha256": "222427d916ac9cbf933ea0e1f34955228e95070fd81876ee99c5b22bc6befefa"
+    },
+    {
+      "board": "keyboard",
+      "pcb_sha256": "0b42f651a0dfdb58c55e6161bb4d2164664e1db90f89f6c4e7c90a1362348acd",
+      "drc_violations": 0,
+      "unconnected": 0,
+      "parity": 0,
+      "erc_violations": 0,
+      "step_sha256": "0948408e172ab65a25aafb435fe642ff5571bd23c9873b5308e9598efdeff7de"
+    },
+    {
+      "board": "power",
+      "pcb_sha256": "163e758a1996df055eaead28000a9d12474a173cbcff8998ac9d0d8379e9a8c4",
+      "drc_violations": 0,
+      "unconnected": 0,
+      "parity": 0,
+      "erc_violations": 0,
+      "step_sha256": "67209c63f455925a93b247e55a037aebf2e7f6b338e1aeff7d2aef6067483cc0"
+    },
+    {
+      "board": "rotary",
+      "pcb_sha256": "d52029b7e49dab3ad727d745172433136e8f4e0840eafe7b25f13b42cd8df609",
+      "drc_violations": 0,
+      "unconnected": 0,
+      "parity": 0,
+      "erc_violations": 0,
+      "step_sha256": "822001077f3d0f0890d56bb7eb26fef489aafadfe52b99cbe7dfe9c45fd9da45"
+    },
+    {
+      "board": "stereo-audio",
+      "pcb_sha256": "635d5af6b378fa1af04bdda1f3ff110e8901688b668118fa31b1544043333bf9",
+      "drc_violations": 0,
+      "unconnected": 0,
+      "parity": 0,
+      "erc_violations": 0,
+      "step_sha256": "e27dcc040499fc9213304db9ca3fd466620a2c721786a8e57dc9cc3f217fbfb1"
+    },
+    {
+      "board": "usb-io",
+      "pcb_sha256": "b4023b210bf59178b0821c5aee6f9a6c1cc10338dd1738f3e778d51a55f72721",
+      "drc_violations": 0,
+      "unconnected": 0,
+      "parity": 0,
+      "erc_violations": 0,
+      "step_sha256": "6e0a2f13810d58c3246e76a60ed0756f599a09abc98aecb9e9e9ec503b940331"
+    }
+  ],
+  "scope": "Native KiCad 9 DRC/ERC/parity and manufacturing export integrity only. Not physical qualification."
+}

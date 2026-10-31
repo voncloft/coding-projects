@@ -1,0 +1,130 @@
+[
+  {
+    "board": "battery-light",
+    "pcb_sha256": "e3c79cf692632c61a423cd24964cd81708f13e756df73a6ce360eaac02961d79",
+    "model_instances": 5,
+    "missing_models": [],
+    "non_mounting_without_model": [],
+    "drc_exclusions": [],
+    "erc_exclusions": [],
+    "ignored_rules": {
+      "footprint_filters_mismatch": "ignore",
+      "footprint_type_mismatch": "ignore",
+      "missing_courtyard": "ignore",
+      "npth_inside_courtyard": "ignore",
+      "pth_inside_courtyard": "ignore"
+    }
+  },
+  {
+    "board": "cm4-carrier",
+    "pcb_sha256": "3b4d1fdd73d2b8a0002618f1ba0cd54da272fec4af129c39ab6a916e7a7ea481",
+    "model_instances": 44,
+    "missing_models": [],
+    "non_mounting_without_model": [],
+    "drc_exclusions": [],
+    "erc_exclusions": [],
+    "ignored_rules": {
+      "footprint_filters_mismatch": "ignore",
+      "footprint_type_mismatch": "ignore",
+      "missing_courtyard": "ignore",
+      "npth_inside_courtyard": "ignore",
+      "pth_inside_courtyard": "ignore"
+    }
+  },
+  {
+    "board": "control",
+    "pcb_sha256": "f7c868291ef30811c09d348c69ef31fd823fdccdf57d89efe36f04a41f39df2e",
+    "model_instances": 29,
+    "missing_models": [],
+    "non_mounting_without_model": [],
+    "drc_exclusions": [],
+    "erc_exclusions": [],
+    "ignored_rules": {
+      "footprint_filters_mismatch": "ignore",
+      "footprint_type_mismatch": "ignore",
+      "missing_courtyard": "ignore",
+      "npth_inside_courtyard": "ignore",
+      "pth_inside_courtyard": "ignore"
+    }
+  },
+  {
+    "board": "keyboard",
+    "pcb_sha256": "0b42f651a0dfdb58c55e6161bb4d2164664e1db90f89f6c4e7c90a1362348acd",
+    "model_instances": 579,
+    "missing_models": [],
+    "non_mounting_without_model": [],
+    "drc_exclusions": [],
+    "erc_exclusions": [],
+    "ignored_rules": {
+      "footprint_filters_mismatch": "ignore",
+      "footprint_type_mismatch": "ignore",
+      "missing_courtyard": "ignore",
+      "npth_inside_courtyard": "ignore",
+      "pth_inside_courtyard": "ignore"
+    }
+  },
+  {
+    "board": "power",
+    "pcb_sha256": "163e758a1996df055eaead28000a9d12474a173cbcff8998ac9d0d8379e9a8c4",
+    "model_instances": 123,
+    "missing_models": [],
+    "non_mounting_without_model": [],
+    "drc_exclusions": [],
+    "erc_exclusions": [],
+    "ignored_rules": {
+      "footprint_filters_mismatch": "ignore",
+      "footprint_type_mismatch": "ignore",
+      "missing_courtyard": "ignore",
+      "npth_inside_courtyard": "ignore",
+      "pth_inside_courtyard": "ignore"
+    }
+  },
+  {
+    "board": "rotary",
+    "pcb_sha256": "d52029b7e49dab3ad727d745172433136e8f4e0840eafe7b25f13b42cd8df609",
+    "model_instances": 8,
+    "missing_models": [],
+    "non_mounting_without_model": [],
+    "drc_exclusions": [],
+    "erc_exclusions": [],
+    "ignored_rules": {
+      "footprint_filters_mismatch": "ignore",
+      "footprint_type_mismatch": "ignore",
+      "missing_courtyard": "ignore",
+      "npth_inside_courtyard": "ignore",
+      "pth_inside_courtyard": "ignore"
+    }
+  },
+  {
+    "board": "stereo-audio",
+    "pcb_sha256": "635d5af6b378fa1af04bdda1f3ff110e8901688b668118fa31b1544043333bf9",
+    "model_instances": 16,
+    "missing_models": [],
+    "non_mounting_without_model": [],
+    "drc_exclusions": [],
+    "erc_exclusions": [],
+    "ignored_rules": {
+      "footprint_filters_mismatch": "ignore",
+      "footprint_type_mismatch": "ignore",
+      "missing_courtyard": "ignore",
+      "npth_inside_courtyard": "ignore",
+      "pth_inside_courtyard": "ignore"
+    }
+  },
+  {
+    "board": "usb-io",
+    "pcb_sha256": "b4023b210bf59178b0821c5aee6f9a6c1cc10338dd1738f3e778d51a55f72721",
+    "model_instances": 133,
+    "missing_models": [],
+    "non_mounting_without_model": [],
+    "drc_exclusions": [],
+    "erc_exclusions": [],
+    "ignored_rules": {
+      "footprint_filters_mismatch": "ignore",
+      "footprint_type_mismatch": "ignore",
+      "missing_courtyard": "ignore",
+      "npth_inside_courtyard": "ignore",
+      "pth_inside_courtyard": "ignore"
+    }
+  }
+]

@@ -1,0 +1,119 @@
+[
+  {
+    "file": "QFN-64-1EP_9x9mm_P0.5mm_EP4.7x4.7mm.step",
+    "source": "Manufacturer package dimensions; leadframe is simplified for mechanical viewing.",
+    "kind": "Dimensioned project model",
+    "bounds": [
+      -4.5,
+      -4.5,
+      0.0,
+      4.5,
+      4.5,
+      1.0
+    ]
+  },
+  {
+    "file": "WDFN-10-1EP_3x3mm_P0.5mm_EP1.8x2.5mm.step",
+    "source": "Manufacturer package dimensions; leadframe is simplified for mechanical viewing.",
+    "kind": "Dimensioned project model",
+    "bounds": [
+      -1.5,
+      -1.5,
+      0.0,
+      1.5,
+      1.5,
+      0.75
+    ]
+  },
+  {
+    "file": "TDFN-8-1EP_2x2mm_P0.5mm_EP0.8x1.2mm.step",
+    "source": "Manufacturer package dimensions; leadframe is simplified for mechanical viewing.",
+    "kind": "Dimensioned project model",
+    "bounds": [
+      -1.0,
+      -1.0,
+      0.0,
+      1.0,
+      1.0,
+      0.8
+    ]
+  },
+  {
+    "file": "Texas_RJE0020A_VQFN-20-1EP_3x3mm_P0.45mm_EP0.675x0.76mm.step",
+    "source": "Manufacturer package dimensions; leadframe is simplified for mechanical viewing.",
+    "kind": "Dimensioned project model",
+    "bounds": [
+      -1.5,
+      -1.5,
+      0.0,
+      1.5,
+      1.5,
+      0.8
+    ]
+  },
+  {
+    "file": "Texas_RQM0029A_VQFN-29_4x4mm_P0.4mm.step",
+    "source": "Manufacturer package dimensions; leadframe is simplified for mechanical viewing.",
+    "kind": "Dimensioned project model",
+    "bounds": [
+      -2.0,
+      -2.0,
+      0.0,
+      2.0,
+      2.0,
+      1.0
+    ]
+  },
+  {
+    "file": "L_7x7.step",
+    "source": "Bourns SRP7050TA family outline and land drawing. Nominal body 7.3 x 6.6 mm, 5 mm maximum height.",
+    "kind": "Dimensioned project model",
+    "bounds": [
+      -3.65,
+      -3.3,
+      0.0,
+      3.65,
+      3.3,
+      5.0
+    ]
+  },
+  {
+    "file": "JST_VH_B2P-VH_1x02_P3.96mm_Vertical.step",
+    "source": "JST VH top-entry header. XY follows the KiCad fabrication outline. Header body 9.3 mm; mating cable clearance is modeled separately in the enclosure.",
+    "kind": "Dimensioned project model",
+    "bounds": [
+      -1.95,
+      -4.8,
+      -3.4,
+      5.909999999999999,
+      3.7,
+      9.3
+    ]
+  },
+  {
+    "file": "JST_VH_B4P-VH_1x04_P3.96mm_Vertical.step",
+    "source": "JST VH top-entry header. XY follows the KiCad fabrication outline. Header body 9.3 mm; mating cable clearance is modeled separately in the enclosure.",
+    "kind": "Dimensioned project model",
+    "bounds": [
+      -1.95,
+      -4.8,
+      -3.4,
+      13.83,
+      3.7,
+      9.3
+    ]
+  },
+  {
+    "file": "SW_SPDT_CK_JS102011SAQN.step",
+    "source": "C&K JS102011SAQN footprint outline. Simplified body, side actuator and three terminals.",
+    "kind": "Dimensioned project model",
+    "bounds": [
+      -4.5,
+      -3.8,
+      0.0,
+      4.5,
+      2.3,
+      3.8
+    ]
+  }
+]

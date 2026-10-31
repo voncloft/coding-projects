@@ -1,0 +1,520 @@
+{
+  "cm4_correction": {
+    "rotation_z_deg": 90,
+    "translation_mm": [
+      362.96,
+      -118,
+      9.6
+    ]
+  },
+  "changed_module_checks": [],
+  "mating_connector_overlaps": [
+    {
+      "a_solid": 1914,
+      "b_solid": 10,
+      "volume_mm3": 0.7946680408764522,
+      "bounds_mm": [
+        343.245,
+        -103.7,
+        8.4854,
+        344.89,
+        -82.32,
+        9.275
+      ]
+    },
+    {
+      "a_solid": 1915,
+      "b_solid": 9,
+      "volume_mm3": 0.6179271065189839,
+      "bounds_mm": [
+        309.04,
+        -103.69,
+        8.4954,
+        310.675,
+        -82.33,
+        9.265
+      ]
+    }
+  ],
+  "cable_allocations": [
+    {
+      "name": "GHAllocation_battery_light_J1",
+      "bounds_mm": [
+        500.1,
+        -19.0,
+        11.6,
+        507.6,
+        -11.5,
+        21.9
+      ],
+      "valid": true,
+      "contacts": [],
+      "wire_exit": "front, +logical Y"
+    },
+    {
+      "name": "GHAllocation_cm4_carrier_J4",
+      "bounds_mm": [
+        295.0,
+        -88.375,
+        6.6,
+        302.5,
+        -79.625,
+        16.9
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_cm4_carrier_J7",
+      "bounds_mm": [
+        350.375,
+        -69.0,
+        6.6,
+        361.625,
+        -61.5,
+        16.9
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_cm4_carrier_J10",
+      "bounds_mm": [
+        303.875,
+        -62.0,
+        6.6,
+        310.125,
+        -54.5,
+        16.9
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_cm4_carrier_J6",
+      "bounds_mm": [
+        352.0,
+        -84.0,
+        6.6,
+        362.0,
+        -76.5,
+        16.9
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_control_J7",
+      "bounds_mm": [
+        411.375,
+        -50.0,
+        9.6,
+        417.625,
+        -42.5,
+        19.9
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_control_J6",
+      "bounds_mm": [
+        419.375,
+        -13.0,
+        9.6,
+        430.625,
+        -5.5,
+        19.9
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_control_J5",
+      "bounds_mm": [
+        433.5,
+        -23.75,
+        9.6,
+        441.0,
+        -16.25,
+        19.9
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_control_J3",
+      "bounds_mm": [
+        419.375,
+        -47.0,
+        9.6,
+        430.625,
+        -39.5,
+        19.9
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_control_J2",
+      "bounds_mm": [
+        401.625,
+        -47.0,
+        9.6,
+        410.375,
+        -39.5,
+        19.9
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_control_J1",
+      "bounds_mm": [
+        388.375,
+        -47.0,
+        9.6,
+        399.625,
+        -39.5,
+        19.9
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_control_J4",
+      "bounds_mm": [
+        433.5,
+        -38.0,
+        9.6,
+        441.0,
+        -28.0,
+        19.9
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_power_J5",
+      "bounds_mm": [
+        73.625,
+        -81.0,
+        8.1,
+        82.375,
+        -73.5,
+        18.4
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_power_J3",
+      "bounds_mm": [
+        89.125,
+        -57.0,
+        8.1,
+        102.875,
+        -49.5,
+        18.4
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_power_J9",
+      "bounds_mm": [
+        46.875,
+        -82.0,
+        8.1,
+        53.125,
+        -74.5,
+        18.4
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_power_J4",
+      "bounds_mm": [
+        106.125,
+        -87.0,
+        8.1,
+        119.875,
+        -79.5,
+        18.4
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_rotary_J1",
+      "bounds_mm": [
+        558.55,
+        -38.525,
+        28.5,
+        568.55,
+        -31.025,
+        38.8
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_usb_io_J8",
+      "bounds_mm": [
+        108.625,
+        -41.0,
+        11.1,
+        117.375,
+        -33.5,
+        21.4
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_usb_io_J11",
+      "bounds_mm": [
+        167.125,
+        -42.0,
+        11.1,
+        180.875,
+        -34.5,
+        21.4
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "GHAllocation_usb_io_J7",
+      "bounds_mm": [
+        68.25,
+        -42.0,
+        11.1,
+        75.75,
+        -34.5,
+        21.4
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "CM4MatedPowerPlug",
+      "bounds_mm": [
+        293.0,
+        -72.9,
+        6.6,
+        303.0,
+        -61.14,
+        23.1
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "HeaderAllocation_keyboard_J2",
+      "bounds_mm": [
+        383.4,
+        -19.68,
+        21.5,
+        386.6,
+        -11.4,
+        32.5
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "HeaderAllocation_keyboard_J5",
+      "bounds_mm": [
+        447.4,
+        -36.68,
+        21.5,
+        450.6,
+        -28.4,
+        32.5
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "HeaderAllocation_keyboard_J3",
+      "bounds_mm": [
+        376.4,
+        -32.38,
+        21.5,
+        379.6,
+        -11.4,
+        32.5
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "HeaderAllocation_keyboard_J1",
+      "bounds_mm": [
+        386.4,
+        -39.3,
+        21.5,
+        389.6,
+        -23.4,
+        32.5
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "HeaderAllocation_keyboard_J4",
+      "bounds_mm": [
+        441.4,
+        -27.3,
+        21.5,
+        444.6,
+        -11.4,
+        32.5
+      ],
+      "valid": true,
+      "contacts": []
+    },
+    {
+      "name": "HeaderAllocation_stereo_audio_J3",
+      "bounds_mm": [
+        389.4,
+        -97.84,
+        7.6,
+        392.6,
+        -79.4,
+        18.6
+      ],
+      "valid": true,
+      "contacts": []
+    }
+  ],
+  "rotary": {
+    "catalog_nominal_travel_mm": 0.5,
+    "checked_travel_mm": 0.8,
+    "cover_gap_at_rest_mm": 1.5,
+    "cover_gap_at_checked_travel_mm": 0.7,
+    "pressed_knob_cover_overlap_mm3": 0,
+    "source": "https://tech.alpsalpine.com/cms.media/product_catalog_ec_01_ec11e_en_611f078659.pdf"
+  },
+  "limits": [
+    "Nominal CAD fit only; manufacturing tolerance, screw/adhesive retention, exact purchased cable housings, wire bends, connector latch access, optical behavior and cooling require prototype validation.",
+    "Two CM4 connector models deliberately mate and retain 1.41260 mm3 of modeled intersection. No other corrected-module body collisions were found.",
+    "The ribbon has a checked access path. A 0.4 mm corridor in the display backplate gap requires a real cable thickness and bend trial; this is not finished cable signoff.",
+    "The rotary cover now includes a 1 mm underside recess: 1.2 mm nominal margin above the outer wire envelope, with 2 mm cover material remaining."
+  ],
+  "saved_fcstd": "/home/von/Documents/Codex/2026-09-12/loo/work/full-system/rev-f/enclosure/keyboard-enclosure.FCStd",
+  "additional_allocations": [
+    {
+      "name": "DSIRibbonRiseAllocation",
+      "valid": true,
+      "bounds_mm": [
+        364.5,
+        -110.0,
+        7.6,
+        378.5,
+        -92.0,
+        24.6
+      ],
+      "contacts": []
+    },
+    {
+      "name": "DSIRibbonOverheadAllocation",
+      "valid": true,
+      "bounds_mm": [
+        373.8274,
+        -108.9743,
+        23.0,
+        468.1726,
+        -48.0257,
+        25.0
+      ],
+      "contacts": []
+    },
+    {
+      "name": "DSIRibbonDisplayEntryAllocation",
+      "valid": true,
+      "bounds_mm": [
+        462.0,
+        -65.0,
+        23.0,
+        466.0,
+        -47.0,
+        29.8
+      ],
+      "contacts": []
+    },
+    {
+      "name": "DSIRibbonUnderPCBAllocation",
+      "valid": true,
+      "bounds_mm": [
+        464.0,
+        -65.0,
+        29.4,
+        508.0,
+        -47.0,
+        29.8
+      ],
+      "contacts": []
+    },
+    {
+      "name": "DSIRibbonConnectorApproach",
+      "valid": true,
+      "bounds_mm": [
+        491.7,
+        -50.3,
+        29.4,
+        507.7,
+        -45.5,
+        31.2
+      ],
+      "contacts": []
+    },
+    {
+      "name": "DSIRibbonConnectorEntry",
+      "valid": true,
+      "bounds_mm": [
+        491.7,
+        -50.4,
+        30.9,
+        507.7,
+        -50.3,
+        31.25
+      ],
+      "contacts": []
+    },
+    {
+      "name": "BatteryNTCAllocation",
+      "valid": true,
+      "bounds_mm": [
+        192.5,
+        -91.0,
+        19.5,
+        200.5,
+        -83.0,
+        21.5
+      ],
+      "contacts": []
+    }
+  ],
+  "ribbon_route": {
+    "source": "CM4 carrier J8, 22-way 0.5 mm; selected display uses 15-way entry",
+    "scope": "Six checked clearance volumes lead beside the display backplate and horizontally toward the FFC slot. They are access envelopes, not an exact formed cable.",
+    "approximate_corridor_centerline_mm": 177.1618359603815,
+    "future_action": "Select the correct 22-to-15 DSI cable; verify contact orientation and use a physical mock-up to establish finished length, folds and minimum bend radius."
+  },
+  "cover_revision": {
+    "valid": true,
+    "solids": 1,
+    "pocket_size_mm": [
+      12.2,
+      10,
+      1
+    ],
+    "cover_material_over_pocket_mm": 2,
+    "rotary_wire_clearance_mm": 1.2,
+    "wire_overlap": [],
+    "pressed_knob_overlap": []
+  }
+}

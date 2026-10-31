@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="pre-architecture">
+  <?dbhtml filename="architecture.html"?>
+
+  <title>MLFS Target Architecture</title>
+
+  <para>
+    Due to the nature of multilib, the only supported CPU architecture is
+    64-bit x86 (x86_64) or AMD64. 32-bit and 16-bit x86 CPUs aren't capable of
+    the multilib system this book employs.
+  </para>
+
+</sect1>

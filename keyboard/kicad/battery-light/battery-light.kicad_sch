@@ -1,0 +1,5 @@
+(kicad_sch (version 20250114) (generator "eeschema") (uuid 83c23d34-e6ff-4064-baf3-f060a8e5559d) (paper "A2") (lib_symbols)
+(text "Tiny two-colour battery indicator" (at 20 20 0) (effects (font (size 3 3)) (justify left)) (uuid 9bc31ec6-ff22-4c4e-bb93-66ee6a341c8c))
+(text "Rev F integrated keyboard computer. See validation reports." (at 20 30 0) (effects (font (size 1.4 1.4)) (justify left)) (uuid b761b035-ef48-40c7-8886-19ad74a7311d))
+(sheet (at 20 50) (size 120 26) (fields_autoplaced yes) (stroke (width 0.15) (type default)) (fill (color 0 0 0 0.0000)) (uuid ef69f99b-2723-4674-be8f-e6590465117c) (property "Sheetname" "Battery state light" (at 20 49 0) (effects (font (size 1.3 1.3)) (justify left bottom))) (property "Sheetfile" "indicator.kicad_sch" (at 20 77 0) (effects (font (size 1.1 1.1)) (justify left top))) (instances (project "battery-light" (path "/83c23d34-e6ff-4064-baf3-f060a8e5559d" (page "2")))))
+)

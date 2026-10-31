@@ -1,0 +1,4 @@
+Comment,Designator,Footprint,LCSC Part #,Quantity,Specification
+"PROCUREMENT SPEC: 10nF, >= 25.0 V, X7R, 10%, 0603, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification.","C1,C2,C3",C_0603_1608Metric,,3,"10nF, >= 25.0 V, X7R, 10%, 0603, operating -55 to +85 C minimum. Match land pattern and 3D clearance. Effective capacitance under DC bias requires supplier verification."
+BM05B-GHS-TBT(LF)(SN),J1,JST_GH_BM05B-GHS-TBT_1x05-1MP_P1.25mm_Vertical,,1,Exact part and native footprint; no electrical substitution without review.
+0603WAF2201T5E,"R1,R2,R3",R_0603_1608Metric,C4190,3,"2.2k ohm, 1%, 0603, >=0.1 W, >=50 V working, TCR <=25 ppm/K for 0.1% or <=100 ppm/K for 1%, -55 to +125 C."

@@ -1,0 +1,19 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-21T04:08:11-0400",
+    "kicad_version": "9.0.7",
+    "sheets": [
+        {
+            "path": "/ALPS rotary input/",
+            "uuid_path": "/e89718d9-bc1e-4107-a932-3a67c82d1b3b/ce5de7dc-332d-43c0-8bd0-314835e6727c",
+            "violations": []
+        },
+        {
+            "path": "/",
+            "uuid_path": "/e89718d9-bc1e-4107-a932-3a67c82d1b3b",
+            "violations": []
+        }
+    ],
+    "source": "rotary.kicad_sch"
+}

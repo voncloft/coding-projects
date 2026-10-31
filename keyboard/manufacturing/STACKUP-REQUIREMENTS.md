@@ -1,0 +1,17 @@
+# Revision H audit: PCB stackup and signal routing
+
+Manufacturing release remains on hold. These are the current design inputs, not measured impedance results.
+
+The seven four-layer boards use JLC04161H-3313 as the reference construction. Top to bottom: 35 um copper / 99.4 um 3313 prepreg / 15.2 um copper / 1.265 mm FR4 core / 15.2 um copper / 99.4 um 3313 prepreg / 35 um copper. The laminate sums to 1.5642 mm before soldermask, in the nominal 1.6 mm procurement category. The stereo audio board is two-layer, nominal 1.6 mm with 35 um copper. All native KiCad boards now contain explicit stackup definitions.
+
+Source: [JLCPCB published stackups](https://jlcpcb.com/impedance), retrieved 20 September 2026. Prepreg Er 4.1, core Er 4.6. Published mask assumptions are Er 3.8, 30.48 um above substrate/between tracks and 15.24 um above traces. The native mask thickness represents above-trace thickness; the numerical estimate includes the separate substrate coating.
+
+USB design target: 90 ohm differential. DSI design target: 100 ohm differential. Specify and quote +/-10% controlled impedance. The routed main USB sections are 0.16 mm wide; main DSI sections are 0.127 mm wide. Typical center spacing is 0.4 mm, giving edge gaps of 0.24 mm and 0.273 mm respectively. Short connector/IC escapes, tuning sections and transitions differ. Do not apply one nominal width/gap to every segment without reviewing those transitions.
+
+A local quasi-static ideal cross-section estimate gives approximately 91.2 ohm for USB 0.16/0.24 mm and 102.5 ohm for DSI 0.127/0.273 mm. Its mesh refinement, domain-size and uniform-dielectric tests passed. This is an engineering estimate using rectangular copper and simplified mask, not a calibrated field-solver result, fabricated coupon, TDR test or USB/MIPI compliance test. It does not include every via, connector, cable, copper neighbor or etch profile.
+
+USB and CM4 boards use inner ground reference layers. The keyboard USB tracks were removed from the inner ground layer; its local bottom USB routing now has a ground pocket in the adjacent inner layer. Filled-plane sampling checks track centers and 0.3 mm lateral margins at 0.1 mm intervals. Connector and signal-via antipads, narrow breakout regions and local margin interruptions remain identified in the audit. They require signal-integrity review; do not interpret a clean clearance DRC as proof of return-path quality.
+
+Both USB-C orientations were measured to their mux pads. Their residual P/N mismatch is approximately 0.04 mm with equal via counts. Active hub legs are below the 1.25 mm mismatch limit used from [Microchip AN26.2](https://ww1.microchip.com/downloads/aemDocuments/documents/UNG/ApplicationNotes/ApplicationNotes/AN26.2-Application-Note-DS00001876.pdf). The CM4 USB and DSI pairs use 0.15 mm checks. DSI path calculations include the CM4 internal offsets. Native custom rules and separate connected-path checks are both retained. Unused hub ports 6 and 7 are configuration straps, not external USB links.
+
+The fabricator must confirm the actual pressed dielectric thicknesses, finished copper/etch geometry, material dielectric constants, soldermask and impedance construction. PCBWay or another supplier must not silently substitute its generic four-layer stack. Any width/stack change requires revised native files, DRC, path checks and refreshed exports. Coupon/TDR and assembled USB/display qualification remain required before fabrication/production release as applicable to the prototype program.

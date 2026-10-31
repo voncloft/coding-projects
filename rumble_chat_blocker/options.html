@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rumble Chat Blocker Preferences</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Rumble Chat Blocker</p>
+          <h1>Preferences</h1>
+          <p class="lede">Edit blocked usernames, remove them, add new ones manually, and export matching uBlock Origin filters.</p>
+        </div>
+        <div class="hero-actions">
+          <button id="add-name" type="button" class="secondary-button">Add Name</button>
+          <button id="copy-filters" type="button">Copy uBO Filters</button>
+          <button id="save-changes" type="button">Save Changes</button>
+        </div>
+      </header>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Blocked Usernames</h2>
+          <p class="hint">Each saved name produces a filter like <code>rumble.com##button.js-user-tag:has-text(name):upward(.chat-history--row)</code>.</p>
+        </div>
+
+        <p id="status" class="status" hidden></p>
+        <p id="empty-state" class="empty-state">No blocked names saved yet. Add one to start.</p>
+        <div id="rows" class="rows"></div>
+      </section>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

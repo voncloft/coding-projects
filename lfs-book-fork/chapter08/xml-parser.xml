@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../general.ent">
+  %general-entities;
+]>
+
+<sect1 id="ch-system-xml-parser" role="wrap">
+  <?dbhtml filename="xml-parser.html"?>
+
+  <sect1info condition="script">
+    <productname>xml-parser</productname>
+    <productnumber>&xml-parser-version;</productnumber>
+    <address>&xml-parser-url;</address>
+  </sect1info>
+
+  <title>XML::Parser-&xml-parser-version;</title>
+
+  <indexterm zone="ch-system-xml-parser">
+    <primary sortas="a-Xml-Parser">XML::Parser</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title/>
+
+    <para>The XML::Parser module is a Perl interface to James Clark's
+    XML parser, Expat.</para>
+
+    <segmentedlist>
+      <segtitle>&buildtime;</segtitle>
+      <segtitle>&diskspace;</segtitle>
+
+      <seglistitem>
+        <seg>&xml-parser-fin-sbu;</seg>
+        <seg>&xml-parser-fin-du;</seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installation of XML::Parser</title>
+
+    <note>
+      <para>This package is scheduled to move to BLFS.  Until that can be
+      done, two Perl modules need to be added.  To do that, we also
+      have to enable DNS by temporarily adding /etc/resolv.conf.</para>
+
+<screen><userinput role="nodump">cat > /etc/resolv.conf &lt;&lt; EOF
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+EOF</userinput></screen>
+
+      <para>Alternatively, you may skip this package and the next package
+      (intltool) as nothing else in LFS needs them.  When you build a BLFS
+      package requiring XML::Parser or intltool, install those modules
+      following <ulink
+      url='&blfs-book;general/perl-deps.html#perl-file-sharedir'>the
+      BLFS instruction</ulink>, and then install this package.</para>
+    </note>
+
+    <para>Now add two Perl modules:</para>
+    
+<screen><userinput remap="pre">yes | cpan -i File::ShareDir
+yes | cpan -i File::ShareDir::Install</userinput></screen>
+
+    <para>Finish this temporary workaround by  removing /etc/resolv.conf.  
+    A discussion of this file
+    will be made at <xref linkend='resolv.conf'/></para>
+
+<screen><userinput remap="pre">rm /etc/resolv.conf</userinput></screen>
+
+    <para>Prepare XML::Parser for compilation:</para>
+
+<screen><userinput remap="configure">perl Makefile.PL</userinput></screen>
+
+    <para>Compile the package:</para>
+
+<screen><userinput remap="make">make</userinput></screen>
+
+    <para>To test the results, issue:</para>
+
+<screen><userinput remap="test">make test</userinput></screen>
+
+    <para>Install the package:</para>
+
+<screen><userinput remap="install">make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 id="contents-xml-parser" role="content">
+    <title>Contents of XML::Parser</title>
+
+    <segmentedlist>
+      <segtitle>Installed module</segtitle>
+
+      <seglistitem>
+        <seg>Expat.so</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="Expat">
+        <term><filename class="libraryfile">Expat</filename></term>
+        <listitem>
+          <para>provides the Perl Expat interface</para>
+          <indexterm zone="ch-system-xml-parser Expat">
+            <primary sortas="c-Expat">Expat</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

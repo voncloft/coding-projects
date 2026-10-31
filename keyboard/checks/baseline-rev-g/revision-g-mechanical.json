@@ -1,0 +1,58 @@
+{
+  "revision": "G",
+  "scope": "Changed USB assembly checked in full native enclosure; unchanged Rev F mechanical checks retained with unchanged-file provenance. Nominal CAD only.",
+  "usb_pcb_sha256": "b7f7849befe7b612db16f1322486b7e8450457209614b75855cef190d2f6e2dd",
+  "usb_step_sha256": "1a9afe19979bfafaa60ecea2382d3099051c0945a32526bccbc0ba3d4387eaa5",
+  "placement": "Placement [Pos=(17,-2,9.5), Yaw-Pitch-Roll=(0,0,0)]",
+  "bounds_mm": [
+    17.0,
+    -44.0,
+    4.015,
+    213.0,
+    -0.925,
+    20.395
+  ],
+  "checks": [
+    {
+      "a": "USB_IO_assembly",
+      "b": "LowerShell",
+      "overlaps": []
+    },
+    {
+      "a": "L1_maximum_envelope",
+      "b": "LowerShell",
+      "overlaps": []
+    }
+  ],
+  "intentional_mating_envelopes": [
+    "GHAllocation_usb_io_J11",
+    "GHAllocation_usb_io_J7",
+    "GHAllocation_usb_io_J8",
+    "IOMatedPlug0",
+    "IOMatedPlug1"
+  ],
+  "passed": true,
+  "fcstd_sha256": "a43e17ef2192de7d963c9cf1f21e01a159a69526f00a97606e28450258d5bbc0",
+  "new_components_vs_own_mating_envelopes": [
+    {
+      "envelope": "IOMatedPlug0",
+      "overlaps": []
+    },
+    {
+      "envelope": "IOMatedPlug1",
+      "overlaps": []
+    },
+    {
+      "envelope": "GHAllocation_usb_io_J8",
+      "overlaps": []
+    },
+    {
+      "envelope": "GHAllocation_usb_io_J11",
+      "overlaps": []
+    },
+    {
+      "envelope": "GHAllocation_usb_io_J7",
+      "overlaps": []
+    }
+  ]
+}

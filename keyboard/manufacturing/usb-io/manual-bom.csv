@@ -1,0 +1,5 @@
+Comment,Designator,Footprint,LCSC Part #,Quantity,Specification
+USB4105-GF-A-060,"J1,J5,J6",USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal,C3025063,3,Exact part and native footprint; no electrical substitution without review.
+67643-3910,"J2,J3,J4",USB_A_Molex_67643_Horizontal,,3,Exact part and native footprint; no electrical substitution without review.
+B2P-VH(LF)(SN),J9,JST_VH_B2P-VH_1x02_P3.96mm_Vertical,,1,Exact part and native footprint; no electrical substitution without review.
+B4P-VH(LF)(SN),J10,JST_VH_B4P-VH_1x04_P3.96mm_Vertical,,1,Exact part and native footprint; no electrical substitution without review.

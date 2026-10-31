@@ -1,0 +1,17 @@
+<!DOCTYPE kcfg SYSTEM "kcfg.dtd">
+<kcfg>
+  <group name="General">
+    <entry name="calendarUrl" type="String">
+      <default></default>
+    </entry>
+    <entry name="username" type="String">
+      <default></default>
+    </entry>
+    <entry name="password" type="String">
+      <default></default>
+    </entry>
+    <entry name="daysAhead" type="Int">
+      <default>7</default>
+    </entry>
+  </group>
+</kcfg>

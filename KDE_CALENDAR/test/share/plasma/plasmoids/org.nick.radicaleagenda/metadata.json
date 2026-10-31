@@ -1,0 +1,16 @@
+{
+  "KPackageStructure": "Plasma/Applet",
+  "KPlugin": {
+    "Id": "org.nick.radicaleagenda",
+    "Name": "Radicale Agenda",
+    "Description": "Shows upcoming events from a Radicale CalDAV calendar (direct CalDAV, no Akonadi).",
+    "Version": "0.1.0",
+    "License": "GPL-3.0-or-later",
+    "Authors": [
+      { "Name": "Nick" }
+    ]
+  },
+  "X-Plasma-API-Minimum-Version": "6.0",
+  "X-Plasma-API": "declarativeappletscript",
+  "X-Plasma-MainScript": "ui/main.qml"
+}

@@ -1,0 +1,20 @@
+{
+  "board": "rotary",
+  "pcb_sha256": "d52029b7e49dab3ad727d745172433136e8f4e0840eafe7b25f13b42cd8df609",
+  "copper_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "thickness_mm": 1.5642,
+  "width_mm": 28.0,
+  "height_mm": 30.0,
+  "tracks": 59,
+  "zones": 2,
+  "footprints": 12,
+  "position_origin": "KiCad absolute board origin. CSV X positive right, Y positive up; view from front. Bottom rotations are native KiCad, not mirrored.",
+  "stackup_status": "Explicit native stackup. 4-layer JLC04161H-3313 reference or 2-layer FR4. See STACKUP-REQUIREMENTS.md; supplier impedance confirmation and physical qualification remain open.",
+  "native_title_revision": "",
+  "system_release": "H audit; manufacturing release on hold"
+}

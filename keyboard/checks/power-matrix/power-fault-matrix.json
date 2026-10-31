@@ -1,0 +1,457 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": [
+        "initial",
+        "read",
+        "107",
+        "72"
+      ],
+      "exit": 0,
+      "output": "PASS initial read address=6b register=48\n"
+    },
+    {
+      "case": [
+        "initial",
+        "read",
+        "107",
+        "10"
+      ],
+      "exit": 0,
+      "output": "PASS initial read address=6b register=0a\n"
+    },
+    {
+      "case": [
+        "initial",
+        "read",
+        "107",
+        "15"
+      ],
+      "exit": 0,
+      "output": "PASS initial read address=6b register=0f\n"
+    },
+    {
+      "case": [
+        "initial",
+        "read",
+        "107",
+        "1"
+      ],
+      "exit": 0,
+      "output": "PASS initial read address=6b register=01\n"
+    },
+    {
+      "case": [
+        "initial",
+        "read",
+        "107",
+        "3"
+      ],
+      "exit": 0,
+      "output": "PASS initial read address=6b register=03\n"
+    },
+    {
+      "case": [
+        "initial",
+        "read",
+        "107",
+        "6"
+      ],
+      "exit": 0,
+      "output": "PASS initial read address=6b register=06\n"
+    },
+    {
+      "case": [
+        "initial",
+        "read",
+        "107",
+        "9"
+      ],
+      "exit": 0,
+      "output": "PASS initial read address=6b register=09\n"
+    },
+    {
+      "case": [
+        "initial",
+        "read",
+        "107",
+        "16"
+      ],
+      "exit": 0,
+      "output": "PASS initial read address=6b register=10\n"
+    },
+    {
+      "case": [
+        "initial",
+        "read",
+        "107",
+        "17"
+      ],
+      "exit": 0,
+      "output": "PASS initial read address=6b register=11\n"
+    },
+    {
+      "case": [
+        "initial",
+        "read",
+        "107",
+        "20"
+      ],
+      "exit": 0,
+      "output": "PASS initial read address=6b register=14\n"
+    },
+    {
+      "case": [
+        "initial",
+        "write",
+        "107",
+        "15"
+      ],
+      "exit": 0,
+      "output": "PASS initial write address=6b register=0f\n"
+    },
+    {
+      "case": [
+        "initial",
+        "write",
+        "107",
+        "1"
+      ],
+      "exit": 0,
+      "output": "PASS initial write address=6b register=01\n"
+    },
+    {
+      "case": [
+        "initial",
+        "write",
+        "107",
+        "3"
+      ],
+      "exit": 0,
+      "output": "PASS initial write address=6b register=03\n"
+    },
+    {
+      "case": [
+        "initial",
+        "write",
+        "107",
+        "6"
+      ],
+      "exit": 0,
+      "output": "PASS initial write address=6b register=06\n"
+    },
+    {
+      "case": [
+        "initial",
+        "write",
+        "107",
+        "9"
+      ],
+      "exit": 0,
+      "output": "PASS initial write address=6b register=09\n"
+    },
+    {
+      "case": [
+        "initial",
+        "write",
+        "107",
+        "16"
+      ],
+      "exit": 0,
+      "output": "PASS initial write address=6b register=10\n"
+    },
+    {
+      "case": [
+        "initial",
+        "write",
+        "107",
+        "17"
+      ],
+      "exit": 0,
+      "output": "PASS initial write address=6b register=11\n"
+    },
+    {
+      "case": [
+        "initial",
+        "write",
+        "107",
+        "20"
+      ],
+      "exit": 0,
+      "output": "PASS initial write address=6b register=14\n"
+    },
+    {
+      "case": [
+        "initial",
+        "write",
+        "107",
+        "47"
+      ],
+      "exit": 0,
+      "output": "PASS initial write address=6b register=2f\n"
+    },
+    {
+      "case": [
+        "initial",
+        "write",
+        "107",
+        "48"
+      ],
+      "exit": 0,
+      "output": "PASS initial write address=6b register=30\n"
+    },
+    {
+      "case": [
+        "initial",
+        "write",
+        "107",
+        "46"
+      ],
+      "exit": 0,
+      "output": "PASS initial write address=6b register=2e\n"
+    },
+    {
+      "case": [
+        "initial",
+        "write",
+        "32",
+        "1"
+      ],
+      "exit": 0,
+      "output": "PASS initial write address=20 register=01\n"
+    },
+    {
+      "case": [
+        "initial",
+        "write",
+        "32",
+        "3"
+      ],
+      "exit": 0,
+      "output": "PASS initial write address=20 register=03\n"
+    },
+    {
+      "case": [
+        "initial",
+        "read",
+        "8",
+        "0"
+      ],
+      "exit": 0,
+      "output": "PASS initial read address=08 register=00\n"
+    },
+    {
+      "case": [
+        "initial",
+        "read",
+        "8",
+        "1"
+      ],
+      "exit": 0,
+      "output": "PASS initial read address=08 register=01\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "read",
+        "107",
+        "59"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime read address=6b register=3b\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "read",
+        "107",
+        "53"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime read address=6b register=35\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "read",
+        "107",
+        "51"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime read address=6b register=33\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "read",
+        "107",
+        "63"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime read address=6b register=3f\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "read",
+        "107",
+        "32"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime read address=6b register=20\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "read",
+        "107",
+        "33"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime read address=6b register=21\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "read",
+        "107",
+        "29"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime read address=6b register=1d\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "read",
+        "107",
+        "16"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime read address=6b register=10\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "read",
+        "107",
+        "6"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime read address=6b register=06\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "read",
+        "107",
+        "15"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime read address=6b register=0f\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "read",
+        "107",
+        "46"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime read address=6b register=2e\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "read",
+        "54",
+        "4"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime read address=36 register=04\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "read",
+        "32",
+        "0"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime read address=20 register=00\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "read",
+        "8",
+        "0"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime read address=08 register=00\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "read",
+        "8",
+        "1"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime read address=08 register=01\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "write",
+        "107",
+        "6"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime write address=6b register=06\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "write",
+        "107",
+        "16"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime write address=6b register=10\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "write",
+        "107",
+        "15"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime write address=6b register=0f\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "write",
+        "107",
+        "46"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime write address=6b register=2e\n"
+    },
+    {
+      "case": [
+        "runtime",
+        "write",
+        "32",
+        "1"
+      ],
+      "exit": 0,
+      "output": "PASS startup\nPASS runtime write address=20 register=01\n"
+    }
+  ],
+  "source_sha256": "0e7b024a5ef9447191f69fea03c0a3aeabce918867beda9e23cc5d18f2eeae88",
+  "scope": "45 individually addressed persistent I2C read/write faults, at initial configuration and while running, against real power.c. PD status failures deliberately fall back to battery; charger/gauge/expander failures must inhibit startup or shut down. Address/undefined behavior sanitized; no physical hardware."
+}

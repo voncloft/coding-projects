@@ -1,0 +1,113 @@
+{
+  "heatsink_valid": true,
+  "heatsink_mm": [
+    24,
+    24,
+    6.5
+  ],
+  "pad_mm": 0.5,
+  "parts": [
+    {
+      "file": "PlateSpacer0.step",
+      "name": "PlateSpacer0",
+      "volume_mm3": 53.8343317119147,
+      "valid": true
+    },
+    {
+      "file": "PlateSpacer1.step",
+      "name": "PlateSpacer1",
+      "volume_mm3": 53.83433171191456,
+      "valid": true
+    },
+    {
+      "file": "PlateSpacer2.step",
+      "name": "PlateSpacer2",
+      "volume_mm3": 53.83433171191456,
+      "valid": true
+    },
+    {
+      "file": "PlateSpacer3.step",
+      "name": "PlateSpacer3",
+      "volume_mm3": 53.83433171191455,
+      "valid": true
+    },
+    {
+      "file": "PlateSpacer4.step",
+      "name": "PlateSpacer4",
+      "volume_mm3": 53.834331711914615,
+      "valid": true
+    },
+    {
+      "file": "PlateSpacer5.step",
+      "name": "PlateSpacer5",
+      "volume_mm3": 53.83433171191467,
+      "valid": true
+    },
+    {
+      "file": "PlateSpacer6.step",
+      "name": "PlateSpacer6",
+      "volume_mm3": 53.83433171191449,
+      "valid": true
+    },
+    {
+      "file": "PlateSpacer7.step",
+      "name": "PlateSpacer7",
+      "volume_mm3": 53.83433171191449,
+      "valid": true
+    },
+    {
+      "file": "PlateSpacer8.step",
+      "name": "PlateSpacer8",
+      "volume_mm3": 53.83433171191449,
+      "valid": true
+    },
+    {
+      "file": "CM4Spacer0.step",
+      "name": "CM4Spacer0",
+      "volume_mm3": 37.110063220529184,
+      "valid": true
+    },
+    {
+      "file": "CM4Spacer1.step",
+      "name": "CM4Spacer1",
+      "volume_mm3": 37.110063220529184,
+      "valid": true
+    },
+    {
+      "file": "CM4Spacer2.step",
+      "name": "CM4Spacer2",
+      "volume_mm3": 37.110063220529184,
+      "valid": true
+    },
+    {
+      "file": "CM4Spacer3.step",
+      "name": "CM4Spacer3",
+      "volume_mm3": 37.110063220529184,
+      "valid": true
+    },
+    {
+      "file": "RubberFoot0.step",
+      "name": "RubberFoot0",
+      "volume_mm3": 452.38934211693015,
+      "valid": true
+    },
+    {
+      "file": "RubberFoot1.step",
+      "name": "RubberFoot1",
+      "volume_mm3": 452.38934211692975,
+      "valid": true
+    },
+    {
+      "file": "RubberFoot2.step",
+      "name": "RubberFoot2",
+      "volume_mm3": 452.38934211693027,
+      "valid": true
+    },
+    {
+      "file": "RubberFoot3.step",
+      "name": "RubberFoot3",
+      "volume_mm3": 452.3893421169298,
+      "valid": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+Harness,From,To,Conductors,Prototype cut allowance mm,From XYZ logical mm,To XYZ logical mm,Wire specification,Status
+H01,usb-io:J9,power:J1,2,280,"[205.0, 26.0, 9.5]","[20.0, 57.0, 6.5]",18 AWG VH power,Cut allowance only: confirm final routed length on first article; follow exact pins in harness.csv
+H02,power:J2,usb-io:J10,4,140,"[111.0, 57.0, 6.5]","[150.0, 35.0, 9.5]",18 AWG VH power,Cut allowance only: confirm final routed length on first article; follow exact pins in harness.csv
+H03,power:J3,usb-io:J11,8,160,"[96.0, 55.0, 6.5]","[174.0, 40.0, 9.5]",26 AWG GH power and ground; 28 AWG signals,Cut allowance only: confirm final routed length on first article; follow exact pins in harness.csv
+H04,usb-io:J7,keyboard:J2,3,440,"[72.0, 40.0, 9.5]","[385.0, 13.0, 32.5]","Shielded 90-ohm USB pair, 28 AWG data; GH supply 26 AWG",Cut allowance only: confirm final routed length on first article; follow exact pins in harness.csv
+H05,power:J4,keyboard:J3,8,440,"[113.0, 85.0, 6.5]","[378.0, 13.0, 32.5]",26 AWG GH power and ground; 28 AWG signals,Cut allowance only: confirm final routed length on first article; follow exact pins in harness.csv
+H06,power:J5,control:J2,4,440,"[78.0, 79.0, 6.5]","[406.0, 45.0, 8]",26 AWG GH power and ground; 28 AWG signals,Cut allowance only: confirm final routed length on first article; follow exact pins in harness.csv
+H07,power:J7,stereo-audio:J3,2,380,"[114.0, 107.0, 6.5]","[391.0, 81.0, 6]","24 AWG audio power, matching rated 2.54 mm contacts",Cut allowance only: confirm final routed length on first article; follow exact pins in harness.csv
+H08,control:J1,keyboard:J4,6,180,"[394.0, 45.0, 8]","[443.0, 13.0, 32.5]",26 AWG GH power and ground; 28 AWG signals,Cut allowance only: confirm final routed length on first article; follow exact pins in harness.csv
+H09,control:J3,cm4-carrier:J7,6,160,"[425.0, 45.0, 8]","[356.0, 67.0, 5]",26 AWG GH power and ground; 28 AWG signals,Cut allowance only: confirm final routed length on first article; follow exact pins in harness.csv
+H10,control:J4,rotary:J1,5,220,"[439.0, 33.0, 8]","[563.55, 36.525, 26.9]",26 AWG GH power and ground; 28 AWG signals,Cut allowance only: confirm final routed length on first article; follow exact pins in harness.csv
+H11,control:J5,battery-light:J1,3,140,"[439.0, 20.0, 8]","[503.85, 14.0, 10]",26 AWG GH power and ground; 28 AWG signals,Cut allowance only: confirm final routed length on first article; follow exact pins in harness.csv
+H12,control:J7,cm4-carrier:J10,2,200,"[414.5, 48.0, 8]","[307.0, 60.0, 5]",26 AWG GH power and ground; 28 AWG signals,Cut allowance only: confirm final routed length on first article; follow exact pins in harness.csv
+H13,power:J6,cm4-carrier:J3,2,360,"[46.0, 108.0, 6.5]","[297.0, 69.0, 5]",18 AWG VH power,Cut allowance only: confirm final routed length on first article; follow exact pins in harness.csv
+H14,usb-io:J8,cm4-carrier:J4,4,300,"[113.0, 39.0, 9.5]","[297.0, 84.0, 5]","Shielded 90-ohm USB pair, 28 AWG data; GH supply 26 AWG",Cut allowance only: confirm final routed length on first article; follow exact pins in harness.csv
+H15,cm4-carrier:J6,stereo-audio:J3,5,100,"[357.0, 82.0, 5]","[391.0, 81.0, 6]",26 AWG GH power and ground; 28 AWG signals,Cut allowance only: confirm final routed length on first article; follow exact pins in harness.csv

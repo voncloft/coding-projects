@@ -1,0 +1,706 @@
+{
+  "fcstd_sha256": "99b49521f007a1829d3121d7184bf726f8cc0e564069d3b3854c71adc0680754",
+  "scope": "Nominal accessories versus current board/case solids; own connector mating volumes excluded as listed by the runner. Mechanical STEP reopen and validity. No physical tolerances or formed-cable test.",
+  "cm4_mating_intersections": [
+    {
+      "a_solid": 9,
+      "b_solid": 1915,
+      "volume": 0.5944542248236764,
+      "intersection_bounds": [
+        309.04,
+        -103.69,
+        8.4954,
+        310.675,
+        -82.33,
+        9.2492
+      ],
+      "a_bounds": [
+        308.31,
+        -104.3,
+        6.5792,
+        311.69,
+        -81.7,
+        9.4792
+      ],
+      "b_bounds": [
+        308.48,
+        -103.77,
+        8.4654,
+        311.45,
+        -82.25,
+        9.6054
+      ]
+    },
+    {
+      "a_solid": 10,
+      "b_solid": 1914,
+      "volume": 0.7678186991808782,
+      "intersection_bounds": [
+        343.245,
+        -103.7,
+        8.4854,
+        344.89,
+        -82.32,
+        9.2592
+      ],
+      "a_bounds": [
+        342.23,
+        -104.3,
+        6.5792,
+        345.61,
+        -81.7,
+        9.4792
+      ],
+      "b_bounds": [
+        342.48,
+        -103.77,
+        8.4654,
+        345.45,
+        -82.25,
+        9.6054
+      ]
+    }
+  ],
+  "accessory_checks": [
+    {
+      "name": "PlateSpacer0",
+      "valid": true,
+      "bounds": [
+        9.5,
+        -14.5,
+        34.1,
+        14.5,
+        -9.5,
+        37.5
+      ],
+      "contacts": []
+    },
+    {
+      "name": "PlateSpacer1",
+      "valid": true,
+      "bounds": [
+        287.5,
+        -39.5,
+        34.1,
+        292.5,
+        -34.5,
+        37.5
+      ],
+      "contacts": []
+    },
+    {
+      "name": "PlateSpacer2",
+      "valid": true,
+      "bounds": [
+        362.5,
+        -39.5,
+        34.1,
+        367.5,
+        -34.5,
+        37.5
+      ],
+      "contacts": []
+    },
+    {
+      "name": "PlateSpacer3",
+      "valid": true,
+      "bounds": [
+        446.5,
+        -14.5,
+        34.1,
+        451.5,
+        -9.5,
+        37.5
+      ],
+      "contacts": []
+    },
+    {
+      "name": "PlateSpacer4",
+      "valid": true,
+      "bounds": [
+        9.5,
+        -142.5,
+        34.1,
+        14.5,
+        -137.5,
+        37.5
+      ],
+      "contacts": []
+    },
+    {
+      "name": "PlateSpacer5",
+      "valid": true,
+      "bounds": [
+        147.5,
+        -142.5,
+        34.1,
+        152.5,
+        -137.5,
+        37.5
+      ],
+      "contacts": []
+    },
+    {
+      "name": "PlateSpacer6",
+      "valid": true,
+      "bounds": [
+        287.5,
+        -142.5,
+        34.1,
+        292.5,
+        -137.5,
+        37.5
+      ],
+      "contacts": []
+    },
+    {
+      "name": "PlateSpacer7",
+      "valid": true,
+      "bounds": [
+        362.5,
+        -142.5,
+        34.1,
+        367.5,
+        -137.5,
+        37.5
+      ],
+      "contacts": []
+    },
+    {
+      "name": "PlateSpacer8",
+      "valid": true,
+      "bounds": [
+        446.5,
+        -142.5,
+        34.1,
+        451.5,
+        -137.5,
+        37.5
+      ],
+      "contacts": []
+    },
+    {
+      "name": "CM4Spacer0",
+      "valid": true,
+      "bounds": [
+        308.06,
+        -68.9,
+        6.6,
+        312.86,
+        -64.1,
+        9.6
+      ],
+      "contacts": []
+    },
+    {
+      "name": "CM4Spacer1",
+      "valid": true,
+      "bounds": [
+        341.06,
+        -68.9,
+        6.6,
+        345.86,
+        -64.1,
+        9.6
+      ],
+      "contacts": []
+    },
+    {
+      "name": "CM4Spacer2",
+      "valid": true,
+      "bounds": [
+        308.06,
+        -116.9,
+        6.6,
+        312.86,
+        -112.1,
+        9.6
+      ],
+      "contacts": []
+    },
+    {
+      "name": "CM4Spacer3",
+      "valid": true,
+      "bounds": [
+        341.06,
+        -116.9,
+        6.6,
+        345.86,
+        -112.1,
+        9.6
+      ],
+      "contacts": []
+    },
+    {
+      "name": "IOMatedPlug0",
+      "valid": true,
+      "bounds": [
+        201.1,
+        -32.0,
+        11.1,
+        212.86,
+        -22.0,
+        27.6
+      ],
+      "contacts": []
+    },
+    {
+      "name": "IOMatedPlug1",
+      "valid": true,
+      "bounds": [
+        146.1,
+        -41.0,
+        11.1,
+        165.78,
+        -31.0,
+        27.6
+      ],
+      "contacts": []
+    },
+    {
+      "name": "PWRMatedPlug0",
+      "valid": true,
+      "bounds": [
+        16.1,
+        -63.0,
+        8.1,
+        27.86,
+        -53.0,
+        24.6
+      ],
+      "contacts": []
+    },
+    {
+      "name": "PWRMatedPlug1",
+      "valid": true,
+      "bounds": [
+        107.1,
+        -72.68,
+        8.1,
+        117.1,
+        -53.0,
+        24.6
+      ],
+      "contacts": []
+    },
+    {
+      "name": "PWRMatedPlug2",
+      "valid": true,
+      "bounds": [
+        42.1,
+        -114.0,
+        8.1,
+        53.86,
+        -104.0,
+        24.6
+      ],
+      "contacts": []
+    },
+    {
+      "name": "PWRMatedPlug3",
+      "valid": true,
+      "bounds": [
+        110.1,
+        -113.0,
+        8.1,
+        121.86,
+        -103.0,
+        24.6
+      ],
+      "contacts": []
+    },
+    {
+      "name": "PWRMatedPlug4",
+      "valid": true,
+      "bounds": [
+        51.1,
+        -61.0,
+        8.1,
+        62.86,
+        -51.0,
+        24.6
+      ],
+      "contacts": []
+    },
+    {
+      "name": "RotaryKnob",
+      "valid": true,
+      "bounds": [
+        553.55,
+        -33.525,
+        43.5,
+        573.55,
+        -13.525,
+        55.5
+      ],
+      "contacts": []
+    },
+    {
+      "name": "SpeakerStrap0",
+      "valid": true,
+      "bounds": [
+        30.0,
+        -133.0,
+        12.5,
+        80.0,
+        -127.0,
+        14.5
+      ],
+      "contacts": []
+    },
+    {
+      "name": "SpeakerStrap1",
+      "valid": true,
+      "bounds": [
+        385.0,
+        -133.0,
+        12.5,
+        435.0,
+        -127.0,
+        14.5
+      ],
+      "contacts": []
+    }
+  ],
+  "step_reload": [
+    {
+      "name": "CM4Spacer0.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        308.06,
+        -68.9,
+        6.6,
+        312.86,
+        -64.1,
+        9.6
+      ]
+    },
+    {
+      "name": "CM4Spacer1.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        341.06,
+        -68.9,
+        6.6,
+        345.86,
+        -64.1,
+        9.6
+      ]
+    },
+    {
+      "name": "CM4Spacer2.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        308.06,
+        -116.9,
+        6.6,
+        312.86,
+        -112.1,
+        9.6
+      ]
+    },
+    {
+      "name": "CM4Spacer3.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        341.06,
+        -116.9,
+        6.6,
+        345.86,
+        -112.1,
+        9.6
+      ]
+    },
+    {
+      "name": "PlateSpacer0.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        9.5,
+        -14.5,
+        34.1,
+        14.5,
+        -9.5,
+        37.5
+      ]
+    },
+    {
+      "name": "PlateSpacer1.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        287.5,
+        -39.5,
+        34.1,
+        292.5,
+        -34.5,
+        37.5
+      ]
+    },
+    {
+      "name": "PlateSpacer2.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        362.5,
+        -39.5,
+        34.1,
+        367.5,
+        -34.5,
+        37.5
+      ]
+    },
+    {
+      "name": "PlateSpacer3.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        446.5,
+        -14.5,
+        34.1,
+        451.5,
+        -9.5,
+        37.5
+      ]
+    },
+    {
+      "name": "PlateSpacer4.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        9.5,
+        -142.5,
+        34.1,
+        14.5,
+        -137.5,
+        37.5
+      ]
+    },
+    {
+      "name": "PlateSpacer5.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        147.5,
+        -142.5,
+        34.1,
+        152.5,
+        -137.5,
+        37.5
+      ]
+    },
+    {
+      "name": "PlateSpacer6.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        287.5,
+        -142.5,
+        34.1,
+        292.5,
+        -137.5,
+        37.5
+      ]
+    },
+    {
+      "name": "PlateSpacer7.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        362.5,
+        -142.5,
+        34.1,
+        367.5,
+        -137.5,
+        37.5
+      ]
+    },
+    {
+      "name": "PlateSpacer8.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        446.5,
+        -142.5,
+        34.1,
+        451.5,
+        -137.5,
+        37.5
+      ]
+    },
+    {
+      "name": "RubberFoot0.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        9.0,
+        -21.0,
+        -4.0,
+        21.0,
+        -9.0,
+        0.0
+      ]
+    },
+    {
+      "name": "RubberFoot1.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        564.0,
+        -21.0,
+        -4.0,
+        576.0,
+        -9.0,
+        0.0
+      ]
+    },
+    {
+      "name": "RubberFoot2.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        9.0,
+        -149.0,
+        -4.0,
+        21.0,
+        -137.0,
+        0.0
+      ]
+    },
+    {
+      "name": "RubberFoot3.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        564.0,
+        -161.0,
+        -4.0,
+        576.0,
+        -149.0,
+        0.0
+      ]
+    },
+    {
+      "name": "cm4-heatsink.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        0.0,
+        0.0,
+        0.0,
+        24.0,
+        24.0,
+        6.5
+      ]
+    },
+    {
+      "name": "indicator-light-pipe.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        501.5,
+        -10.35,
+        12.9,
+        506.2,
+        -5.65,
+        42.0
+      ]
+    },
+    {
+      "name": "keyboard-enclosure.step",
+      "valid": true,
+      "solids": 23,
+      "bounds": [
+        0.0,
+        -166.5,
+        -4.0,
+        584.55,
+        0.0,
+        55.5
+      ]
+    },
+    {
+      "name": "lower-shell.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        0.0,
+        -166.5,
+        0.0,
+        584.55,
+        0.0,
+        39.0
+      ]
+    },
+    {
+      "name": "plate-spacers.step",
+      "valid": true,
+      "solids": 13,
+      "bounds": [
+        9.5,
+        -142.5,
+        6.6,
+        451.5,
+        -9.5,
+        37.5
+      ]
+    },
+    {
+      "name": "rotary-knob.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        553.55,
+        -33.525,
+        43.5,
+        573.55,
+        -13.525,
+        55.5
+      ]
+    },
+    {
+      "name": "speaker-straps.step",
+      "valid": true,
+      "solids": 2,
+      "bounds": [
+        30.0,
+        -133.0,
+        12.5,
+        435.0,
+        -127.0,
+        14.5
+      ]
+    },
+    {
+      "name": "switch-plate.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        8.0,
+        -142.3,
+        37.5,
+        453.1,
+        -10.0,
+        39.0
+      ]
+    },
+    {
+      "name": "top-frame.step",
+      "valid": true,
+      "solids": 1,
+      "bounds": [
+        0.0,
+        -166.5,
+        39.0,
+        584.55,
+        0.0,
+        42.0
+      ]
+    }
+  ],
+  "passed": true
+}

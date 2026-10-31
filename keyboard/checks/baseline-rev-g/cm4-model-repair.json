@@ -1,0 +1,13 @@
+{
+  "source_valid": false,
+  "source_solids": 2262,
+  "result_valid": true,
+  "changes": [
+    {
+      "solid": 2058,
+      "original_volume": 91.15465522358348,
+      "bounds": "BoundBox (42.5359, 25.7252, 1.1908, 52.5359, 40.2252, 1.9718)",
+      "repair": "Conservative enclosing solid, original STEP retained"
+    }
+  ]
+}

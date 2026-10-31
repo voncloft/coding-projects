@@ -1,0 +1,40 @@
+{
+  "revision": "H audit",
+  "scope": "Changed power assembly checked against native enclosure and other components. Nominal CAD only.",
+  "power_pcb_sha256": "163e758a1996df055eaead28000a9d12474a173cbcff8998ac9d0d8379e9a8c4",
+  "power_step_sha256": "67209c63f455925a93b247e55a037aebf2e7f6b338e1aeff7d2aef6067483cc0",
+  "placement": "Placement [Pos=(12,-50,6.5), Yaw-Pitch-Roll=(0,0,0)]",
+  "bounds_mm": [
+    12.0,
+    -112.8,
+    3.915,
+    126.0,
+    -50.0,
+    17.3792
+  ],
+  "checks": [
+    {
+      "a": "Power_assembly",
+      "b": "LowerShell",
+      "overlaps": []
+    },
+    {
+      "a": "L2_maximum_envelope",
+      "b": "LowerShell",
+      "overlaps": []
+    }
+  ],
+  "intentional_mating_envelopes": [
+    "GHAllocation_power_J3",
+    "GHAllocation_power_J4",
+    "GHAllocation_power_J5",
+    "GHAllocation_power_J9",
+    "PWRMatedPlug0",
+    "PWRMatedPlug1",
+    "PWRMatedPlug2",
+    "PWRMatedPlug3",
+    "PWRMatedPlug4"
+  ],
+  "passed": true,
+  "fcstd_sha256": "99b49521f007a1829d3121d7184bf726f8cc0e564069d3b3854c71adc0680754"
+}

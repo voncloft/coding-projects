@@ -1,0 +1,926 @@
+{
+  "scope": "Exact nominal CAD solids across all boards, display, battery envelope, CM4, heatsink, speakers, case, plate, light pipe and rotary. This does not test physical tolerances or part internals.",
+  "fcstd_sha256": "99b49521f007a1829d3121d7184bf726f8cc0e564069d3b3854c71adc0680754",
+  "checks": [
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "usb_io_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "power_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "cm4_carrier_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "stereo_audio_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "control_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "rotary_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "battery_light_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "TouchDisplay2_ManufacturerModel",
+      "bbox_separate": true
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "Battery_CU_JAS503_Bounds",
+      "bbox_separate": true
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "CM4_Manufacturer_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "CM4_HeatSink_Allowance",
+      "bbox_separate": true
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "IndicatorLightPipe",
+      "bbox_separate": true
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_0",
+      "bbox_separate": true
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_1",
+      "bbox_separate": true
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "LowerShell",
+      "intersections": []
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "TopFrame",
+      "intersections": []
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "SwitchPlate",
+      "intersections": []
+    },
+    {
+      "a": "keyboard_KiCad_Assembly",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "power_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "cm4_carrier_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "stereo_audio_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "control_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "rotary_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "battery_light_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "TouchDisplay2_ManufacturerModel",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "Battery_CU_JAS503_Bounds",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "CM4_Manufacturer_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "CM4_HeatSink_Allowance",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "IndicatorLightPipe",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_0",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_1",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "LowerShell",
+      "intersections": []
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "TopFrame",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "SwitchPlate",
+      "bbox_separate": true
+    },
+    {
+      "a": "usb_io_KiCad_Assembly",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "cm4_carrier_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "stereo_audio_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "control_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "rotary_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "battery_light_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "TouchDisplay2_ManufacturerModel",
+      "bbox_separate": true
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "Battery_CU_JAS503_Bounds",
+      "bbox_separate": true
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "CM4_Manufacturer_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "CM4_HeatSink_Allowance",
+      "bbox_separate": true
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "IndicatorLightPipe",
+      "bbox_separate": true
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_0",
+      "bbox_separate": true
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_1",
+      "bbox_separate": true
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "LowerShell",
+      "intersections": []
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "TopFrame",
+      "bbox_separate": true
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "SwitchPlate",
+      "bbox_separate": true
+    },
+    {
+      "a": "power_KiCad_Assembly",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "stereo_audio_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "control_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "rotary_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "battery_light_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "TouchDisplay2_ManufacturerModel",
+      "bbox_separate": true
+    },
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "Battery_CU_JAS503_Bounds",
+      "bbox_separate": true
+    },
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "CM4_Manufacturer_Assembly",
+      "intersections": [
+        {
+          "a_solid": 9,
+          "b_solid": 1915,
+          "volume_mm3": 0.5944542248236764,
+          "bounds_mm": [
+            309.03999999999996,
+            -103.69000000000024,
+            8.495399999618952,
+            310.675,
+            -82.32999999999868,
+            9.249200000000048
+          ]
+        },
+        {
+          "a_solid": 10,
+          "b_solid": 1914,
+          "volume_mm3": 0.7678186991808782,
+          "bounds_mm": [
+            343.245,
+            -103.70000000000012,
+            8.485399999619016,
+            344.89,
+            -82.3199999999988,
+            9.259199999999982
+          ]
+        }
+      ]
+    },
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "CM4_HeatSink_Allowance",
+      "intersections": []
+    },
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "IndicatorLightPipe",
+      "bbox_separate": true
+    },
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_0",
+      "bbox_separate": true
+    },
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_1",
+      "bbox_separate": true
+    },
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "LowerShell",
+      "intersections": []
+    },
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "TopFrame",
+      "bbox_separate": true
+    },
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "SwitchPlate",
+      "bbox_separate": true
+    },
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "stereo_audio_KiCad_Assembly",
+      "b": "control_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "stereo_audio_KiCad_Assembly",
+      "b": "rotary_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "stereo_audio_KiCad_Assembly",
+      "b": "battery_light_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "stereo_audio_KiCad_Assembly",
+      "b": "TouchDisplay2_ManufacturerModel",
+      "bbox_separate": true
+    },
+    {
+      "a": "stereo_audio_KiCad_Assembly",
+      "b": "Battery_CU_JAS503_Bounds",
+      "bbox_separate": true
+    },
+    {
+      "a": "stereo_audio_KiCad_Assembly",
+      "b": "CM4_Manufacturer_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "stereo_audio_KiCad_Assembly",
+      "b": "CM4_HeatSink_Allowance",
+      "bbox_separate": true
+    },
+    {
+      "a": "stereo_audio_KiCad_Assembly",
+      "b": "IndicatorLightPipe",
+      "bbox_separate": true
+    },
+    {
+      "a": "stereo_audio_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_0",
+      "bbox_separate": true
+    },
+    {
+      "a": "stereo_audio_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_1",
+      "bbox_separate": true
+    },
+    {
+      "a": "stereo_audio_KiCad_Assembly",
+      "b": "LowerShell",
+      "intersections": []
+    },
+    {
+      "a": "stereo_audio_KiCad_Assembly",
+      "b": "TopFrame",
+      "bbox_separate": true
+    },
+    {
+      "a": "stereo_audio_KiCad_Assembly",
+      "b": "SwitchPlate",
+      "bbox_separate": true
+    },
+    {
+      "a": "stereo_audio_KiCad_Assembly",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "control_KiCad_Assembly",
+      "b": "rotary_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "control_KiCad_Assembly",
+      "b": "battery_light_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "control_KiCad_Assembly",
+      "b": "TouchDisplay2_ManufacturerModel",
+      "bbox_separate": true
+    },
+    {
+      "a": "control_KiCad_Assembly",
+      "b": "Battery_CU_JAS503_Bounds",
+      "bbox_separate": true
+    },
+    {
+      "a": "control_KiCad_Assembly",
+      "b": "CM4_Manufacturer_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "control_KiCad_Assembly",
+      "b": "CM4_HeatSink_Allowance",
+      "bbox_separate": true
+    },
+    {
+      "a": "control_KiCad_Assembly",
+      "b": "IndicatorLightPipe",
+      "bbox_separate": true
+    },
+    {
+      "a": "control_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_0",
+      "bbox_separate": true
+    },
+    {
+      "a": "control_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_1",
+      "bbox_separate": true
+    },
+    {
+      "a": "control_KiCad_Assembly",
+      "b": "LowerShell",
+      "intersections": []
+    },
+    {
+      "a": "control_KiCad_Assembly",
+      "b": "TopFrame",
+      "bbox_separate": true
+    },
+    {
+      "a": "control_KiCad_Assembly",
+      "b": "SwitchPlate",
+      "bbox_separate": true
+    },
+    {
+      "a": "control_KiCad_Assembly",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "rotary_KiCad_Assembly",
+      "b": "battery_light_KiCad_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "rotary_KiCad_Assembly",
+      "b": "TouchDisplay2_ManufacturerModel",
+      "bbox_separate": true
+    },
+    {
+      "a": "rotary_KiCad_Assembly",
+      "b": "Battery_CU_JAS503_Bounds",
+      "bbox_separate": true
+    },
+    {
+      "a": "rotary_KiCad_Assembly",
+      "b": "CM4_Manufacturer_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "rotary_KiCad_Assembly",
+      "b": "CM4_HeatSink_Allowance",
+      "bbox_separate": true
+    },
+    {
+      "a": "rotary_KiCad_Assembly",
+      "b": "IndicatorLightPipe",
+      "bbox_separate": true
+    },
+    {
+      "a": "rotary_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_0",
+      "bbox_separate": true
+    },
+    {
+      "a": "rotary_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_1",
+      "bbox_separate": true
+    },
+    {
+      "a": "rotary_KiCad_Assembly",
+      "b": "LowerShell",
+      "intersections": []
+    },
+    {
+      "a": "rotary_KiCad_Assembly",
+      "b": "TopFrame",
+      "intersections": []
+    },
+    {
+      "a": "rotary_KiCad_Assembly",
+      "b": "SwitchPlate",
+      "bbox_separate": true
+    },
+    {
+      "a": "rotary_KiCad_Assembly",
+      "b": "RotaryKnob",
+      "intersections": []
+    },
+    {
+      "a": "battery_light_KiCad_Assembly",
+      "b": "TouchDisplay2_ManufacturerModel",
+      "bbox_separate": true
+    },
+    {
+      "a": "battery_light_KiCad_Assembly",
+      "b": "Battery_CU_JAS503_Bounds",
+      "bbox_separate": true
+    },
+    {
+      "a": "battery_light_KiCad_Assembly",
+      "b": "CM4_Manufacturer_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "battery_light_KiCad_Assembly",
+      "b": "CM4_HeatSink_Allowance",
+      "bbox_separate": true
+    },
+    {
+      "a": "battery_light_KiCad_Assembly",
+      "b": "IndicatorLightPipe",
+      "intersections": []
+    },
+    {
+      "a": "battery_light_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_0",
+      "bbox_separate": true
+    },
+    {
+      "a": "battery_light_KiCad_Assembly",
+      "b": "Speaker_AS04008CO_R_1",
+      "bbox_separate": true
+    },
+    {
+      "a": "battery_light_KiCad_Assembly",
+      "b": "LowerShell",
+      "intersections": []
+    },
+    {
+      "a": "battery_light_KiCad_Assembly",
+      "b": "TopFrame",
+      "bbox_separate": true
+    },
+    {
+      "a": "battery_light_KiCad_Assembly",
+      "b": "SwitchPlate",
+      "bbox_separate": true
+    },
+    {
+      "a": "battery_light_KiCad_Assembly",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "TouchDisplay2_ManufacturerModel",
+      "b": "Battery_CU_JAS503_Bounds",
+      "bbox_separate": true
+    },
+    {
+      "a": "TouchDisplay2_ManufacturerModel",
+      "b": "CM4_Manufacturer_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "TouchDisplay2_ManufacturerModel",
+      "b": "CM4_HeatSink_Allowance",
+      "bbox_separate": true
+    },
+    {
+      "a": "TouchDisplay2_ManufacturerModel",
+      "b": "IndicatorLightPipe",
+      "bbox_separate": true
+    },
+    {
+      "a": "TouchDisplay2_ManufacturerModel",
+      "b": "Speaker_AS04008CO_R_0",
+      "bbox_separate": true
+    },
+    {
+      "a": "TouchDisplay2_ManufacturerModel",
+      "b": "Speaker_AS04008CO_R_1",
+      "bbox_separate": true
+    },
+    {
+      "a": "TouchDisplay2_ManufacturerModel",
+      "b": "LowerShell",
+      "intersections": []
+    },
+    {
+      "a": "TouchDisplay2_ManufacturerModel",
+      "b": "TopFrame",
+      "bbox_separate": true
+    },
+    {
+      "a": "TouchDisplay2_ManufacturerModel",
+      "b": "SwitchPlate",
+      "bbox_separate": true
+    },
+    {
+      "a": "TouchDisplay2_ManufacturerModel",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "Battery_CU_JAS503_Bounds",
+      "b": "CM4_Manufacturer_Assembly",
+      "bbox_separate": true
+    },
+    {
+      "a": "Battery_CU_JAS503_Bounds",
+      "b": "CM4_HeatSink_Allowance",
+      "bbox_separate": true
+    },
+    {
+      "a": "Battery_CU_JAS503_Bounds",
+      "b": "IndicatorLightPipe",
+      "bbox_separate": true
+    },
+    {
+      "a": "Battery_CU_JAS503_Bounds",
+      "b": "Speaker_AS04008CO_R_0",
+      "bbox_separate": true
+    },
+    {
+      "a": "Battery_CU_JAS503_Bounds",
+      "b": "Speaker_AS04008CO_R_1",
+      "bbox_separate": true
+    },
+    {
+      "a": "Battery_CU_JAS503_Bounds",
+      "b": "LowerShell",
+      "intersections": []
+    },
+    {
+      "a": "Battery_CU_JAS503_Bounds",
+      "b": "TopFrame",
+      "bbox_separate": true
+    },
+    {
+      "a": "Battery_CU_JAS503_Bounds",
+      "b": "SwitchPlate",
+      "bbox_separate": true
+    },
+    {
+      "a": "Battery_CU_JAS503_Bounds",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "CM4_Manufacturer_Assembly",
+      "b": "CM4_HeatSink_Allowance",
+      "bbox_separate": true
+    },
+    {
+      "a": "CM4_Manufacturer_Assembly",
+      "b": "IndicatorLightPipe",
+      "bbox_separate": true
+    },
+    {
+      "a": "CM4_Manufacturer_Assembly",
+      "b": "Speaker_AS04008CO_R_0",
+      "bbox_separate": true
+    },
+    {
+      "a": "CM4_Manufacturer_Assembly",
+      "b": "Speaker_AS04008CO_R_1",
+      "bbox_separate": true
+    },
+    {
+      "a": "CM4_Manufacturer_Assembly",
+      "b": "LowerShell",
+      "intersections": []
+    },
+    {
+      "a": "CM4_Manufacturer_Assembly",
+      "b": "TopFrame",
+      "bbox_separate": true
+    },
+    {
+      "a": "CM4_Manufacturer_Assembly",
+      "b": "SwitchPlate",
+      "bbox_separate": true
+    },
+    {
+      "a": "CM4_Manufacturer_Assembly",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "CM4_HeatSink_Allowance",
+      "b": "IndicatorLightPipe",
+      "bbox_separate": true
+    },
+    {
+      "a": "CM4_HeatSink_Allowance",
+      "b": "Speaker_AS04008CO_R_0",
+      "bbox_separate": true
+    },
+    {
+      "a": "CM4_HeatSink_Allowance",
+      "b": "Speaker_AS04008CO_R_1",
+      "bbox_separate": true
+    },
+    {
+      "a": "CM4_HeatSink_Allowance",
+      "b": "LowerShell",
+      "intersections": []
+    },
+    {
+      "a": "CM4_HeatSink_Allowance",
+      "b": "TopFrame",
+      "bbox_separate": true
+    },
+    {
+      "a": "CM4_HeatSink_Allowance",
+      "b": "SwitchPlate",
+      "bbox_separate": true
+    },
+    {
+      "a": "CM4_HeatSink_Allowance",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "IndicatorLightPipe",
+      "b": "Speaker_AS04008CO_R_0",
+      "bbox_separate": true
+    },
+    {
+      "a": "IndicatorLightPipe",
+      "b": "Speaker_AS04008CO_R_1",
+      "bbox_separate": true
+    },
+    {
+      "a": "IndicatorLightPipe",
+      "b": "LowerShell",
+      "intersections": []
+    },
+    {
+      "a": "IndicatorLightPipe",
+      "b": "TopFrame",
+      "intersections": []
+    },
+    {
+      "a": "IndicatorLightPipe",
+      "b": "SwitchPlate",
+      "bbox_separate": true
+    },
+    {
+      "a": "IndicatorLightPipe",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "Speaker_AS04008CO_R_0",
+      "b": "Speaker_AS04008CO_R_1",
+      "bbox_separate": true
+    },
+    {
+      "a": "Speaker_AS04008CO_R_0",
+      "b": "LowerShell",
+      "intersections": []
+    },
+    {
+      "a": "Speaker_AS04008CO_R_0",
+      "b": "TopFrame",
+      "bbox_separate": true
+    },
+    {
+      "a": "Speaker_AS04008CO_R_0",
+      "b": "SwitchPlate",
+      "bbox_separate": true
+    },
+    {
+      "a": "Speaker_AS04008CO_R_0",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "Speaker_AS04008CO_R_1",
+      "b": "LowerShell",
+      "intersections": []
+    },
+    {
+      "a": "Speaker_AS04008CO_R_1",
+      "b": "TopFrame",
+      "bbox_separate": true
+    },
+    {
+      "a": "Speaker_AS04008CO_R_1",
+      "b": "SwitchPlate",
+      "bbox_separate": true
+    },
+    {
+      "a": "Speaker_AS04008CO_R_1",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "LowerShell",
+      "b": "TopFrame",
+      "bbox_separate": true
+    },
+    {
+      "a": "LowerShell",
+      "b": "SwitchPlate",
+      "intersections": []
+    },
+    {
+      "a": "LowerShell",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "TopFrame",
+      "b": "SwitchPlate",
+      "bbox_separate": true
+    },
+    {
+      "a": "TopFrame",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    },
+    {
+      "a": "SwitchPlate",
+      "b": "RotaryKnob",
+      "bbox_separate": true
+    }
+  ],
+  "expected_cm4_connector_intersections": [
+    {
+      "a": "cm4_carrier_KiCad_Assembly",
+      "b": "CM4_Manufacturer_Assembly",
+      "intersections": [
+        {
+          "a_solid": 9,
+          "b_solid": 1915,
+          "volume_mm3": 0.5944542248236764,
+          "bounds_mm": [
+            309.03999999999996,
+            -103.69000000000024,
+            8.495399999618952,
+            310.675,
+            -82.32999999999868,
+            9.249200000000048
+          ]
+        },
+        {
+          "a_solid": 10,
+          "b_solid": 1914,
+          "volume_mm3": 0.7678186991808782,
+          "bounds_mm": [
+            343.245,
+            -103.70000000000012,
+            8.485399999619016,
+            344.89,
+            -82.3199999999988,
+            9.259199999999982
+          ]
+        }
+      ]
+    }
+  ],
+  "unexpected": [],
+  "passed": true,
+  "object_count": 19,
+  "pair_count": 171
+}

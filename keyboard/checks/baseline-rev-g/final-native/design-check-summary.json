@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "boards": [
+    {
+      "drc": 0,
+      "unrouted": 0,
+      "parity": 0,
+      "erc": 0,
+      "board": "battery-light",
+      "models": 5,
+      "missing_models": [],
+      "pcb_sha256": "0f8cf61483918a8788fee7ab90a25a18a2a8bb54f6e5ee7ff6040e5891c98571"
+    },
+    {
+      "drc": 0,
+      "unrouted": 0,
+      "parity": 0,
+      "erc": 0,
+      "board": "cm4-carrier",
+      "models": 44,
+      "missing_models": [],
+      "pcb_sha256": "87e79f7ccf3a12923e4b93bdfb2c7f893af2f91961169d0298471005205307ff"
+    },
+    {
+      "drc": 0,
+      "unrouted": 0,
+      "parity": 0,
+      "erc": 0,
+      "board": "control",
+      "models": 29,
+      "missing_models": [],
+      "pcb_sha256": "592af9590740a99cc5b5bfd544e9efc5de0bf14fdc79e46017b643868e58a395"
+    },
+    {
+      "drc": 0,
+      "unrouted": 0,
+      "parity": 0,
+      "erc": 0,
+      "board": "keyboard",
+      "models": 579,
+      "missing_models": [],
+      "pcb_sha256": "b83235825ce35cb3f58337d03fd946116a82c16f51c5bed0fea838664d3e254c"
+    },
+    {
+      "drc": 0,
+      "unrouted": 0,
+      "parity": 0,
+      "erc": 0,
+      "board": "power",
+      "models": 122,
+      "missing_models": [],
+      "pcb_sha256": "216780c9da36d96f695f384c189d001e022bfeed8426a2b9420044a235ad8a09"
+    },
+    {
+      "drc": 0,
+      "unrouted": 0,
+      "parity": 0,
+      "erc": 0,
+      "board": "rotary",
+      "models": 8,
+      "missing_models": [],
+      "pcb_sha256": "a3a0bbd2684bbdb2224f96dc88021b16ae83bad9f015125deaa17fd63b51b20f"
+    },
+    {
+      "drc": 0,
+      "unrouted": 0,
+      "parity": 0,
+      "erc": 0,
+      "board": "stereo-audio",
+      "models": 16,
+      "missing_models": [],
+      "pcb_sha256": "fca3631fccf479f0315bb9cce38fa3d70cabda8f6d9096dca1fd29053b6d7f13"
+    },
+    {
+      "drc": 0,
+      "unrouted": 0,
+      "parity": 0,
+      "erc": 0,
+      "board": "usb-io",
+      "models": 133,
+      "missing_models": [],
+      "pcb_sha256": "b7f7849befe7b612db16f1322486b7e8450457209614b75855cef190d2f6e2dd"
+    }
+  ],
+  "scope": "Native KiCad and file resolution only; no electrical hardware"
+}

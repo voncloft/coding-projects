@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+TARGET="https://www.linuxfromscratch.org/blfs/view/svn/"
+OUTFILE="/var/cache/scratchpkg/workbook/blfs-categorized.txt"
+touch "$OUTFILE"
+unwanted='appendices|introduction|legalnotice|mit|preface|longindex|download|index'
+
+categories=("basicnet" "general" "gnome" "kde" "lxqt" "multimedia" "postlfs" "pst" "server" "x" "xfce" "xsoft")
+
+> raw-cat.txt
+
+for category in "${categories[@]}"; do
+  curl -s "$TARGET$category/" | \
+  grep -Eo 'href="[^"]+\.html"' | \
+  sed -e 's/href="//;s/"$//' | \
+  grep -viE "(^|/)$unwanted\.html$" | \
+  while read -r href; do
+    pkg=$(basename "$href" .html | tr -d '[:space:]')
+    [[ -z "$pkg" ]] && continue
+    echo "$category:$pkg"
+  done >> raw-cat.txt
+done
+
+sort -t: -k1,1 -k2,2 raw-cat.txt > sorted-raw-cat.txt
+mv sorted-raw-cat.txt raw-cat.txt
+
+{
+  lastcat=""
+  while IFS=":" read -r category pkg; do
+    if [[ "$category" != "$lastcat" ]]; then
+      printf "\n%s:\n" "$category"
+      lastcat="$category"
+    fi
+    printf "  - %s\n" "$pkg"
+  done < raw-cat.txt
+} > "$OUTFILE"
+
+rm raw-cat.txt
+echo "Done → $OUTFILE"

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Todo List
+Comment=Qt6 todo list with dynamic checkboxes
+Exec=@LAUNCHER@ %u
+Icon=com.von.TodoList
+Terminal=false
+Categories=Utility;Qt;
+StartupNotify=true

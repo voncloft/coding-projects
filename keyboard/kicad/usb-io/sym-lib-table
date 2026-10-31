@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "KeyboardE") (type "KiCad") (uri "${KIPRJMOD}/KeyboardE.kicad_sym") (options "") (descr "Verified manufacturer pin maps")) (lib (name "KeyboardF") (type "KiCad") (uri "${KIPRJMOD}/KeyboardG.kicad_sym") (options "") (descr "Rev G verified USB mux symbol")))

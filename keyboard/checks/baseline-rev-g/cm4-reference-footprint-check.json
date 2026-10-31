@@ -1,0 +1,26 @@
+{
+  "official_file": "Raspberry Pi CM4IOv5.kicad_pcb, Module1",
+  "source_url": "https://www.raspberrypi.com/documentation/computers/compute-module.html",
+  "pads_compared": 200,
+  "max_delta_mm": 2.842170943040401e-14,
+  "transform": "(x,y) -> (215.96-x,132-y)",
+  "hole_positions_match": [
+    [
+      20.46,
+      10.5
+    ],
+    [
+      53.46,
+      10.5
+    ],
+    [
+      20.46,
+      58.5
+    ],
+    [
+      53.46,
+      58.5
+    ]
+  ],
+  "module_step_correction": "Rotate +90 degrees, translate (362.96,-118,9.6). The previous -90-degree import was reversed."
+}

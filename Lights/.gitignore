@@ -1,0 +1,26 @@
+# Qt / CMake build folders
+build/
+*.user
+*.pro.user
+*.pro.user.* 
+
+# Backup / temporary files
+*.o
+*.obj
+*.exe
+*.log
+*.qrc
+!resources.qrc
+!broadlink.qrc
+/build-broadlink/
+__pycache__/
+*.moc
+*.rcc
+*.pch
+*.dll
+*.so
+*.dylib
+
+# OS files
+.DS_Store
+Thumbs.db

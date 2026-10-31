@@ -1,0 +1,65 @@
+Harness,From board,From connector,From pin,From net,To board,To connector,To pin,To net,Notes
+H01,usb-io,J9,1,PD_IN,power,J1,1,PD_IN,PD input; VH 2-pin at both ends
+H01,usb-io,J9,2,GND,power,J1,2,GND,PD input; VH 2-pin at both ends
+H02,power,J2,1,+5V_CORE,usb-io,J10,1,+5V_CORE,Core and external USB rails; VH 4-pin at both ends
+H02,power,J2,2,GND,usb-io,J10,2,GND,Core and external USB rails; VH 4-pin at both ends
+H02,power,J2,3,+5V_IO,usb-io,J10,3,+5V_IO,Core and external USB rails; VH 4-pin at both ends
+H02,power,J2,4,GND,usb-io,J10,4,GND,Core and external USB rails; VH 4-pin at both ends
+H03,power,J3,1,+3V3_AON,usb-io,J11,1,+3V3_AON,Controls; GH 8-pin at both ends
+H03,power,J3,2,GND,usb-io,J11,2,GND,Controls; GH 8-pin at both ends
+H03,power,J3,3,I2C_SDA,usb-io,J11,3,I2C_SDA,Controls; GH 8-pin at both ends
+H03,power,J3,4,I2C_SCL,usb-io,J11,4,I2C_SCL,Controls; GH 8-pin at both ends
+H03,power,J3,5,POWER_REQUEST,usb-io,J11,5,POWER_REQUEST,Controls; GH 8-pin at both ends
+H03,power,J3,6,EXT_USB_ENABLE,usb-io,J11,6,EXT_USB_ENABLE,Controls; GH 8-pin at both ends
+H03,power,J3,7,WATCH_ENABLE,usb-io,J11,7,WATCH_ENABLE,Controls; GH 8-pin at both ends
+H03,power,J3,8,WATCH_FAULT_N,usb-io,J11,8,WATCH_FAULT_N,Controls; GH 8-pin at both ends
+H04,usb-io,J7,1,DN1_DP,keyboard,J2,1,HUB_KB_DP,USB pair; GH 3-pin to existing 2.54 mm header
+H04,usb-io,J7,2,DN1_DM,keyboard,J2,2,HUB_KB_DM,USB pair; GH 3-pin to existing 2.54 mm header
+H04,usb-io,J7,3,GND,keyboard,J2,3,GND,USB pair; GH 3-pin to existing 2.54 mm header
+H05,power,J4,1,+3V3_AON,keyboard,J3,1,+3V3_AON,Keyboard power and control; GH 8-pin to existing 2.54 mm header
+H05,power,J4,2,GND,keyboard,J3,2,GND,Keyboard power and control; GH 8-pin to existing 2.54 mm header
+H05,power,J4,3,+5V_RGB,keyboard,J3,3,+5V_RGB,Keyboard power and control; GH 8-pin to existing 2.54 mm header
+H05,power,J4,4,GND,keyboard,J3,4,GND,Keyboard power and control; GH 8-pin to existing 2.54 mm header
+H05,power,J4,5,POWER_REQUEST,keyboard,J3,5,POWER_REQUEST,Keyboard power and control; GH 8-pin to existing 2.54 mm header
+H05,power,J4,6,MAIN_ENABLE,keyboard,J3,6,MAIN_ENABLE,Keyboard power and control; GH 8-pin to existing 2.54 mm header
+H05,power,J4,7,POWER_IRQ,keyboard,J3,7,POWER_IRQ,Keyboard power and control; GH 8-pin to existing 2.54 mm header
+H05,power,J4,8,GND,keyboard,J3,8,GND,Keyboard power and control; GH 8-pin to existing 2.54 mm header
+H06,power,J5,1,I2C_SDA,control,J2,1,PWR_SDA,"I2C and always-on supply, GH 4 at both ends"
+H06,power,J5,2,I2C_SCL,control,J2,2,PWR_SCL,"I2C and always-on supply, GH 4 at both ends"
+H06,power,J5,3,+3V3_AON,control,J2,3,+3V3_AON,"I2C and always-on supply, GH 4 at both ends"
+H06,power,J5,4,GND,control,J2,4,GND,"I2C and always-on supply, GH 4 at both ends"
+H07,power,J7,1,+3V3_AUDIO,stereo-audio,J3,1,+3V3_AUDIO,Audio power; VH 2-pin to positions 1–2 of existing 7-pin header
+H07,power,J7,2,GND,stereo-audio,J3,2,GND,Audio power; VH 2-pin to positions 1–2 of existing 7-pin header
+H08,control,J1,1,BRIDGE_TX,keyboard,J4,1,BRIDGE_TX,"Bridge UART, I2C and AON; GH 6 to main 2.54 mm 6-pin housing"
+H08,control,J1,2,BRIDGE_RX,keyboard,J4,2,BRIDGE_RX,"Bridge UART, I2C and AON; GH 6 to main 2.54 mm 6-pin housing"
+H08,control,J1,3,PWR_SDA,keyboard,J4,3,I2C_SDA,"Bridge UART, I2C and AON; GH 6 to main 2.54 mm 6-pin housing"
+H08,control,J1,4,PWR_SCL,keyboard,J4,4,I2C_SCL,"Bridge UART, I2C and AON; GH 6 to main 2.54 mm 6-pin housing"
+H08,control,J1,5,+3V3_AON,keyboard,J4,5,+3V3_AON,"Bridge UART, I2C and AON; GH 6 to main 2.54 mm 6-pin housing"
+H08,control,J1,6,GND,keyboard,J4,6,GND,"Bridge UART, I2C and AON; GH 6 to main 2.54 mm 6-pin housing"
+H09,control,J3,1,C3_RX,cm4-carrier,J7,1,C3_RX,"CM4 UART, recovery and final-halt; GH 6 at both ends"
+H09,control,J3,2,C3_TX,cm4-carrier,J7,2,C3_TX,"CM4 UART, recovery and final-halt; GH 6 at both ends"
+H09,control,J3,3,C3_EN,cm4-carrier,J7,3,C3_EN,"CM4 UART, recovery and final-halt; GH 6 at both ends"
+H09,control,J3,4,C3_BOOT_N,cm4-carrier,J7,4,C3_BOOT_N,"CM4 UART, recovery and final-halt; GH 6 at both ends"
+H09,control,J3,5,CM4_HALTED_N,cm4-carrier,J7,5,CM4_HALTED_N,"CM4 UART, recovery and final-halt; GH 6 at both ends"
+H09,control,J3,6,GND,cm4-carrier,J7,6,GND,"CM4 UART, recovery and final-halt; GH 6 at both ends"
+H10,control,J4,1,+3V3_AON,rotary,J1,1,+3V3_AON,Rotary inputs and supply; GH 5 at both ends
+H10,control,J4,2,GND,rotary,J1,2,GND,Rotary inputs and supply; GH 5 at both ends
+H10,control,J4,3,ENC_A,rotary,J1,3,ENC_A,Rotary inputs and supply; GH 5 at both ends
+H10,control,J4,4,ENC_B,rotary,J1,4,ENC_B,Rotary inputs and supply; GH 5 at both ends
+H10,control,J4,5,ENC_SW,rotary,J1,5,ENC_SW,Rotary inputs and supply; GH 5 at both ends
+H11,control,J5,1,RED_PWM,battery-light,J1,1,RED_PWM,Battery indicator red/green/GND; GH 3 at both ends
+H11,control,J5,2,GREEN_PWM,battery-light,J1,2,GREEN_PWM,Battery indicator red/green/GND; GH 3 at both ends
+H11,control,J5,3,GND,battery-light,J1,3,GND,Battery indicator red/green/GND; GH 3 at both ends
+H12,control,J7,1,+3V3_AON,cm4-carrier,J10,1,+3V3_AON,Always-on isolated UART supply; GH 2 at both ends
+H12,control,J7,2,GND,cm4-carrier,J10,2,GND,Always-on isolated UART supply; GH 2 at both ends
+H13,power,J6,1,+5V_CORE,cm4-carrier,J3,1,+5V_CORE,CM4 and display core supply; VH 2 at both ends
+H13,power,J6,2,GND,cm4-carrier,J3,2,GND,CM4 and display core supply; VH 2 at both ends
+H14,usb-io,J8,1,CM4_VBUS,cm4-carrier,J4,1,CM4_VBUS,"CM4 USB audio/recovery; GH 4, shielded 90-ohm USB pair"
+H14,usb-io,J8,2,DN2_DM,cm4-carrier,J4,2,USB_DM,"CM4 USB audio/recovery; GH 4, shielded 90-ohm USB pair"
+H14,usb-io,J8,3,DN2_DP,cm4-carrier,J4,3,USB_DP,"CM4 USB audio/recovery; GH 4, shielded 90-ohm USB pair"
+H14,usb-io,J8,4,GND,cm4-carrier,J4,4,GND,"CM4 USB audio/recovery; GH 4, shielded 90-ohm USB pair"
+H15,cm4-carrier,J6,1,I2S_BCLK_R,stereo-audio,J3,3,CLK_IN,I2S/control; GH 5 to audio 2.54 mm pins 3-7; shares a 7-way audio housing with H07
+H15,cm4-carrier,J6,2,I2S_LRCLK_R,stereo-audio,J3,4,LR_IN,I2S/control; GH 5 to audio 2.54 mm pins 3-7; shares a 7-way audio housing with H07
+H15,cm4-carrier,J6,3,I2S_DATA_R,stereo-audio,J3,5,DATA_IN,I2S/control; GH 5 to audio 2.54 mm pins 3-7; shares a 7-way audio housing with H07
+H15,cm4-carrier,J6,4,AMP_ENABLE,stereo-audio,J3,6,AMP_ENABLE,I2S/control; GH 5 to audio 2.54 mm pins 3-7; shares a 7-way audio housing with H07
+H15,cm4-carrier,J6,5,GND,stereo-audio,J3,7,GND,I2S/control; GH 5 to audio 2.54 mm pins 3-7; shares a 7-way audio housing with H07

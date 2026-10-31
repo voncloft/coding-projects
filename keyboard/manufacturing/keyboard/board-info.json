@@ -1,0 +1,20 @@
+{
+  "board": "keyboard",
+  "pcb_sha256": "0b42f651a0dfdb58c55e6161bb4d2164664e1db90f89f6c4e7c90a1362348acd",
+  "copper_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "thickness_mm": 1.5642,
+  "width_mm": 445.1,
+  "height_mm": 132.3,
+  "tracks": 8710,
+  "zones": 3,
+  "footprints": 481,
+  "position_origin": "KiCad absolute board origin. CSV X positive right, Y positive up; view from front. Bottom rotations are native KiCad, not mirrored.",
+  "stackup_status": "Explicit native stackup. 4-layer JLC04161H-3313 reference or 2-layer FR4. See STACKUP-REQUIREMENTS.md; supplier impedance confirmation and physical qualification remain open.",
+  "native_title_revision": "D",
+  "system_release": "H audit; manufacturing release on hold"
+}

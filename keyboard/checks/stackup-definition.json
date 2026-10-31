@@ -1,0 +1,54 @@
+{
+  "source": "https://jlcpcb.com/impedance",
+  "boards": [
+    {
+      "board": "battery-light",
+      "laminate_mm": 1.5642,
+      "stackup": "JLC04161H-3313",
+      "changed_signal_widths": 0
+    },
+    {
+      "board": "cm4-carrier",
+      "laminate_mm": 1.5642,
+      "stackup": "JLC04161H-3313",
+      "changed_signal_widths": 80
+    },
+    {
+      "board": "control",
+      "laminate_mm": 1.5642,
+      "stackup": "JLC04161H-3313",
+      "changed_signal_widths": 0
+    },
+    {
+      "board": "keyboard",
+      "laminate_mm": 1.5642,
+      "stackup": "JLC04161H-3313",
+      "changed_signal_widths": 0
+    },
+    {
+      "board": "power",
+      "laminate_mm": 1.5642,
+      "stackup": "JLC04161H-3313",
+      "changed_signal_widths": 0
+    },
+    {
+      "board": "rotary",
+      "laminate_mm": 1.5642,
+      "stackup": "JLC04161H-3313",
+      "changed_signal_widths": 0
+    },
+    {
+      "board": "stereo-audio",
+      "laminate_mm": 1.6,
+      "stackup": "2-layer nominal FR4",
+      "changed_signal_widths": 0
+    },
+    {
+      "board": "usb-io",
+      "laminate_mm": 1.5642,
+      "stackup": "JLC04161H-3313",
+      "changed_signal_widths": 173
+    }
+  ],
+  "scope": "Nominal 1.6 mm procurement; four-layer physical laminate 1.5642 mm before soldermask, as published. Controlled impedance remains subject to manufacturer confirmation and coupon qualification."
+}

@@ -1,0 +1,4 @@
+Comment,Designator,Footprint,LCSC Part #,Quantity,Specification
+TSAL6200,"D1,D2",LED_D5.0mm_Horizontal_O1.27mm_Z3.0mm,C55528,2,Exact part and native footprint; no electrical substitution without review.
+ESP32-C3-WROOM-02U-N4,U1,ESP32-C3-WROOM-02U,C2926676,1,Exact part and native footprint; no electrical substitution without review.
+TSOP38238,U2,Vishay_MINICAST-3Pin,C141632,1,Exact part and native footprint; no electrical substitution without review.

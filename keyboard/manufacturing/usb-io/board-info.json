@@ -1,0 +1,20 @@
+{
+  "board": "usb-io",
+  "pcb_sha256": "b4023b210bf59178b0821c5aee6f9a6c1cc10338dd1738f3e778d51a55f72721",
+  "copper_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "thickness_mm": 1.5642,
+  "width_mm": 196.0,
+  "height_mm": 42.0,
+  "tracks": 4559,
+  "zones": 4,
+  "footprints": 138,
+  "position_origin": "KiCad absolute board origin. CSV X positive right, Y positive up; view from front. Bottom rotations are native KiCad, not mirrored.",
+  "stackup_status": "Explicit native stackup. 4-layer JLC04161H-3313 reference or 2-layer FR4. See STACKUP-REQUIREMENTS.md; supplier impedance confirmation and physical qualification remain open.",
+  "native_title_revision": "G",
+  "system_release": "H audit; manufacturing release on hold"
+}

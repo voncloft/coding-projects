@@ -1,0 +1,99 @@
+{
+  "homogeneous_scaling_test_passed": true,
+  "scope": "Numerical ideal-cross-section estimate only. No fabricated PCB or calibrated TDR measured. Rectangular conductors, solder mask approximation, grounded inner reference and no adjacent same-layer copper. Does not account for local vias/escapes/etch or missing reference copper. Supplier must confirm controlled-impedance fabrication.",
+  "inputs_source": "https://jlcpcb.com/impedance",
+  "stackup": "JLC04161H-3313, 0.0994 mm outer prepreg, Er 4.1, 35 um nominal copper; mask Er 3.8, 30.48 um substrate coating and 15.24 um top coating",
+  "air_reference_test_passed": true,
+  "estimates": [
+    {
+      "width_mm": 0.18,
+      "gap_mm": 0.22,
+      "grid_step_mm": 0.004,
+      "extent_mm": 3,
+      "nodes": 26055,
+      "Zdiff_ohms": 85.22947566772386,
+      "capacitance_F_per_m": 6.864637933604904e-11,
+      "relative_solve_residual": 1.0498737162135049e-15
+    },
+    {
+      "width_mm": 0.18,
+      "gap_mm": 0.22,
+      "grid_step_mm": 0.002,
+      "extent_mm": 3,
+      "nodes": 75036,
+      "Zdiff_ohms": 85.3182031245144,
+      "capacitance_F_per_m": 6.85724236157983e-11,
+      "relative_solve_residual": 1.6021006595920946e-15
+    },
+    {
+      "width_mm": 0.18,
+      "gap_mm": 0.22,
+      "grid_step_mm": 0.002,
+      "extent_mm": 5,
+      "nodes": 75036,
+      "Zdiff_ohms": 85.31741260668016,
+      "capacitance_F_per_m": 6.857295592759233e-11,
+      "relative_solve_residual": 1.739447224887076e-15
+    },
+    {
+      "width_mm": 0.25,
+      "gap_mm": 0.15,
+      "grid_step_mm": 0.002,
+      "extent_mm": 3,
+      "nodes": 79476,
+      "Zdiff_ohms": 68.40553302453341,
+      "capacitance_F_per_m": 8.575468677402228e-11,
+      "relative_solve_residual": 2.359756236811115e-15
+    },
+    {
+      "width_mm": 0.16,
+      "gap_mm": 0.24,
+      "grid_step_mm": 0.002,
+      "extent_mm": 3,
+      "nodes": 73926,
+      "Zdiff_ohms": 91.17948664020955,
+      "capacitance_F_per_m": 6.408938392425901e-11,
+      "relative_solve_residual": 1.4893024633713824e-15
+    },
+    {
+      "width_mm": 0.2,
+      "gap_mm": 0.2,
+      "grid_step_mm": 0.002,
+      "extent_mm": 3,
+      "nodes": 76146,
+      "Zdiff_ohms": 80.00916385270757,
+      "capacitance_F_per_m": 7.319468769358407e-11,
+      "relative_solve_residual": 1.854087004443586e-15
+    },
+    {
+      "width_mm": 0.127,
+      "gap_mm": 0.273,
+      "grid_step_mm": 0.004,
+      "extent_mm": 3,
+      "nodes": 25110,
+      "Zdiff_ohms": 102.33357696585563,
+      "capacitance_F_per_m": 5.6974595041233074e-11,
+      "relative_solve_residual": 2.0416516090388346e-15
+    },
+    {
+      "width_mm": 0.127,
+      "gap_mm": 0.273,
+      "grid_step_mm": 0.002,
+      "extent_mm": 3,
+      "nodes": 72594,
+      "Zdiff_ohms": 102.4953522119535,
+      "capacitance_F_per_m": 5.688252960656431e-11,
+      "relative_solve_residual": 2.4945768440330196e-15
+    },
+    {
+      "width_mm": 0.16,
+      "gap_mm": 0.24,
+      "grid_step_mm": 0.004,
+      "extent_mm": 3,
+      "nodes": 25380,
+      "Zdiff_ohms": 91.03741701912914,
+      "capacitance_F_per_m": 6.418917598232248e-11,
+      "relative_solve_residual": 9.655693232815132e-16
+    }
+  ]
+}

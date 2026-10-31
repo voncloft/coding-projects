@@ -1,0 +1,9 @@
+(version 1)
+(rule "General copper to routed edge"
+ (constraint edge_clearance (min 0.5mm)))
+(rule "Signals beside internal reverse LED cutouts"
+ (condition "(A.Type == 'Track' || A.Type == 'Via') && B.memberOfFootprint('LED*')")
+ (constraint edge_clearance (min 0.25mm)))
+(rule "Reverse LED landing pads to LED cutout"
+ (condition "A.Type == 'Pad' && A.memberOfFootprint('LED*') && B.memberOfFootprint('LED*')")
+ (constraint edge_clearance (min 0.2mm)))

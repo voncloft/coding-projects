@@ -1,0 +1,26 @@
+[
+  {
+    "file": "Hirose_DF40HC_3mm_100DS.step",
+    "source": "Hirose manufacturer STEP 0001218445S; rigid rotation/translation to KiCad footprint coordinates. CL0684-4151-0-51.",
+    "bounds": [
+      -11.3,
+      -1.6900000000000004,
+      -2.802864397946019e-15,
+      11.300000000000002,
+      1.6900000000000008,
+      2.900000000000003
+    ]
+  },
+  {
+    "file": "ALPS_EC11E15244G1.step",
+    "source": "Dimensioned project model from ALPS EC11E catalog drawing 2, update 2510. Simplified body/terminals; exact mounting and 24.5 mm tip height.",
+    "bounds": [
+      -0.35,
+      -9.15,
+      -3.5,
+      14.85,
+      4.15,
+      24.5
+    ]
+  }
+]

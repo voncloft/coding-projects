@@ -1,0 +1,13 @@
+{
+  "totals": [
+    744.5629,
+    1684.9729
+  ],
+  "expected": [
+    744.5629,
+    1684.9729000000002
+  ],
+  "inputPropagation": true,
+  "missingQuoteVisible": true,
+  "listedSubtotal": 229.7129
+}

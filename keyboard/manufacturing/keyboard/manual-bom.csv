@@ -1,0 +1,4 @@
+Comment,Designator,Footprint,LCSC Part #,Quantity,Specification
+M20-9990645,"J1,J4",PinHeader_1x06_P2.54mm_Vertical,,2,Exact part and native footprint; no electrical substitution without review.
+M20-9990345,"J2,J5",PinHeader_1x03_P2.54mm_Vertical,,2,Exact part and native footprint; no electrical substitution without review.
+M20-9990845,J3,PinHeader_1x08_P2.54mm_Vertical,,1,Exact part and native footprint; no electrical substitution without review.

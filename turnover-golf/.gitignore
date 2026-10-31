@@ -1,0 +1,7 @@
+/build/
+/build-*/
+/cmake-build-*/
+/turnover-golf
+/test-profile/
+/CMakeUserPresets.json
+*.user

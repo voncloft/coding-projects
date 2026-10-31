@@ -1,0 +1,18 @@
+{
+  "board": "stereo-audio",
+  "pcb_sha256": "635d5af6b378fa1af04bdda1f3ff110e8901688b668118fa31b1544043333bf9",
+  "copper_layers": [
+    "F.Cu",
+    "B.Cu"
+  ],
+  "thickness_mm": 1.6,
+  "width_mm": 54.0,
+  "height_mm": 50.0,
+  "tracks": 336,
+  "zones": 0,
+  "footprints": 20,
+  "position_origin": "KiCad absolute board origin. CSV X positive right, Y positive up; view from front. Bottom rotations are native KiCad, not mirrored.",
+  "stackup_status": "Explicit native stackup. 4-layer JLC04161H-3313 reference or 2-layer FR4. See STACKUP-REQUIREMENTS.md; supplier impedance confirmation and physical qualification remain open.",
+  "native_title_revision": "D",
+  "system_release": "H audit; manufacturing release on hold"
+}

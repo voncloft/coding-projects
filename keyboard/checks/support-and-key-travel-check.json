@@ -1,0 +1,482 @@
+{
+  "supports": [
+    {
+      "board": "keyboard",
+      "post": "KeyboardPost0",
+      "nearest_hole": "H1",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "keyboard",
+      "post": "KeyboardPost1",
+      "nearest_hole": "H3",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "keyboard",
+      "post": "KeyboardPost2",
+      "nearest_hole": "H4",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "keyboard",
+      "post": "KeyboardPost3",
+      "nearest_hole": "H5",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "keyboard",
+      "post": "KeyboardPost4",
+      "nearest_hole": "H6",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "keyboard",
+      "post": "KeyboardPost5",
+      "nearest_hole": "H7",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "keyboard",
+      "post": "KeyboardPost6",
+      "nearest_hole": "H8",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "keyboard",
+      "post": "KeyboardPost7",
+      "nearest_hole": "H9",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "keyboard",
+      "post": "KeyboardPost8",
+      "nearest_hole": "H10",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "usb-io",
+      "post": "USBPost0",
+      "nearest_hole": "H1",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "usb-io",
+      "post": "USBPost1",
+      "nearest_hole": "H2",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "usb-io",
+      "post": "USBPost2",
+      "nearest_hole": "H3",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "usb-io",
+      "post": "USBPost3",
+      "nearest_hole": "H4",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "usb-io",
+      "post": "USBPost4",
+      "nearest_hole": "H5",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "power",
+      "post": "PowerPost0",
+      "nearest_hole": "H1",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "power",
+      "post": "PowerPost1",
+      "nearest_hole": "H2",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "power",
+      "post": "PowerPost2",
+      "nearest_hole": "H3",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "power",
+      "post": "PowerPost3",
+      "nearest_hole": "H4",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "cm4-carrier",
+      "post": "CarrierPost0",
+      "nearest_hole": "H1",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "cm4-carrier",
+      "post": "CarrierPost1",
+      "nearest_hole": "H2",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "cm4-carrier",
+      "post": "CarrierPost2",
+      "nearest_hole": "H3",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "cm4-carrier",
+      "post": "CarrierPost3",
+      "nearest_hole": "H4",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "stereo-audio",
+      "post": "AudioPost0",
+      "nearest_hole": "H1",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "stereo-audio",
+      "post": "AudioPost1",
+      "nearest_hole": "H2",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "stereo-audio",
+      "post": "AudioPost2",
+      "nearest_hole": "H3",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "stereo-audio",
+      "post": "AudioPost3",
+      "nearest_hole": "H4",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "control",
+      "post": "controlPost0",
+      "nearest_hole": "H1",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "control",
+      "post": "controlPost1",
+      "nearest_hole": "H2",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "control",
+      "post": "controlPost2",
+      "nearest_hole": "H3",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "control",
+      "post": "controlPost3",
+      "nearest_hole": "H4",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "rotary",
+      "post": "rotaryPost0",
+      "nearest_hole": "H1",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "rotary",
+      "post": "rotaryPost1",
+      "nearest_hole": "H2",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "rotary",
+      "post": "rotaryPost2",
+      "nearest_hole": "H3",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "rotary",
+      "post": "rotaryPost3",
+      "nearest_hole": "H4",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "battery-light",
+      "post": "batterylightPost0",
+      "nearest_hole": "H1",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    },
+    {
+      "board": "battery-light",
+      "post": "batterylightPost1",
+      "nearest_hole": "H2",
+      "center_error_mm": 0.0,
+      "top_error_mm": 0.0
+    }
+  ],
+  "fcstd_sha256": "99b49521f007a1829d3121d7184bf726f8cc0e564069d3b3854c71adc0680754",
+  "keycap_travel": {
+    "key_count": 108,
+    "travel_mm": 4,
+    "collisions": [],
+    "scope": "Standard envelope keycaps, exact selected cap profile still needs physical verification."
+  },
+  "display_solids": [
+    {
+      "i": 0,
+      "volume": 12172.702053380774,
+      "bounds": [
+        468.25,
+        -143.70000000000002,
+        33.08,
+        539.4100000000001,
+        -22.759999999999973,
+        35.65
+      ]
+    },
+    {
+      "i": 1,
+      "volume": 2833.1533837560783,
+      "bounds": [
+        467.89194272598,
+        -144.05805727402,
+        32.7632233725894,
+        539.7680572740201,
+        -22.401942725980007,
+        35.63
+      ]
+    },
+    {
+      "i": 2,
+      "volume": 4742.26780981739,
+      "bounds": [
+        467.3499999999951,
+        -144.68239220029244,
+        27.599999999999998,
+        540.3923922002925,
+        -19.859999999999985,
+        34.599999999999994
+      ]
+    },
+    {
+      "i": 3,
+      "volume": 1.770747605043062,
+      "bounds": [
+        511.55000000000007,
+        -120.15000000000002,
+        29.98,
+        514.45,
+        -118.14999999999998,
+        31.98
+      ]
+    },
+    {
+      "i": 4,
+      "volume": 1.7707476050430746,
+      "bounds": [
+        493.1500000000001,
+        -120.15000000000002,
+        29.98,
+        496.05000000000007,
+        -118.14999999999998,
+        31.98
+      ]
+    },
+    {
+      "i": 5,
+      "volume": 224.77729457209918,
+      "bounds": [
+        493.299999999999,
+        -125.05000097426228,
+        29.279999999999998,
+        514.300000000001,
+        -116.14999999999999,
+        31.98
+      ]
+    },
+    {
+      "i": 6,
+      "volume": 7860.731340000008,
+      "bounds": [
+        471.58000000000004,
+        -142.25,
+        34.4,
+        536.08,
+        -24.560000000000002,
+        35.46
+      ]
+    },
+    {
+      "i": 7,
+      "volume": 739.898714696466,
+      "bounds": [
+        467.88468064980736,
+        -144.06531935017506,
+        32.849999999999994,
+        539.7753193501882,
+        -22.394680662463017,
+        35.96648974373635
+      ]
+    },
+    {
+      "i": 8,
+      "volume": 788.5262400000005,
+      "bounds": [
+        468.20000000000005,
+        -143.75,
+        35.949999999999996,
+        539.46,
+        -22.710000000000008,
+        36.55
+      ]
+    },
+    {
+      "i": 9,
+      "volume": 4765.095720000014,
+      "bounds": [
+        468.1,
+        -143.85,
+        36.55,
+        539.5600000000001,
+        -22.61,
+        37.1
+      ]
+    },
+    {
+      "i": 10,
+      "volume": 1732.7620799999827,
+      "bounds": [
+        468.1,
+        -143.85,
+        37.1,
+        539.5600000000001,
+        -22.61,
+        37.3
+      ]
+    },
+    {
+      "i": 11,
+      "volume": 9165.732671437834,
+      "bounds": [
+        458.1,
+        -157.4,
+        37.3,
+        549.5600000000001,
+        -14.0,
+        38.0
+      ]
+    },
+    {
+      "i": 12,
+      "volume": 623.5674734466388,
+      "bounds": [
+        470.30000438649006,
+        -131.05,
+        31.38,
+        474.6000000000001,
+        -27.463874632357317,
+        32.78
+      ]
+    },
+    {
+      "i": 13,
+      "volume": 377.24959999999584,
+      "bounds": [
+        536.16,
+        -131.05,
+        31.38,
+        538.76,
+        -27.410000000000004,
+        32.78
+      ]
+    },
+    {
+      "i": 14,
+      "volume": 1430.3999999999983,
+      "bounds": [
+        479.83000000000004,
+        -123.51,
+        32.28,
+        527.83,
+        -49.010000000000005,
+        32.68
+      ]
+    },
+    {
+      "i": 15,
+      "volume": 47.56048201262292,
+      "bounds": [
+        522.11,
+        -111.10000000000007,
+        28.879999999999995,
+        527.3100000000001,
+        -103.44999999999995,
+        32.28
+      ]
+    },
+    {
+      "i": 16,
+      "volume": 28.275000000000023,
+      "bounds": [
+        512.51,
+        -53.34,
+        30.330000000000002,
+        517.51,
+        -50.44,
+        32.28
+      ]
+    },
+    {
+      "i": 17,
+      "volume": 170.56000000001035,
+      "bounds": [
+        491.49999999999903,
+        -55.640000000000015,
+        30.28,
+        507.90000000000003,
+        -50.44000000000001,
+        32.28
+      ]
+    }
+  ],
+  "passed": true
+}

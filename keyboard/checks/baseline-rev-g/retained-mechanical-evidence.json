@@ -1,0 +1,140 @@
+{
+  "scope": "Rev F nominal case/key/support/mating checks apply to the unchanged case parts, board mounts, display, CM4 and seven boards. Revision G USB populated assembly is separately rechecked and embedded in FCStd.",
+  "unchanged_boards": [
+    {
+      "board": "cm4-carrier",
+      "pcb_sha256": "87e79f7ccf3a12923e4b93bdfb2c7f893af2f91961169d0298471005205307ff"
+    },
+    {
+      "board": "power",
+      "pcb_sha256": "216780c9da36d96f695f384c189d001e022bfeed8426a2b9420044a235ad8a09"
+    },
+    {
+      "board": "battery-light",
+      "pcb_sha256": "0f8cf61483918a8788fee7ab90a25a18a2a8bb54f6e5ee7ff6040e5891c98571"
+    },
+    {
+      "board": "control",
+      "pcb_sha256": "592af9590740a99cc5b5bfd544e9efc5de0bf14fdc79e46017b643868e58a395"
+    },
+    {
+      "board": "stereo-audio",
+      "pcb_sha256": "fca3631fccf479f0315bb9cce38fa3d70cabda8f6d9096dca1fd29053b6d7f13"
+    },
+    {
+      "board": "keyboard",
+      "pcb_sha256": "b83235825ce35cb3f58337d03fd946116a82c16f51c5bed0fea838664d3e254c"
+    },
+    {
+      "board": "rotary",
+      "pcb_sha256": "a3a0bbd2684bbdb2224f96dc88021b16ae83bad9f015125deaa17fd63b51b20f"
+    }
+  ],
+  "unchanged_case_parts": [
+    {
+      "file": "enclosure/lower-shell.step",
+      "sha256": "f7737068a0dd4e7b11342078be86f245e496e882ed6352729ab731092fefa48d"
+    },
+    {
+      "file": "enclosure/PlateSpacer7.step",
+      "sha256": "efc2b3d6fac069038aca5c65539783dccc4708221a944f61d82cd90707fee92f"
+    },
+    {
+      "file": "enclosure/rotary-knob.step",
+      "sha256": "2b1c5e9ddfc43a15b1fa002edffccfab109a4a0738c908ed26553e978e8c3f2a"
+    },
+    {
+      "file": "enclosure/PlateSpacer8.step",
+      "sha256": "6410b573a5ee11af171d94fcd949b7894a35f4fc576585275704de6f95ba7b05"
+    },
+    {
+      "file": "enclosure/CM4Spacer0.step",
+      "sha256": "a0f5fa010be7026f7659e13ad251f57c915152f7da411b3f1ae51eaafb85858c"
+    },
+    {
+      "file": "enclosure/CM4Spacer1.step",
+      "sha256": "50b4673f1404b37aa9649c78748d955edcdfe31f6632f0fa6d0ce59557894644"
+    },
+    {
+      "file": "enclosure/PlateSpacer5.step",
+      "sha256": "7a1e895e34e232460a3187eb96332714d14e42b6ec58d1446cd003989c5cec5a"
+    },
+    {
+      "file": "enclosure/indicator-light-pipe.step",
+      "sha256": "021d413525c289c0c554b6332be4e18482c03f0a545deeb72720aabbe8871260"
+    },
+    {
+      "file": "enclosure/speaker-straps.step",
+      "sha256": "0d70bc86ab51212e2cd50b296780cc8eebc5baf378e7362cdf22977a95d9289d"
+    },
+    {
+      "file": "enclosure/PlateSpacer0.step",
+      "sha256": "9f172ece559733c70a9ba919c92b7b6d7a950863419ac9a3d25b90519bae2074"
+    },
+    {
+      "file": "enclosure/RubberFoot0.step",
+      "sha256": "25ed74225e219f5dbff62f4c1728784cc92c103361febd63a873bab200a989bc"
+    },
+    {
+      "file": "enclosure/plate-spacers.step",
+      "sha256": "4e70a36fac4e60fa90a6a7d88101b37f874726141c02d2533115123c1c14a5aa"
+    },
+    {
+      "file": "enclosure/CM4Spacer3.step",
+      "sha256": "be66418e74f442fd8d05524d960e360b0962f22fbe94c77ba6882bf21df2e6b1"
+    },
+    {
+      "file": "enclosure/PlateSpacer6.step",
+      "sha256": "06cf3c32375dcbe7bebb101fe03346ec1007d2fdb287e436674227cafb785e77"
+    },
+    {
+      "file": "enclosure/PlateSpacer4.step",
+      "sha256": "c9cb14f34890432d22003e127ce833dddc05e6d5b44908f1e7389157cc56e2a5"
+    },
+    {
+      "file": "enclosure/PlateSpacer1.step",
+      "sha256": "cc825001528a6e755aa962091075ea6720f54289984b8014c20801ef93b728cd"
+    },
+    {
+      "file": "enclosure/PlateSpacer2.step",
+      "sha256": "84d239d77b76d28b2ddffef4d77401ba5f590d21f3763afa565addb84309d371"
+    },
+    {
+      "file": "enclosure/RubberFoot2.step",
+      "sha256": "64c2ea307832e9196bbe9b96f3729c9f5c1a6fa3148f3faa625f075209fb2c7e"
+    },
+    {
+      "file": "enclosure/PlateSpacer3.step",
+      "sha256": "53f7889e4bb54db5bc5625803d1c7095841d5f662719d78a23737d0cd3158901"
+    },
+    {
+      "file": "enclosure/CM4Spacer2.step",
+      "sha256": "89a7de3645ab733bc9765653c0bf9aa19ab3d53531efb6d93799cc2652a83bb1"
+    },
+    {
+      "file": "enclosure/cm4-heatsink.step",
+      "sha256": "d65827fc7699f30a39bd7c3bb03a8c284c10380b17567f2ef616c24f8976836c"
+    },
+    {
+      "file": "enclosure/RubberFoot3.step",
+      "sha256": "65f0880ecd047829ce63f7fb0dd696cfb0075b9c2ead36cf48a5cf1b9be95b1c"
+    },
+    {
+      "file": "enclosure/top-frame.step",
+      "sha256": "3e69df195d7bea1674815333eacd2873ab26e9327ff03318835a8ef5c19e336c"
+    },
+    {
+      "file": "enclosure/RubberFoot1.step",
+      "sha256": "6dd4729a2c00baecac722d900e5d1682f9bb11b219c8a8f0d17dc17b40ca159e"
+    },
+    {
+      "file": "enclosure/switch-plate.step",
+      "sha256": "192e71d22f4960d1ebedbd58664219f04c07c39fe65ed80d1bb8b9ed7fe20f51"
+    },
+    {
+      "file": "enclosure/keyboard-enclosure.step",
+      "sha256": "9b8dcbfacc0abcb190c6de8d1b80a8e8380272da7b5ec879c6b09e3cb8ef895e"
+    }
+  ],
+  "revision_g_fit": "revision-g-mechanical.json"
+}

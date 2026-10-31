@@ -1,0 +1,89 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-15T01:21:35-0400",
+    "kicad_version": "9.0.7",
+    "sheets": [
+        {
+            "path": "/RP2040 controller/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc/f8f33bc5-33d5-4a21-9687-42f779eb388c",
+            "violations": []
+        },
+        {
+            "path": "/Controller bypass and harness/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc/281dbb55-67e6-48a2-af67-230a154ed394",
+            "violations": []
+        },
+        {
+            "path": "/Matrix switches 1 to 18/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc/54457060-408e-410b-95b4-f7b8460396df",
+            "violations": []
+        },
+        {
+            "path": "/Matrix switches 19 to 36/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc/01f1d2fd-74b7-4ad2-a2f9-905115244bc5",
+            "violations": []
+        },
+        {
+            "path": "/Matrix switches 37 to 54/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc/faa2c8c4-d743-48c8-b630-4dd64cb8666a",
+            "violations": []
+        },
+        {
+            "path": "/Matrix switches 55 to 72/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc/77976b9f-4299-4207-81b9-d1cb9e2c6edc",
+            "violations": []
+        },
+        {
+            "path": "/Matrix switches 73 to 90/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc/0764c0cc-bb28-4dd4-bfe0-a30623d3422a",
+            "violations": []
+        },
+        {
+            "path": "/Matrix switches 91 to 108/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc/651faec0-0098-420e-ac65-6d8f423af8fa",
+            "violations": []
+        },
+        {
+            "path": "/RGB level shifting/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc/5cb63e08-af0f-4a98-b363-c18c2bd84595",
+            "violations": []
+        },
+        {
+            "path": "/Key RGB 1 to 18/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc/5d34f23a-5a97-46d2-84a7-645b0e9c9b2e",
+            "violations": []
+        },
+        {
+            "path": "/Key RGB 19 to 36/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc/19d69215-d54c-4d4f-ae27-dbe6d5d9058a",
+            "violations": []
+        },
+        {
+            "path": "/Key RGB 37 to 54/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc/6cea47d6-80c7-4b0e-9195-ec626a13ce38",
+            "violations": []
+        },
+        {
+            "path": "/Key RGB 55 to 72/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc/1b6c938f-20c0-4ddd-bf8a-5f8640ddee87",
+            "violations": []
+        },
+        {
+            "path": "/Key RGB 73 to 90/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc/757d1b08-d85b-4b64-8fb4-d594f609a5cd",
+            "violations": []
+        },
+        {
+            "path": "/Key RGB 91 to 108/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc/67130079-5663-4fae-8403-e61201781907",
+            "violations": []
+        },
+        {
+            "path": "/",
+            "uuid_path": "/f0b891d9-b8d9-4f57-9e34-a9e2a85f0cdc",
+            "violations": []
+        }
+    ],
+    "source": "keyboard.kicad_sch"
+}

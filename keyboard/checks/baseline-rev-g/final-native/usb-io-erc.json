@@ -1,0 +1,89 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-15T01:21:34-0400",
+    "kicad_version": "9.0.7",
+    "sheets": [
+        {
+            "path": "/USB2517 self-powered USB 2.0 hub/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf/7ae407e1-0e4d-4fcf-94d8-7d252b87e2a3",
+            "violations": []
+        },
+        {
+            "path": "/Hub clock and supply/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf/a81c945d-c186-42df-8359-c3fc47704e26",
+            "violations": []
+        },
+        {
+            "path": "/PC upstream USB-C/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf/009158c1-9df1-43e4-ada0-4212c1780c85",
+            "violations": []
+        },
+        {
+            "path": "/USB port enable interlock/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf/2bacb612-517a-4a27-8549-b9bb5f265eac",
+            "violations": []
+        },
+        {
+            "path": "/External USB-A 1/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf/695fe2d5-c5e5-4879-8232-3d4210e34765",
+            "violations": []
+        },
+        {
+            "path": "/External USB-A 2/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf/1c45e16d-3258-4215-b750-4ab45028f372",
+            "violations": []
+        },
+        {
+            "path": "/External USB-A 3/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf/cacddc52-3ee4-487d-a950-631b2bd073a9",
+            "violations": []
+        },
+        {
+            "path": "/USB-C watch output/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf/1ff2aefd-62f4-405c-ba2c-24e80c9504b0",
+            "violations": []
+        },
+        {
+            "path": "/USB-C charging input and PD negotiation/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf/952799ea-59db-4af9-888a-7cfb0e02f7c6",
+            "violations": []
+        },
+        {
+            "path": "/Power and control harness/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf/402231a4-255f-49bb-847c-cc9c97d00a14",
+            "violations": []
+        },
+        {
+            "path": "/Internal CM4 USB device port power/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf/b38430b0-d01e-4671-84d5-4038f478cd64",
+            "violations": []
+        },
+        {
+            "path": "/USB2517 self-powered USB 2.0 hub — continued 2/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf/a6c8a6bc-2006-4878-b65a-976b9c4fff27",
+            "violations": []
+        },
+        {
+            "path": "/Independent USB hub supply/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf/f66af22d-bf13-47e4-a714-076fd2627354",
+            "violations": []
+        },
+        {
+            "path": "/Combined charge/data and alternate host selection/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf/2b380e2c-8a46-4bb1-87f4-29e9780ead5e",
+            "violations": []
+        },
+        {
+            "path": "/Safe upstream attach detection/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf/2db45df0-00e3-44e4-a3b4-5b6c6607ee38",
+            "violations": []
+        },
+        {
+            "path": "/",
+            "uuid_path": "/204d4028-5b83-494a-a949-1bd7c84994bf",
+            "violations": []
+        }
+    ],
+    "source": "usb-io.kicad_sch"
+}

@@ -1,0 +1,13 @@
+{
+  "node": {
+    "version": "v20.20.2",
+    "url": "https://nodejs.org/dist/v20.20.2/node-v20.20.2-linux-arm64.tar.xz",
+    "sha256": "73093db209e4e9e09dd7d15a47aeaab1b74833830df03efa5f942a1122c5fa71"
+  },
+  "plexamp": {
+    "version": "4.13.2",
+    "url": "https://plexamp.plex.tv/headless/Plexamp-Linux-headless-v4.13.2.tar.bz2",
+    "sha256": "86e5ede3d852a87099a106f2cc6b83e4ec1350000176d83fbcedb83950c48041"
+  },
+  "checked": "2026-09-12"
+}

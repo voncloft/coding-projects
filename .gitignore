@@ -1,0 +1,69 @@
+# Rebuildable output and development caches
+build/
+build-*/
+build_*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+CMakeUserPresets.json
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.pio/
+
+# Compiled applications, libraries, firmware, and packaged extensions
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dll
+*.dylib
+*.exe
+*.pdb
+*.class
+*.elf
+*.bin
+*.uf2
+*.hex
+*.fw
+*.xpi
+/keyboard/checks/baseline-rev-g/firmware-g/power-tests
+
+# CAD editor caches, autosaves, and redundant backup archives
+*-backups/
+backups/
+*.kicad_prl
+*.FCBak
+*.FCStd1
+fp-info-cache
+*.autosave
+/Case/case.zip
+
+# Local credentials and workspace state
+.aws/
+.ssh/
+.gnupg/
+.env
+.env.*
+!.env.example
+!.env.sample
+.codex/
+.agents/
+*.user
+*.user.*
+.DS_Store
+Thumbs.db
+
+# Runtime logs and local test data
+*.log
+/lfs_installer/logs/
+/turnover-golf/test-profile/
+/testing/hello
+
+# Optional local archives are not part of the GitHub backup
+/outdated/

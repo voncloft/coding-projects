@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "sheets": [
+    "Summary",
+    "PCB Parts",
+    "Assembly"
+  ],
+  "formula_count": 409,
+  "pcb_positions": 829,
+  "totals_usd": [
+    744.5629,
+    1684.9729
+  ],
+  "missing_quote_visible": true,
+  "engine": "Bundled LibreOfficeDev26 build2c87e51eeaa2b413ff4ae097b2705eea1995d8e5; ODS conversion/recalculation and XML numeric cross-check"
+}

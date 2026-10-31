@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Lights
+Comment=Launch Lights
+Exec="/home/von/Desktop/coding-projects/Lights/build/Lights"
+Icon=/home/von/Desktop/coding-projects/Lights/assets/lightbulb.svg
+Terminal=false
+Categories=Utility;
+StartupNotify=true
+StartupWMClass=Lights

@@ -1,0 +1,2 @@
+Found 0 violations
+Saved ERC Report to /home/von/Documents/Codex/2026-09-12/loo/work/full-system/checks/cm4-carrier-erc.rpt

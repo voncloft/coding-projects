@@ -1,0 +1,43 @@
+{
+  "pages": 23,
+  "text_chars": [
+    3700,
+    3972,
+    3601,
+    597,
+    4575,
+    1821,
+    3466,
+    3326,
+    1468,
+    4354,
+    600,
+    3791,
+    3967,
+    1122,
+    4593,
+    1531,
+    4749,
+    4130,
+    4478,
+    5218,
+    1034,
+    2859,
+    3096
+  ],
+  "all_sections": [
+    "START-HERE.md",
+    "OPEN-ITEMS.md",
+    "USB-C-AND-HEADPHONES.md",
+    "assembly/MECHANICAL.md",
+    "assembly/WIRING.md",
+    "assembly/POWER-AND-FABRICATION.md",
+    "firmware/README.md",
+    "software/README.md",
+    "assembly/ACCEPTANCE.md",
+    "CHECK-RESULTS.md"
+  ],
+  "pdf_sha256": "4b0a37fe34f5af0ef2567e2ecd1cbeea50b9afea83b35b0cf6e7a3883572cc1a",
+  "visual_review": "All 23 final rendered pages inspected; tables and text remain on-page; one-line overflow corrected.",
+  "status": "Revision H engineering audit; manufacturing HOLD"
+}

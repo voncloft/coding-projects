@@ -1,0 +1,7 @@
+BLUETOOTH_ENABLE = yes
+BLUETOOTH_DRIVER = custom
+EEPROM_DRIVER = wear_leveling
+WEAR_LEVELING_DRIVER = rp2040_flash
+UART_DRIVER_REQUIRED = yes
+I2C_DRIVER_REQUIRED = yes
+SRC += bridge.c power.c

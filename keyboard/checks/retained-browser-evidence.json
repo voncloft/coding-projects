@@ -1,0 +1,46 @@
+{
+  "scope": "Historical browser simulation only. UI source byte-identical to Revision G; changed target helpers separately fixture-tested. Not a new browser run or physical target test.",
+  "retained_report": "baseline-rev-g/screen-test.json",
+  "unchanged_ui_sources": [
+    {
+      "path": "software/keyboard_ui/__init__.py",
+      "sha256": "acd75b7658b4b8be5c678de6157f84c582d2f2dab820973875c58aa66ab81cdd"
+    },
+    {
+      "path": "software/keyboard_ui/app.py",
+      "sha256": "f4a73fbb2dd46e207deb72a9366146b0131675c8af1725ba4368f4f9b680d387"
+    },
+    {
+      "path": "software/keyboard_ui/audio.py",
+      "sha256": "b240d79e48a6828e23d381ddf7d0d3435220e1115904ffcca814687755b6d795"
+    },
+    {
+      "path": "software/keyboard_ui/infrared.py",
+      "sha256": "0f0f033816235f33e51b8b88afbc311d18580282199877a79b3ab27aec8b0cb4"
+    },
+    {
+      "path": "software/keyboard_ui/key.wav",
+      "sha256": "8e8be4a97c6a3ba330e92d36672eaa0df5ce3d52c562f3165d10e698bfe57fa5"
+    },
+    {
+      "path": "software/keyboard_ui/macros.py",
+      "sha256": "b59a77e2a2a2c009a398bc70a0b3246a2c23005f135e9bec7ed1b97e2ef8a8e0"
+    },
+    {
+      "path": "software/keyboard_ui/protocol.py",
+      "sha256": "2b048122237c40292232f2792b6f7137cae420b938bca8e9bc7423c470c00499"
+    },
+    {
+      "path": "software/keyboard_ui/static/app.js",
+      "sha256": "90c938da44a6e7f680f6bee09f0294c702bfbfd2cec94756017a5f8a12167f18"
+    },
+    {
+      "path": "software/keyboard_ui/static/index.html",
+      "sha256": "766e8f6a3e50635cbddf01ae7e34ed06092f816c990899ddc9b4793dd2b2abbb"
+    },
+    {
+      "path": "software/keyboard_ui/static/style.css",
+      "sha256": "1ed9d9cdd34173bc762c009248b010b0629d3cc3eb833963cfe2741d2080b907"
+    }
+  ]
+}

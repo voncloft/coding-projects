@@ -1,0 +1,17 @@
+Joint,Quantity,Specification,Acceptance
+Cover,8,M3x8 screw +0.5 mm washer,Verify thread engagement and clearance per MECHANICAL.md before final assembly
+Main PCB and plate,9,M2x10 screw,Verify thread engagement and clearance per MECHANICAL.md before final assembly
+USB I/O PCB,5,M2.5x6 screw,Verify thread engagement and clearance per MECHANICAL.md before final assembly
+Power PCB,4,M2.5x5 screw,Verify thread engagement and clearance per MECHANICAL.md before final assembly
+CM4 carrier PCB,4,M2x4 screw,Verify thread engagement and clearance per MECHANICAL.md before final assembly
+Audio PCB,4,M2x4 screw,Verify thread engagement and clearance per MECHANICAL.md before final assembly
+Control PCB,4,M2x5 screw,Verify thread engagement and clearance per MECHANICAL.md before final assembly
+Rotary PCB,4,M2x5 screw,Verify thread engagement and clearance per MECHANICAL.md before final assembly
+Battery light PCB,2,M2x5 screw,Verify thread engagement and clearance per MECHANICAL.md before final assembly
+Speaker straps,4,M2x5 screw,Verify thread engagement and clearance per MECHANICAL.md before final assembly
+CM4 module,4,M2.5x10 screw +washer +nut,Verify thread engagement and clearance per MECHANICAL.md before final assembly
+Display,4,M2.5x30 screw +washer depth adjustment,Verify thread engagement and clearance per MECHANICAL.md before final assembly
+Main plate spacers,9,Nylon 3.4 mm height OD5 bore2.2,Verify thread engagement and clearance per MECHANICAL.md before final assembly
+CM4 spacers,4,Nylon 3.0 mm height OD4.8 bore2.7,Verify thread engagement and clearance per MECHANICAL.md before final assembly
+Feet,4,Silicone diameter12 x4 mm,Verify thread engagement and clearance per MECHANICAL.md before final assembly
+Pack retention,1,Insulating foam/strap kit; no pouch compression,Verify thread engagement and clearance per MECHANICAL.md before final assembly

@@ -1,0 +1,556 @@
+{
+  "keyboard": {
+    "J2": {
+      "1": "HUB_KB_DP",
+      "2": "HUB_KB_DM",
+      "3": "GND"
+    },
+    "J5": {
+      "1": "RGB_108",
+      "2": "+5V_RGB",
+      "3": "GND"
+    },
+    "J3": {
+      "1": "+3V3_AON",
+      "2": "GND",
+      "3": "+5V_RGB",
+      "4": "GND",
+      "5": "POWER_REQUEST",
+      "6": "MAIN_ENABLE",
+      "7": "POWER_IRQ",
+      "8": "GND"
+    },
+    "J1": {
+      "1": "+3V3_AON",
+      "2": "GND",
+      "3": "SWDIO",
+      "4": "SWCLK",
+      "5": "RUN",
+      "6": "GND"
+    },
+    "J4": {
+      "1": "BRIDGE_TX",
+      "2": "BRIDGE_RX",
+      "3": "I2C_SDA",
+      "4": "I2C_SCL",
+      "5": "+3V3_AON",
+      "6": "GND"
+    }
+  },
+  "control": {
+    "J7": {
+      "1": "+3V3_AON",
+      "2": "GND"
+    },
+    "J6": {
+      "1": "+3V3_AON",
+      "2": "GND",
+      "3": "C3_TX",
+      "4": "C3_RX",
+      "5": "C3_EN",
+      "6": "C3_BOOT_N"
+    },
+    "J5": {
+      "1": "RED_PWM",
+      "2": "GREEN_PWM",
+      "3": "GND"
+    },
+    "J3": {
+      "1": "C3_RX",
+      "2": "C3_TX",
+      "3": "C3_EN",
+      "4": "C3_BOOT_N",
+      "5": "CM4_HALTED_N",
+      "6": "GND"
+    },
+    "J2": {
+      "1": "PWR_SDA",
+      "2": "PWR_SCL",
+      "3": "+3V3_AON",
+      "4": "GND"
+    },
+    "J1": {
+      "1": "BRIDGE_TX",
+      "2": "BRIDGE_RX",
+      "3": "PWR_SDA",
+      "4": "PWR_SCL",
+      "5": "+3V3_AON",
+      "6": "GND"
+    },
+    "J4": {
+      "1": "+3V3_AON",
+      "2": "GND",
+      "3": "ENC_A",
+      "4": "ENC_B",
+      "5": "ENC_SW"
+    }
+  },
+  "cm4-carrier": {
+    "J4": {
+      "1": "CM4_VBUS",
+      "2": "USB_DM",
+      "3": "USB_DP",
+      "4": "GND"
+    },
+    "J1": {
+      "1": "GND",
+      "2": "GND",
+      "3": "unconnected-(J1-Ethernet_Pair3_P-Pad3)",
+      "4": "unconnected-(J1-Ethernet_Pair1_P-Pad4)",
+      "5": "unconnected-(J1-Ethernet_Pair3_N-Pad5)",
+      "6": "unconnected-(J1-Ethernet_Pair1_N-Pad6)",
+      "7": "GND",
+      "8": "GND",
+      "9": "unconnected-(J1-Ethernet_Pair2_N-Pad9)",
+      "10": "unconnected-(J1-Ethernet_Pair0_N-Pad10)",
+      "11": "unconnected-(J1-Ethernet_Pair2_P-Pad11)",
+      "12": "unconnected-(J1-Ethernet_Pair0_P-Pad12)",
+      "13": "GND",
+      "14": "GND",
+      "15": "unconnected-(J1-Ethernet_nLED3(3.3v)-Pad15)",
+      "16": "unconnected-(J1-Ethernet_SYNC_IN(1.8v)-Pad16)",
+      "17": "unconnected-(J1-Ethernet_nLED2(3.3v)-Pad17)",
+      "18": "unconnected-(J1-Ethernet_SYNC_OUT(1.8v)-Pad18)",
+      "19": "unconnected-(J1-Ethernet_nLED1(3.3v)-Pad19)",
+      "20": "unconnected-(J1-EEPROM_nWP-Pad20)",
+      "21": "unconnected-(J1-PI_nLED_Activity-Pad21)",
+      "22": "GND",
+      "23": "GND",
+      "24": "AMP_ENABLE",
+      "25": "I2S_DATA",
+      "26": "I2S_LRCLK",
+      "27": "unconnected-(J1-GPIO20-Pad27)",
+      "28": "unconnected-(J1-GPIO13-Pad28)",
+      "29": "unconnected-(J1-GPIO16-Pad29)",
+      "30": "unconnected-(J1-GPIO6-Pad30)",
+      "31": "unconnected-(J1-GPIO12-Pad31)",
+      "32": "GND",
+      "33": "GND",
+      "34": "unconnected-(J1-GPIO5-Pad34)",
+      "35": "unconnected-(J1-ID_SC-Pad35)",
+      "36": "unconnected-(J1-ID_SD-Pad36)",
+      "37": "unconnected-(J1-GPIO7-Pad37)",
+      "38": "unconnected-(J1-GPIO11-Pad38)",
+      "39": "unconnected-(J1-GPIO8-Pad39)",
+      "40": "unconnected-(J1-GPIO9-Pad40)",
+      "41": "unconnected-(J1-GPIO25-Pad41)",
+      "42": "GND",
+      "43": "GND",
+      "44": "unconnected-(J1-GPIO10-Pad44)",
+      "45": "USB_VBUS_SENSE",
+      "46": "DISPLAY_FAULT_N",
+      "47": "CM4_HALTED",
+      "48": "C3_BOOT_DRIVE",
+      "49": "I2S_BCLK",
+      "50": "C3_RESET_DRIVE",
+      "51": "CM4_RX",
+      "52": "GND",
+      "53": "GND",
+      "54": "unconnected-(J1-GPIO4-Pad54)",
+      "55": "CM4_TX",
+      "56": "unconnected-(J1-GPIO3-Pad56)",
+      "57": "unconnected-(J1-SD_CLK-Pad57)",
+      "58": "unconnected-(J1-GPIO2-Pad58)",
+      "59": "GND",
+      "60": "GND",
+      "61": "unconnected-(J1-SD_DAT3-Pad61)",
+      "62": "unconnected-(J1-SD_CMD-Pad62)",
+      "63": "unconnected-(J1-SD_DAT0-Pad63)",
+      "64": "unconnected-(J1-SD_DAT5-Pad64)",
+      "65": "GND",
+      "66": "GND",
+      "67": "unconnected-(J1-SD_DAT1-Pad67)",
+      "68": "unconnected-(J1-SD_DAT4-Pad68)",
+      "69": "unconnected-(J1-SD_DAT2-Pad69)",
+      "70": "unconnected-(J1-SD_DAT7-Pad70)",
+      "71": "GND",
+      "72": "unconnected-(J1-SD_DAT6-Pad72)",
+      "73": "unconnected-(J1-SD_VDD_Override-Pad73)",
+      "74": "GND",
+      "75": "unconnected-(J1-SD_PWR_ON-Pad75)",
+      "76": "unconnected-(J1-Reserved-Pad76)",
+      "77": "+5V_CORE",
+      "78": "+3V3_CM4",
+      "79": "+5V_CORE",
+      "80": "DSI_SCL",
+      "81": "+5V_CORE",
+      "82": "DSI_SDA",
+      "83": "+5V_CORE",
+      "84": "+3V3_CM4",
+      "85": "+5V_CORE",
+      "86": "+3V3_CM4",
+      "87": "+5V_CORE",
+      "88": "+1V8_CM4",
+      "89": "unconnected-(J1-WiFi_nDisable-Pad89)",
+      "90": "+1V8_CM4",
+      "91": "GND",
+      "92": "unconnected-(J1-RUN_PG-Pad92)",
+      "93": "RPIBOOT_N",
+      "94": "unconnected-(J1-AnalogIP0-Pad94)",
+      "95": "unconnected-(J1-nPI_LED_PWR-Pad95)",
+      "96": "unconnected-(J1-AnalogIP1-Pad96)",
+      "97": "unconnected-(J1-Camera_GPIO-Pad97)",
+      "98": "GND",
+      "99": "CM4_GLOBAL_EN",
+      "100": "unconnected-(J1-nEXTRST-Pad100)"
+    },
+    "J2": {
+      "1": "unconnected-(J2-USB_OTG_ID-Pad1)",
+      "2": "unconnected-(J2-PCIe_CLK_nREQ-Pad2)",
+      "3": "USB_DM",
+      "4": "unconnected-(J2-Reserved-Pad4)",
+      "5": "USB_DP",
+      "6": "unconnected-(J2-Reserved-Pad6)",
+      "7": "GND",
+      "8": "GND",
+      "9": "unconnected-(J2-PCIe_nRST-Pad9)",
+      "10": "unconnected-(J2-PCIe_CLK_P-Pad10)",
+      "11": "unconnected-(J2-VDAC_COMP-Pad11)",
+      "12": "unconnected-(J2-PCIe_CLK_N-Pad12)",
+      "13": "GND",
+      "14": "GND",
+      "15": "unconnected-(J2-CAM1_D0_N-Pad15)",
+      "16": "unconnected-(J2-PCIe_RX_P-Pad16)",
+      "17": "unconnected-(J2-CAM1_D0_P-Pad17)",
+      "18": "unconnected-(J2-PCIe_RX_N-Pad18)",
+      "19": "GND",
+      "20": "GND",
+      "21": "unconnected-(J2-CAM1_D1_N-Pad21)",
+      "22": "unconnected-(J2-PCIe_TX_P-Pad22)",
+      "23": "unconnected-(J2-CAM1_D1_P-Pad23)",
+      "24": "unconnected-(J2-PCIe_TX_N-Pad24)",
+      "25": "GND",
+      "26": "GND",
+      "27": "unconnected-(J2-CAM1_C_N-Pad27)",
+      "28": "unconnected-(J2-CAM0_D0_N-Pad28)",
+      "29": "unconnected-(J2-CAM1_C_P-Pad29)",
+      "30": "unconnected-(J2-CAM0_D0_P-Pad30)",
+      "31": "GND",
+      "32": "GND",
+      "33": "unconnected-(J2-CAM1_D2_N-Pad33)",
+      "34": "unconnected-(J2-CAM0_D1_N-Pad34)",
+      "35": "unconnected-(J2-CAM1_D2_P-Pad35)",
+      "36": "unconnected-(J2-CAM0_D1_P-Pad36)",
+      "37": "GND",
+      "38": "GND",
+      "39": "unconnected-(J2-CAM1_D3_N-Pad39)",
+      "40": "unconnected-(J2-CAM0_C_N-Pad40)",
+      "41": "unconnected-(J2-CAM1_D3_P-Pad41)",
+      "42": "unconnected-(J2-CAM0_C_P-Pad42)",
+      "43": "unconnected-(J2-HDMI1_HOTPLUG-Pad43)",
+      "44": "GND",
+      "45": "unconnected-(J2-HDMI1_SDA-Pad45)",
+      "46": "unconnected-(J2-HDMI1_TX2_P-Pad46)",
+      "47": "unconnected-(J2-HDMI1_SCL-Pad47)",
+      "48": "unconnected-(J2-HDMI1_TX2_N-Pad48)",
+      "49": "unconnected-(J2-HDMI1_CEC-Pad49)",
+      "50": "GND",
+      "51": "unconnected-(J2-HDMI0_CEC-Pad51)",
+      "52": "unconnected-(J2-HDMI1_TX1_P-Pad52)",
+      "53": "unconnected-(J2-HDMI0_HOTPLUG-Pad53)",
+      "54": "unconnected-(J2-HDMI1_TX1_N-Pad54)",
+      "55": "GND",
+      "56": "GND",
+      "57": "unconnected-(J2-DSI0_D0_N-Pad57)",
+      "58": "unconnected-(J2-HDMI1_TX0_P-Pad58)",
+      "59": "unconnected-(J2-DSI0_D0_P-Pad59)",
+      "60": "unconnected-(J2-HDMI1_TX0_N-Pad60)",
+      "61": "GND",
+      "62": "GND",
+      "63": "unconnected-(J2-DSI0_D1_N-Pad63)",
+      "64": "unconnected-(J2-HDMI1_CLK_P-Pad64)",
+      "65": "unconnected-(J2-DSI0_D1_P-Pad65)",
+      "66": "unconnected-(J2-HDMI1_CLK_N-Pad66)",
+      "67": "GND",
+      "68": "GND",
+      "69": "unconnected-(J2-DSI0_C_N-Pad69)",
+      "70": "unconnected-(J2-HDMI0_TX2_P-Pad70)",
+      "71": "unconnected-(J2-DSI0_C_P-Pad71)",
+      "72": "unconnected-(J2-HDMI0_TX2_N-Pad72)",
+      "73": "GND",
+      "74": "GND",
+      "75": "DSI_D0_N",
+      "76": "unconnected-(J2-HDMI0_TX1_P-Pad76)",
+      "77": "DSI_D0_P",
+      "78": "unconnected-(J2-HDMI0_TX1_N-Pad78)",
+      "79": "GND",
+      "80": "GND",
+      "81": "DSI_D1_N",
+      "82": "unconnected-(J2-HDMI0_TX0_P-Pad82)",
+      "83": "DSI_D1_P",
+      "84": "unconnected-(J2-HDMI0_TX0_N-Pad84)",
+      "85": "GND",
+      "86": "GND",
+      "87": "DSI_CLK_N",
+      "88": "unconnected-(J2-HDMI0_CLK_P-Pad88)",
+      "89": "DSI_CLK_P",
+      "90": "unconnected-(J2-HDMI0_CLK_N-Pad90)",
+      "91": "GND",
+      "92": "GND",
+      "93": "DSI_D2_N",
+      "94": "DSI_D3_N",
+      "95": "DSI_D2_P",
+      "96": "DSI_D3_P",
+      "97": "GND",
+      "98": "GND",
+      "99": "unconnected-(J2-HDMI0_SDA-Pad99)",
+      "100": "unconnected-(J2-HDMI0_SCL-Pad100)"
+    },
+    "J5": {
+      "1": "+5V_DISPLAY",
+      "2": "unconnected-(J5-Pin_2-Pad2)",
+      "3": "GND"
+    },
+    "J8": {
+      "1": "GND",
+      "2": "DSI_D0_N",
+      "3": "DSI_D0_P",
+      "4": "GND",
+      "5": "DSI_D1_N",
+      "6": "DSI_D1_P",
+      "7": "GND",
+      "8": "DSI_CLK_N",
+      "9": "DSI_CLK_P",
+      "10": "GND",
+      "11": "DSI_D2_N",
+      "12": "DSI_D2_P",
+      "13": "GND",
+      "14": "DSI_D3_N",
+      "15": "DSI_D3_P",
+      "16": "GND",
+      "17": "unconnected-(J8-Pin_17-Pad17)",
+      "18": "unconnected-(J8-Pin_18-Pad18)",
+      "19": "GND",
+      "20": "DSI_SCL",
+      "21": "DSI_SDA",
+      "22": "+3V3_CM4"
+    },
+    "J7": {
+      "1": "C3_RX",
+      "2": "C3_TX",
+      "3": "C3_EN",
+      "4": "C3_BOOT_N",
+      "5": "CM4_HALTED_N",
+      "6": "GND"
+    },
+    "J3": {
+      "1": "+5V_CORE",
+      "2": "GND"
+    },
+    "J10": {
+      "1": "+3V3_AON",
+      "2": "GND"
+    },
+    "J9": {
+      "1": "RPIBOOT_N",
+      "2": "GND"
+    },
+    "J6": {
+      "1": "I2S_BCLK_R",
+      "2": "I2S_LRCLK_R",
+      "3": "I2S_DATA_R",
+      "4": "AMP_ENABLE",
+      "5": "GND"
+    }
+  },
+  "power": {
+    "J1": {
+      "1": "PD_IN",
+      "2": "GND"
+    },
+    "J5": {
+      "1": "I2C_SDA",
+      "2": "I2C_SCL",
+      "3": "+3V3_AON",
+      "4": "GND"
+    },
+    "J3": {
+      "1": "+3V3_AON",
+      "2": "GND",
+      "3": "I2C_SDA",
+      "4": "I2C_SCL",
+      "5": "POWER_REQUEST",
+      "6": "EXT_USB_ENABLE",
+      "7": "WATCH_ENABLE",
+      "8": "WATCH_FAULT_N"
+    },
+    "J6": {
+      "1": "+5V_CORE",
+      "2": "GND"
+    },
+    "J9": {
+      "1": "BATT_TS",
+      "2": "GND"
+    },
+    "J4": {
+      "1": "+3V3_AON",
+      "2": "GND",
+      "3": "+5V_RGB",
+      "4": "GND",
+      "5": "POWER_REQUEST",
+      "6": "MAIN_ENABLE",
+      "7": "POWER_IRQ",
+      "8": "GND"
+    },
+    "J7": {
+      "1": "+3V3_AUDIO",
+      "2": "GND"
+    },
+    "J2": {
+      "1": "+5V_CORE",
+      "2": "GND",
+      "3": "+5V_IO",
+      "4": "GND"
+    },
+    "J8": {
+      "1": "BAT_PACK",
+      "2": "GND"
+    }
+  },
+  "usb-io": {
+    "J2": {
+      "1": "PORT3_VBUS",
+      "2": "DN3_DM",
+      "3": "DN3_DP",
+      "4": "GND",
+      "5": "GND"
+    },
+    "J6": {
+      "A1": "GND",
+      "A4": "PD_RAW",
+      "A5": "CHARGE_CC1",
+      "A6": "CHARGE_DP",
+      "A7": "CHARGE_DM",
+      "A8": "unconnected-(J6-SBU1-PadA8)",
+      "A9": "PD_RAW",
+      "A12": "GND",
+      "B1": "GND",
+      "B4": "PD_RAW",
+      "B5": "CHARGE_CC2",
+      "B6": "CHARGE_DP",
+      "B7": "CHARGE_DM",
+      "B8": "unconnected-(J6-SBU2-PadB8)",
+      "B9": "PD_RAW",
+      "B12": "GND",
+      "S1": "GND"
+    },
+    "J3": {
+      "1": "PORT4_VBUS",
+      "2": "DN4_DM",
+      "3": "DN4_DP",
+      "4": "GND",
+      "5": "GND"
+    },
+    "J8": {
+      "1": "CM4_VBUS",
+      "2": "DN2_DM",
+      "3": "DN2_DP",
+      "4": "GND"
+    },
+    "J9": {
+      "1": "PD_IN",
+      "2": "GND"
+    },
+    "J11": {
+      "1": "+3V3_AON",
+      "2": "GND",
+      "3": "I2C_SDA",
+      "4": "I2C_SCL",
+      "5": "POWER_REQUEST",
+      "6": "EXT_USB_ENABLE",
+      "7": "WATCH_ENABLE",
+      "8": "WATCH_FAULT_N"
+    },
+    "J10": {
+      "1": "+5V_CORE",
+      "2": "GND",
+      "3": "+5V_IO",
+      "4": "GND"
+    },
+    "J4": {
+      "1": "PORT5_VBUS",
+      "2": "DN5_DM",
+      "3": "DN5_DP",
+      "4": "GND",
+      "5": "GND"
+    },
+    "J1": {
+      "A1": "GND",
+      "A4": "PC_VBUS",
+      "A5": "PC_CC1",
+      "A6": "PC_DP",
+      "A7": "PC_DM",
+      "A8": "unconnected-(J1-SBU1-PadA8)",
+      "A9": "PC_VBUS",
+      "A12": "GND",
+      "B1": "GND",
+      "B4": "PC_VBUS",
+      "B5": "PC_CC2",
+      "B6": "PC_DP",
+      "B7": "PC_DM",
+      "B8": "unconnected-(J1-SBU2-PadB8)",
+      "B9": "PC_VBUS",
+      "B12": "GND",
+      "S1": "GND"
+    },
+    "J7": {
+      "1": "DN1_DP",
+      "2": "DN1_DM",
+      "3": "GND"
+    },
+    "J5": {
+      "A1": "GND",
+      "A4": "WATCH_VBUS",
+      "A5": "WATCH_CC1",
+      "A6": "unconnected-(J5-D+-PadA6)",
+      "A7": "unconnected-(J5-D--PadA7)",
+      "A8": "unconnected-(J5-SBU1-PadA8)",
+      "A9": "WATCH_VBUS",
+      "A12": "GND",
+      "B1": "GND",
+      "B4": "WATCH_VBUS",
+      "B5": "WATCH_CC2",
+      "B6": "unconnected-(J5-D+-PadB6)",
+      "B7": "unconnected-(J5-D--PadB7)",
+      "B8": "unconnected-(J5-SBU2-PadB8)",
+      "B9": "WATCH_VBUS",
+      "B12": "GND",
+      "S1": "GND"
+    }
+  },
+  "rotary": {
+    "J1": {
+      "1": "+3V3_AON",
+      "2": "GND",
+      "3": "ENC_A",
+      "4": "ENC_B",
+      "5": "ENC_SW"
+    }
+  },
+  "battery-light": {
+    "J1": {
+      "1": "RED_PWM",
+      "2": "GREEN_PWM",
+      "3": "GND"
+    }
+  },
+  "stereo-audio": {
+    "J1": {
+      "1": "SPK_L_P",
+      "2": "SPK_L_N"
+    },
+    "J3": {
+      "1": "+3V3_AUDIO",
+      "2": "GND",
+      "3": "CLK_IN",
+      "4": "LR_IN",
+      "5": "DATA_IN",
+      "6": "AMP_ENABLE",
+      "7": "GND"
+    },
+    "J2": {
+      "1": "SPK_R_P",
+      "2": "SPK_R_N"
+    }
+  }
+}

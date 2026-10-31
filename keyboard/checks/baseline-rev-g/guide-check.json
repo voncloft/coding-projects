@@ -1,0 +1,36 @@
+{
+  "pages": 20,
+  "text_chars": [
+    3150,
+    4324,
+    4264,
+    2049,
+    3086,
+    3083,
+    2073,
+    3950,
+    990,
+    4271,
+    4336,
+    4517,
+    1552,
+    4494,
+    4373,
+    4370,
+    4841,
+    1507,
+    2574,
+    3102
+  ],
+  "all_sections": [
+    "START-HERE.md",
+    "USB-C-AND-HEADPHONES.md",
+    "assembly/MECHANICAL.md",
+    "assembly/WIRING.md",
+    "assembly/POWER-AND-FABRICATION.md",
+    "firmware/README.md",
+    "software/README.md",
+    "assembly/ACCEPTANCE.md",
+    "CHECK-RESULTS.md"
+  ]
+}
