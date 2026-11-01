@@ -3,6 +3,7 @@
 #include <QtTest>
 #include <QAction>
 #include <QComboBox>
+#include <QCheckBox>
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QJsonArray>
@@ -10,6 +11,9 @@
 #include <QSpinBox>
 #include <QStandardPaths>
 #include <QTemporaryDir>
+#include <QPainter>
+#include <QTabWidget>
+#include <QCryptographicHash>
 #include <set>
 
 namespace Golf {
@@ -17,17 +21,17 @@ class GameTest : public QObject {
     Q_OBJECT
     QTemporaryDir settings;
     static void start(Game &g) {
-        for(int i=0;i<7;++i) QVERIFY(g.open(i));
+        for(int i=0;i<g.state().rules.cardCount()-1;++i) QVERIFY(g.open(i));
         while(g.state().phase==Phase::Opening) g.computerStep();
     }
     static bool conserved(const Game &g) {
         std::set<int> ids; int n=0;
-        auto add=[&](int id){ ++n; return id>=0 && id<108 && ids.insert(id).second; };
+        auto add=[&](int id){ ++n; return id>=0 && id<g.s.rules.deckSize() && ids.insert(id).second; };
         for(int id:g.s.deck) if(!add(id))return false;
         for(int id:g.s.discards) if(!add(id))return false;
         for(auto h:g.s.hands) for(auto c:h) if(!add(c.card))return false;
         if(g.s.held>=0 && !add(g.s.held))return false;
-        return n==108 && ids.size()==108;
+        return n==g.s.rules.deckSize() && int(ids.size())==g.s.rules.deckSize();
     }
 private slots:
     void initTestCase() {
@@ -98,7 +102,7 @@ private slots:
         QCOMPARE(Game::score(h).total,expected); QCOMPARE(Game::score(h).bonus,bonus);
     }
     void fourMinusFiveCardsContributeMinusThirty() {
-        Hand hand{{{104,true},{8,true},{105,true},{16,true},{106,true},{24,true},{107,true},{32,true}}};
+        Hand hand{{104,true},{8,true},{105,true},{16,true},{106,true},{24,true},{107,true},{32,true}};
         auto score=Game::score(hand);
         QCOMPARE(score.columns[0]+score.columns[2],-20);QCOMPARE(score.bonus,-10);
         QCOMPARE(score.columns[0]+score.columns[2]+score.bonus,-30);
@@ -142,7 +146,7 @@ private slots:
         QCOMPARE(g.hidden(0),1);QVERIFY(g.s.scores.empty());
     }
     void computerCanFlipSafelyWithoutPeeking() {
-        Game g(63);start(g);g.s.current=0;g.s.turns[0]=6;
+        Game g(63);g.setCpuTarget(6);start(g);g.s.current=0;g.s.turns[0]=6;
         std::array<int,8> ranks{7,7,0,0,7,7,0,12};
         for(int i=0;i<8;++i)g.s.hands[0][i]={ranks[i]*8,i!=7};
         std::array<int,8> otherRanks{12,11,10,9,8,7,6,5};
@@ -262,10 +266,10 @@ private slots:
         Window w(false);w.show();
         QTimer::singleShot(50,[&]{
             auto *dialog=qobject_cast<QDialog *>(QApplication::activeModalWidget());QVERIFY(dialog);
-            auto *rounds=dialog->findChild<QSpinBox *>("settingsRoundCount");QVERIFY(rounds);rounds->setValue(17);
+            auto *rounds=dialog->findChild<QSpinBox *>("roundCount");QVERIFY(rounds);rounds->setValue(17);
             QTest::mouseClick(dialog->findChild<QDialogButtonBox *>()->button(QDialogButtonBox::Ok),Qt::LeftButton);
         });
-        auto *action=w.findChild<QAction *>("roundSettings");QVERIFY(action);action->trigger();
+        auto *action=w.findChild<QAction *>("gameOptions");QVERIFY(action);action->trigger();
         QCOMPARE(w.game().state().holes,17);QCOMPARE(w.findChild<QTableWidget *>("scores")->rowCount(),17);
     }
     void uiSevenCardsDrawAndFinalReveal() {
@@ -291,7 +295,7 @@ private slots:
                 auto *rounds=dialog->findChild<QSpinBox *>("roundCount");QVERIFY(rounds);rounds->setValue(7);
                 QTest::mouseClick(dialog->findChild<QDialogButtonBox *>()->button(QDialogButtonBox::Ok),Qt::LeftButton);
             });
-            auto *settingsAction=w.findChild<QAction *>("playerSettings");QVERIFY(settingsAction);settingsAction->trigger();
+            auto *settingsAction=w.findChild<QAction *>("gameOptions");QVERIFY(settingsAction);settingsAction->trigger();
             QCOMPARE(w.game().players(),players);QCOMPARE(w.game().state().holes,7);
             for(int i=0;i<7;++i)QTest::mouseClick(w.findChild<CardButton *>(QString("card%1").arg(i)),Qt::LeftButton);
             QTRY_COMPARE(w.game().state().phase,Phase::Draw);
@@ -317,6 +321,271 @@ private slots:
             QCOMPARE(w.game().state().phase,Phase::HoleOver);QCOMPARE(w.game().state().deck,deck);QCOMPARE(w.game().state().discards,discards);
             QCOMPARE(w.game().state().hands[0][7].card,original);QCOMPARE(w.game().hidden(0),0);
         }
+    }
+
+    void configurableLayoutsDecksAndSaveRoundtrip_data() {
+        QTest::addColumn<int>("columns");QTest::addColumn<int>("rows");QTest::addColumn<int>("decks");QTest::addColumn<int>("matching");
+        QTest::addColumn<bool>("cancelRows");
+        for(auto shape:{std::pair{4,2},std::pair{3,3},std::pair{4,4}})
+            for(int decks:{1,2,8})for(int matching:{0,1})for(bool cancelRows:{false,true}) {
+                if(cancelRows && shape.second==2)continue;
+                QTest::newRow(qPrintable(QString("%1x%2-%3decks-mode%4-rows%5").arg(shape.first).arg(shape.second).arg(decks).arg(matching).arg(cancelRows)))
+                    <<shape.first<<shape.second<<decks<<matching<<cancelRows;
+            }
+    }
+    void configurableLayoutsDecksAndSaveRoundtrip() {
+        QFETCH(int,columns);QFETCH(int,rows);QFETCH(int,decks);QFETCH(int,matching);
+        QFETCH(bool,cancelRows);
+        Rules rules{columns,rows,decks,Matching(matching),0,cancelRows};
+        for(int players=2;players<=4;++players) {
+            Game g(101),copy,view;g.newMatch(players-1,2,rules);
+            QCOMPARE(g.state().deck.size(),size_t(108*decks-players*columns*rows-1));QVERIFY(conserved(g));
+            for(int p=0;p<players;++p)QCOMPARE(g.hidden(p),columns*rows);
+            std::array<int,14> values{};
+            for(int id=0;id<rules.deckSize();++id)++values[value(id)==-5?13:value(id)];
+            for(int r=0;r<13;++r)QCOMPARE(values[r],8*decks);QCOMPARE(values[13],4*decks);
+            QVERIFY(copy.restore(g.save()));QCOMPARE(copy.save(),g.save());
+            QVERIFY(view.restorePublicView(g.publicView(1),1));QCOMPARE(view.state().rules.cardCount(),rules.cardCount());
+            QCOMPARE(view.state().rules.cancelRows,cancelRows);
+            QVERIFY(!g.open(rules.cardCount()));start(g);
+            for(int p=0;p<players;++p)QCOMPARE(g.hidden(p),1);
+            QVERIFY(g.draw(false));QVERIFY(!g.replace(rules.cardCount()));
+            QVERIFY(copy.restore(g.save()));QCOMPARE(copy.save(),g.save());
+            QVERIFY(view.restorePublicView(g.publicView(1),1));QCOMPARE(view.state().held,-2);
+            QVERIFY(g.finishHole());QVERIFY(conserved(g));
+            QVERIFY(copy.restore(g.save()));QCOMPARE(copy.save(),g.save());
+            QVERIFY(view.restorePublicView(g.publicView(1),1));QCOMPARE(view.state().scores,g.state().scores);
+            for(int p=0;p<players;++p)QCOMPARE(g.total(p),Game::score(g.state().hands[p],false,rules).total);
+            QVERIFY(g.nextHole());start(g);QVERIFY(g.finishHole());
+            QCOMPARE(g.state().phase,Phase::MatchOver);QVERIFY(conserved(g));
+            QVERIFY(copy.restore(g.save()));QCOMPARE(copy.save(),g.save());
+        }
+    }
+    void largerLayoutsScoreBothMatchingModes() {
+        auto make=[](std::initializer_list<int> ranks){Hand h(ranks.size());int i=0;for(int r:ranks)h[i++]={r==-5?104:r*8,true};return h;};
+        Hand nine=make({7,1,-5,7,2,-5,3,4,0});
+        Rules columns{3,3,2,Matching::Columns},pairs{3,3,2,Matching::Pairs};
+        QCOMPARE(Game::score(nine,false,columns).total,14);
+        QCOMPARE(Game::score(nine,false,pairs).total,0);
+        nine=Hand(9,Slot{56,true});
+        QCOMPARE(Game::score(nine,false,columns).total,-15);
+        QCOMPARE(Game::score(nine,false,pairs).total,6);
+        Hand sixteen=make({7,1,-5,3,7,2,-5,4,4,1,-5,5,4,2,-5,6});
+        columns={4,4,2,Matching::Columns};pairs={4,4,2,Matching::Pairs};
+        QCOMPARE(Game::score(sixteen,false,columns).total,26);
+        QCOMPARE(Game::score(sixteen,false,pairs).total,-12);
+        sixteen=Hand(16,Slot{56,true});
+        QCOMPARE(Game::score(sixteen,false,columns).total,-20);
+        QCOMPARE(Game::score(sixteen,false,pairs).total,-40);
+        sixteen[0].up=false;
+        QCOMPARE(Game::score(sixteen,true,columns).total,6);
+        QCOMPARE(Game::score(sixteen,true,pairs).total,-28);
+        QVERIFY(!Game::score(sixteen,true,pairs).matched[0]);
+        sixteen=Hand(16,Slot{104,true});
+        QCOMPARE(Game::score(sixteen,false,columns).total,-100);
+        QCOMPARE(Game::score(sixteen,false,pairs).total,-120);
+    }
+    void rowsCancelWithoutDoubleCountingIntersections() {
+        auto make=[](std::initializer_list<int> ranks){Hand h(ranks.size());int i=0;for(int r:ranks)h[i++]={r==-5?104:r*8,true};return h;};
+        Rules rules{3,3,2,Matching::Columns,0,true};
+        Hand h=make({7,7,7, 1,2,3, 4,5,6});
+        auto result=Game::score(h,true,rules);QCOMPARE(result.total,21);QCOMPARE(result.bonus,0);
+        for(int i=0;i<9;++i)QCOMPARE(result.matched[i],i<3);
+        h[0].up=false;result=Game::score(h,true,rules);QCOMPARE(result.total,35);
+        for(bool matched:result.matched)QVERIFY(!matched);
+        h=make({7,7,7, 7,1,2, 7,3,4});
+        result=Game::score(h,false,rules);QCOMPARE(result.total,0);QCOMPARE(result.bonus,-10);
+        QCOMPARE(result.columns[0],0);QCOMPARE(result.columns[1],4);QCOMPARE(result.columns[2],6);
+        // The two rows share cards with three column pairs: five bonus groups,
+        // with each card's value cancelled only once.
+        h=make({7,7,7, 7,7,7, 1,2,3});
+        QCOMPARE(Game::score(h,false,rules).total,-4);
+        rules.matching=Matching::Pairs;result=Game::score(h,false,rules);
+        QCOMPARE(result.total,-19);QCOMPARE(result.bonus,-25);
+        for(auto shape:{std::pair{3,3},std::pair{4,4}})for(auto mode:{Matching::Columns,Matching::Pairs}) {
+            rules={shape.first,shape.second,8,mode,0,true};h=Hand(rules.cardCount(),Slot{104,true});
+            result=Game::score(h,false,rules);
+            const int expected=shape.first==3?-75:mode==Matching::Columns?-120:-140;
+            QCOMPARE(result.total,expected);
+            for(int c=0;c<rules.columns;++c)QCOMPARE(result.columns[c],-5*rules.rows);
+            for(int i=0;i<rules.cardCount();++i)QVERIFY(result.matched[i]);
+        }
+    }
+    void twoColumnsBonusExamples() {
+        for(auto shape:{std::pair{4,2},std::pair{3,3},std::pair{4,4}}) {
+            Rules rules{shape.first,shape.second,2,Matching::Columns};
+            for(int rank:{7,-5}) {
+                Hand h(rules.cardCount());int other=0;
+                for(int r=0;r<rules.rows;++r)for(int c=0;c<rules.columns;++c) {
+                    const int v=c<2?rank:r*2+c;
+                    h[r*rules.columns+c]={v==-5?104:v*8,true};if(c>=2)other+=v;
+                }
+                auto result=Game::score(h,false,rules);QCOMPARE(result.bonus,-10);
+                QCOMPARE(result.total-other,rank==-5?-10*rules.rows-10:-10);
+                if(rank==7) {
+                    for(int r=0;r<rules.rows;++r)h[r*rules.columns+1].card=64;
+                    QCOMPARE(Game::score(h,false,rules).bonus,0);
+                } else if(rules.rows==4) {
+                    rules.matching=Matching::Pairs;result=Game::score(h,false,rules);
+                    QCOMPARE(result.bonus,-20);QCOMPARE(result.total-other,-60);
+                }
+            }
+        }
+    }
+    void legacySavesAndMalformedOptions() {
+        Game original(12),copy;original.setCpuTarget(6);auto legacy=original.save();legacy["format"]=2;
+        for(const auto &key:{"columns","rows","decks","matching","cpuTarget","cancelRows"})legacy.remove(key);
+        QVERIFY(copy.restore(legacy));QCOMPARE(copy.save(),original.save());
+        auto previous=original.save();previous["format"]=3;previous.remove("cancelRows");
+        QVERIFY(copy.restore(previous));QCOMPARE(copy.save(),original.save());QVERIFY(!copy.state().rules.cancelRows);
+        const auto before=copy.save();
+        for(const auto &key:{"columns","rows","decks","matching","cpuTarget"}) {
+            auto bad=original.save();bad[key]=99;QVERIFY(!copy.restore(bad));QCOMPARE(copy.save(),before);
+            bad=original.publicView(0);bad[key]=99;QVERIFY(!copy.restorePublicView(bad,0));QCOMPARE(copy.save(),before);
+            bad=original.save();bad.remove(key);QVERIFY(!copy.restore(bad));
+            bad=original.save();bad[key]=1.5;QVERIFY(!copy.restore(bad));
+        }
+        auto bad=original.publicView(0);bad["stockCount"]=1;
+        QVERIFY(!copy.restorePublicView(bad,0));QCOMPARE(copy.save(),before);
+        bad=original.save();bad.remove("cancelRows");QVERIFY(!copy.restore(bad));
+        for(QJsonValue flag:{QJsonValue(1),QJsonValue("true"),QJsonValue(true)}) {
+            bad=original.save();bad["cancelRows"]=flag;QVERIFY(!copy.restore(bad));QCOMPARE(copy.save(),before);
+            bad=original.publicView(0);bad["cancelRows"]=flag;QVERIFY(!copy.restorePublicView(bad,0));QCOMPARE(copy.save(),before);
+        }
+    }
+    void newLayoutsAiKeepsFinalCardPrivateAndDevelopsHand() {
+        for(auto shape:{std::pair{3,3},std::pair{4,4}})for(auto matching:{Matching::Columns,Matching::Pairs})for(bool cancelRows:{false,true}) {
+            Rules rules{shape.first,shape.second,2,matching,0,cancelRows};Game g(7);g.newMatch(2,1,rules);start(g);
+            Game other=g;int last=rules.cardCount()-1;
+            other.s.hands[0][last].card=104;g.s.hands[0][last].card=96;
+            QCOMPARE(g.unseenValues(),other.unseenValues());
+            QCOMPARE(g.estimate(g.s.hands[0]),other.estimate(other.s.hands[0]));
+            QCOMPARE(g.bestReplacement(40),other.bestReplacement(40));
+            // Fresh game: simulate a complete match, checking card conservation and finish quality.
+            g.newMatch(2,1,rules);int steps=0;
+            while(g.active() && ++steps<10000){g.computerStep();QVERIFY(conserved(g));}
+            QVERIFY2(steps<10000,"AI failed to complete a larger-layout match");
+            QCOMPARE(g.s.phase,Phase::MatchOver);QVERIFY(g.s.turns[g.s.endingBy]>=6);
+            QVERIFY(g.s.scores.back()[g.s.endingBy]<=rules.cpuTarget);
+        }
+    }
+    void uiOptionsAndNewGameRememberAllChoices() {
+        QSettings config;config.clear();config.setValue("fast",true);
+        {
+            Window w(true);w.show();QCOMPARE(w.windowTitle(),QString("Turnover Golf"));
+            for(int count:{8,9,16}) {
+                QTimer::singleShot(30,[&]{
+                    auto *dialog=qobject_cast<QDialog *>(QApplication::activeModalWidget());QVERIFY(dialog);
+                    dialog->findChild<QComboBox *>("playerCount")->setCurrentIndex(2);
+                    auto *shape=dialog->findChild<QComboBox *>("cardLayout");QVERIFY(shape);shape->setCurrentIndex(shape->findData(count));
+                    auto *rows=dialog->findChild<QCheckBox *>("cancelRows");QVERIFY(rows);QCOMPARE(rows->isEnabled(),count!=8);rows->setChecked(count!=8);
+                    dialog->findChild<QComboBox *>("matchingMode")->setCurrentIndex(1);
+                    dialog->findChild<QSpinBox *>("deckCount")->setValue(3);
+                    dialog->findChild<QSpinBox *>("roundCount")->setValue(5);
+                    auto *target=dialog->findChild<QComboBox *>("cpuTarget");target->setCurrentIndex(target->findData(-5));
+                    dialog->findChild<QComboBox *>("faceTheme")->setCurrentIndex(8);
+                    dialog->findChild<QComboBox *>("backTheme")->setCurrentIndex(2);
+                    QCOMPARE(dialog->findChild<QComboBox *>("faceTheme")->count(),12);
+                    QCOMPARE(dialog->findChild<QComboBox *>("backTheme")->count(),12);
+                    QCOMPARE(dialog->findChild<QTabWidget *>("setupTabs")->count(),5);
+                    if(count==16)dialog->grab().save(QDir::currentPath()+"/layout-options.png");
+                    if(count==16){dialog->findChild<QTabWidget *>("setupTabs")->setCurrentIndex(1);dialog->grab().save(QDir::currentPath()+"/row-options.png");}
+                    QTest::mouseClick(dialog->findChild<QDialogButtonBox *>()->button(QDialogButtonBox::Ok),Qt::LeftButton);
+                });
+                w.findChild<QAction *>("gameOptions")->trigger();
+                QCOMPARE(w.game().players(),4);QCOMPARE(w.game().state().rules.cardCount(),count);
+                QCOMPARE(w.game().state().rules.decks,3);QCOMPARE(w.game().state().rules.matching,Matching::Pairs);
+                QCOMPARE(w.game().state().rules.cpuTarget,-5);
+                QCOMPARE(w.game().state().rules.cancelRows,count!=8);
+                QCOMPARE(w.findChild<CardButton *>("card0")->faceTheme(),8);QCOMPARE(w.findChild<CardButton *>("card0")->backTheme(),2);
+                QVERIFY(w.findChild<CardButton *>(QString("card%1").arg(count-1)));
+                QVERIFY(!w.findChild<CardButton *>(QString("card%1").arg(count)));
+                // New game must not open a setup dialog.
+                bool unexpectedDialog=false;QTimer timer;
+                connect(&timer,&QTimer::timeout,[&]{if(auto *d=qobject_cast<QDialog *>(QApplication::activeModalWidget())){unexpectedDialog=true;d->reject();}});timer.start(20);
+                QTest::mouseClick(w.findChild<QPushButton *>("newGame"),Qt::LeftButton);timer.stop();QVERIFY(!unexpectedDialog);
+                QCOMPARE(w.game().players(),4);QCOMPARE(w.game().state().holes,5);QCOMPARE(w.game().hidden(0),count);
+                QCOMPARE(w.game().state().rules.cancelRows,count!=8);
+                QCOMPARE(w.game().state().rules.decks,3);QCOMPARE(w.game().state().rules.matching,Matching::Pairs);
+                QCOMPARE(w.game().state().rules.cpuTarget,-5);
+                QCOMPARE(w.findChild<CardButton *>("card0")->faceTheme(),8);QCOMPARE(w.findChild<CardButton *>("card0")->backTheme(),2);
+                for(int i=0;i<count-1;++i)QTest::mouseClick(w.findChild<CardButton *>(QString("card%1").arg(i)),Qt::LeftButton);
+                QTRY_COMPARE(w.game().state().phase,Phase::Draw);
+                QCoreApplication::processEvents();
+                w.capture(QDir::currentPath()+QString("/layout-%1.png").arg(count));
+                QTest::mouseClick(w.findChild<CardButton *>(QString("card%1").arg(count-1)),Qt::LeftButton);
+                QCOMPARE(w.game().state().phase,Phase::HoleOver);
+            }
+        }
+        Window restored(false);QCOMPARE(restored.game().state().rules.cardCount(),16);QCOMPARE(restored.game().players(),4);QCOMPARE(restored.game().state().holes,5);
+        QCOMPARE(restored.game().state().rules.decks,3);QCOMPARE(restored.game().state().rules.matching,Matching::Pairs);
+        QCOMPARE(restored.game().state().rules.cpuTarget,-5);
+        QVERIFY(restored.game().state().rules.cancelRows);
+        QCOMPARE(restored.findChild<CardButton *>("card0")->faceTheme(),8);QCOMPARE(restored.findChild<CardButton *>("card0")->backTheme(),2);
+        config.clear();
+    }
+
+    void rowOptionAloneRestartsAndCancelKeepsCurrentHand() {
+        QSettings config;config.clear();config.setValue("columns",3);config.setValue("rows",3);
+        Window w(false);QVERIFY(w.session().act("open",0));const auto before=w.game().save();
+        QTimer::singleShot(30,[&]{
+            auto *d=qobject_cast<QDialog *>(QApplication::activeModalWidget());QVERIFY(d);
+            d->findChild<QCheckBox *>("cancelRows")->setChecked(true);
+            QCOMPARE(d->findChild<QDialogButtonBox *>()->button(QDialogButtonBox::Ok)->text(),QString("Start new game"));
+            d->reject();
+        });
+        w.findChild<QAction *>("gameOptions")->trigger();QCOMPARE(w.game().save(),before);
+        QTimer::singleShot(30,[&]{
+            auto *d=qobject_cast<QDialog *>(QApplication::activeModalWidget());QVERIFY(d);
+            d->findChild<QCheckBox *>("cancelRows")->setChecked(true);
+            QTest::mouseClick(d->findChild<QDialogButtonBox *>()->button(QDialogButtonBox::Ok),Qt::LeftButton);
+        });
+        w.findChild<QAction *>("gameOptions")->trigger();QVERIFY(w.game().state().rules.cancelRows);QCOMPARE(w.game().hidden(0),9);
+        QTimer::singleShot(30,[&]{
+            auto *d=qobject_cast<QDialog *>(QApplication::activeModalWidget());QVERIFY(d);
+            d->findChild<QComboBox *>("cardLayout")->setCurrentIndex(0);
+            QVERIFY(!d->findChild<QCheckBox *>("cancelRows")->isEnabled());
+            QTest::mouseClick(d->findChild<QDialogButtonBox *>()->button(QDialogButtonBox::Ok),Qt::LeftButton);
+        });
+        w.findChild<QAction *>("gameOptions")->trigger();QVERIFY(!w.game().state().rules.cancelRows);QCOMPARE(w.game().hidden(0),8);
+        config.clear();
+    }
+    void computerHonorsSelectedFinishingTarget() {
+        Game g(63);start(g);g.s.current=0;g.s.turns[0]=6;
+        const std::array<int,8> mine{7,7,0,0,7,7,0,12},other{12,11,10,9,8,7,6,5};
+        for(int i=0;i<8;++i){g.s.hands[0][i]={mine[i]*8,i!=7};g.s.hands[1][i]={other[i]*8,i!=7};}
+        QVERIFY(g.setCpuTarget(3));QVERIFY(g.shouldFinish(96,0));QVERIFY(g.shouldFlipFinal());
+        QVERIFY(g.setCpuTarget(0));QVERIFY(!g.shouldFinish(96,0));QVERIFY(!g.shouldFlipFinal());
+        QVERIFY(g.setCpuTarget(-20));QVERIFY(g.shouldFinish(0,0));QVERIFY(!g.shouldFinish(40,0));
+        QVERIFY(!g.setCpuTarget(-21));QVERIFY(!g.setCpuTarget(7));QCOMPARE(g.s.rules.cpuTarget,-20);
+        g.s.turns[0]=5;QVERIFY(!g.shouldFinish(0,0));
+    }
+    void themeChoicesAreDistinctAndAppearanceKeepsTheGame() {
+        QCOMPARE(CardButton::themeNames().size(),12);
+        QSet<QByteArray> fronts,backs;
+        QImage sheet(816,486,QImage::Format_ARGB32_Premultiplied);sheet.fill(QColor("#e5e9ed"));QPainter painter(&sheet);
+        QFont title=QApplication::font();title.setPixelSize(13);painter.setFont(title);
+        for(int theme=0;theme<12;++theme){
+            CardButton front,back;front.resize(88,122);back.resize(88,122);front.setAppearance(theme,theme);back.setAppearance(theme,theme);front.setCard(7,false,"1");back.setCard(Hidden,false,"2");
+            auto frontImage=front.grab().toImage(),backImage=back.grab().toImage();
+            fronts.insert(QCryptographicHash::hash(QByteArray(reinterpret_cast<const char *>(frontImage.constBits()),frontImage.sizeInBytes()),QCryptographicHash::Sha256));
+            backs.insert(QCryptographicHash::hash(QByteArray(reinterpret_cast<const char *>(backImage.constBits()),backImage.sizeInBytes()),QCryptographicHash::Sha256));
+            int x=(theme%4)*204+10,y=(theme/4)*162;painter.setPen(Qt::black);painter.drawText(QRect(x,y,190,28),Qt::AlignCenter,CardButton::themeNames()[theme]);
+            painter.drawImage(QPoint(x,y+29),frontImage);painter.drawImage(QPoint(x+94,y+29),backImage);
+        }
+        painter.end();QVERIFY(sheet.save(QDir::currentPath()+"/card-themes.png"));QCOMPARE(fronts.size(),12);QCOMPARE(backs.size(),12);
+        Window w(false);w.show();QVERIFY(w.session().act("open",0));const auto before=w.game().save();
+        QTimer::singleShot(30,[&]{
+            auto *d=qobject_cast<QDialog *>(QApplication::activeModalWidget());QVERIFY(d);
+            d->findChild<QTabWidget *>("setupTabs")->setCurrentIndex(3);
+            d->findChild<QComboBox *>("faceTheme")->setCurrentIndex(10);d->findChild<QComboBox *>("backTheme")->setCurrentIndex(7);
+            d->grab().save(QDir::currentPath()+"/appearance-options.png");
+            QTest::mouseClick(d->findChild<QDialogButtonBox *>()->button(QDialogButtonBox::Ok),Qt::LeftButton);
+        });
+        w.findChild<QAction *>("gameOptions")->trigger();QCOMPARE(w.game().save(),before);
+        QCOMPARE(w.findChild<CardButton *>("card0")->faceTheme(),10);QCOMPARE(w.findChild<CardButton *>("card0")->backTheme(),7);
+        QTimer::singleShot(30,[&]{auto *d=qobject_cast<QDialog *>(QApplication::activeModalWidget());QVERIFY(d);d->findChild<QComboBox *>("faceTheme")->setCurrentIndex(0);d->reject();});
+        w.findChild<QAction *>("gameOptions")->trigger();QCOMPARE(w.findChild<CardButton *>("card0")->faceTheme(),10);QCOMPARE(w.game().save(),before);
     }
 
 };

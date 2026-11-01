@@ -67,3 +67,6 @@ Thumbs.db
 
 # Optional local archives are not part of the GitHub backup
 /outdated/
+
+# Turnover Golf also keeps its own upstream repository
+/turnover-golf/.git/

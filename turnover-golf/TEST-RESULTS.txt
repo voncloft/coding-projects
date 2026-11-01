@@ -1,3 +1,43 @@
+Turnover Golf 1.0.10 verification
+
+Native Qt 6.11.2 / C++17 release build: passed
+CTest: 2 of 2 suites passed
+Game/rules/UI: 71 passed, 0 failed
+Online multiplayer: 13 passed, 0 failed
+
+Verified optional complete-row cancellation in 3x3 and 4x4, with whole-column and pair modes. Tests cover intersections without cancelling the same card twice, hidden cards, row/column bonus groups, and -5 values remaining negative. Verified two same-value whole columns earn -10, and two all-minus-five columns contribute -30 / -40 / -50 in 4x2 / 3x3 / 4x4. Four pairs of -5 in 4x4 pair mode contribute -60 before other cards or row matches.
+
+Verified save/public-view roundtrips with row cancellation on and off, 1 / 2 / 8 decks, and 2 / 3 / 4 players. Older format-2 and format-3 saves keep row cancellation off; malformed flags and row cancellation in 4x2 are rejected. CPU simulations preserve hidden information, develop hands for at least six turns and honor the configured finishing target with rows enabled too.
+
+Verified the checkbox is enabled for 3x3 and 4x4 only, persists for New game and reopening the window, and changing it alone starts a new match. Cancelling settings leaves the current hand unchanged. Online row settings and scores synchronize, and guests see the host's setting read-only. Network protocol is 3; separate internet locations were not tested.
+
+Inspected the offscreen Cards settings render: the row checkbox, house-rule explanation and dialog buttons are readable and fit. The larger-layout bonus scoring is explicitly labeled as Turnover Golf house rules, rather than official Play Nine scoring. Reran the relevant UI/preferences test after the explanatory text change.
+
+Desktop metadata validation, launcher shell syntax and git diff --check passed. Built version 1.0.10 and refreshed the uninstalled project test executable. No installation performed.
+
+Earlier release verification (retained as historical evidence):
+
+Turnover Golf 1.0.9 verification
+
+Native Qt 6.11.2 / C++17 release build: passed
+CTest: 2 of 2 suites passed
+Game/rules/UI: 56 passed, 0 failed
+Online multiplayer: 12 passed, 0 failed
+
+Verified all three layouts (4x2, 3x3, 4x4), both matching modes, and 1, 2 and 8 decks with 2, 3 and 4 players. Checked deck distribution, unique card identities, all-but-one opening, final flip/replacement, scoring, card conservation, private saves and masked online views. Larger-layout matches completed with CPU finishes at or below the configured target after at least six turns. Tests separately exercise targets 3, 0 and -20 and reject invalid targets.
+
+Verified New game reuses the chosen player count, layout, matching, decks, rounds and CPU target without reopening setup. Preferences survive reopening the window. Appearance changes preserve the current hand and score; cancelling options preserves all choices. Rendered all 12 front and 12 back themes and verified each is distinct.
+
+Inspected offscreen renders of the tabbed Players & rounds and Appearance settings pages, the theme contact sheet, and the 3x3 and 4x4 tables. Dialog controls and previews are readable with room around them. The 4x4 table supports vertical scrolling when required by window size.
+
+TCP synchronization tests passed for 3x3 and 4x4 hands, both matching modes, multiple decks, opening, replacement finishes and the next round. CPU-target and round updates remain host-only. Existing reconnect, mixed-human/computer, invalid-action and hidden-card masking tests pass. Connections between separate internet locations were not tested.
+
+Desktop metadata validation, launcher shell syntax and git diff --check passed. Both the build executable and local project test executable report TurnoverGolf 1.0.9. The launcher prefers the build executable. No system installation performed.
+
+Restored this project's existing Git history and SSH origin git@github.com:voncloft/Turnover-golf.git. The parent coding-projects repository still tracks the source files and ignores turnover-golf/.git/.
+
+Earlier release verification (retained as historical evidence):
+
 Turnover Golf 1.0.8 verification
 
 Native Qt 6.11.2 / C++17 release build: passed

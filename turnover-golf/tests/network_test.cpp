@@ -9,6 +9,7 @@
 #include <QTemporaryDir>
 #include <QTabWidget>
 #include <QComboBox>
+#include <QCheckBox>
 #include <QSpinBox>
 #include <QLineEdit>
 #include <QDialogButtonBox>
@@ -170,6 +171,7 @@ private slots:
         Game hg,ag;NetworkSession h(hg),a(ag);QVERIFY(h.host({true},2,"Host",0));
         QVERIFY(h.act("rounds",4));QCOMPARE(hg.state().holes,4);
         a.join("127.0.0.1",h.port(),h.roomCode(),"Alice");QTRY_VERIFY(a.ready());QCOMPARE(ag.state().holes,4);
+        QVERIFY(!a.act("cpuTarget",6));QVERIFY(h.act("cpuTarget",-10));sync(h,a);QCOMPARE(ag.state().rules.cpuTarget,-10);
         QVERIFY(!a.act("rounds",99));QVERIFY(h.act("rounds",7));sync(h,a);QCOMPARE(ag.state().holes,7);
         openSeven(h,h);sync(h,a);openSeven(a,h);QVERIFY(h.act("draw"));QVERIFY(h.act("finish"));sync(h,a);
         auto scores=hg.state().scores;QVERIFY(h.act("rounds",1));sync(h,a);QCOMPARE(ag.state().phase,Phase::MatchOver);
@@ -204,20 +206,20 @@ private slots:
             d->grab().save(QDir::currentPath()+"/online-setup.png");
             QTest::mouseClick(d->findChild<QDialogButtonBox *>()->button(QDialogButtonBox::Ok),Qt::LeftButton);
         });
-        QTest::mouseClick(host.findChild<QPushButton *>("newGame"),Qt::LeftButton);
+        host.findChild<QAction *>("gameOptions")->trigger();
         QCOMPARE(host.session().mode(),NetworkSession::Mode::Host);QVERIFY(!host.session().ready());
         QTimer::singleShot(50,[&]{
             auto *d=qobject_cast<QDialog *>(QApplication::activeModalWidget());QVERIFY(d);
-            d->findChild<QTabWidget *>("setupTabs")->setCurrentIndex(1);
+            d->findChild<QTabWidget *>("setupTabs")->setCurrentIndex(4);
             d->findChild<QLineEdit *>("joinAddress")->setText("127.0.0.1");
             d->findChild<QSpinBox *>("joinPort")->setValue(host.session().port());
             d->findChild<QLineEdit *>("joinCode")->setText(host.session().roomCode());
             d->findChild<QLineEdit *>("joinName")->setText("Guest");
             QTest::mouseClick(d->findChild<QDialogButtonBox *>()->button(QDialogButtonBox::Ok),Qt::LeftButton);
         });
-        QTest::mouseClick(guest.findChild<QPushButton *>("newGame"),Qt::LeftButton);
+        guest.findChild<QAction *>("gameOptions")->trigger();
         QTRY_VERIFY(guest.session().ready());QCOMPARE(guest.session().localSeat(),1);
-        QVERIFY(!guest.findChild<QAction *>("roundSettings")->isEnabled());
+        QVERIFY(guest.findChild<QAction *>("gameOptions"));
         for(int i=0;i<7;++i)QTest::mouseClick(host.findChild<CardButton *>(QString("card%1").arg(i)),Qt::LeftButton);
         sync(host.session(),guest.session());
         for(int i=0;i<7;++i) {
@@ -242,6 +244,40 @@ private slots:
         QTest::mouseClick(host.findChild<QPushButton *>("nextHole"),Qt::LeftButton);sync(host.session(),guest.session());
         QCOMPARE(guest.game().state().hole,2);QCOMPARE(guest.game().hidden(1),8);
     }
+    void selectedLayoutsDecksAndRulesSynchronize() {
+        for(auto shape:{std::pair{3,3},std::pair{4,4}})for(auto matching:{Matching::Columns,Matching::Pairs})for(bool cancelRows:{false,true}) {
+            Rules rules{shape.first,shape.second,3,matching,0,cancelRows};
+            Game hg,ag;NetworkSession h(hg),a(ag);QVERIFY(h.host({true},2,"Host",0,rules));
+            a.join("127.0.0.1",h.port(),h.roomCode(),"Guest");QTRY_VERIFY(a.ready());
+            QCOMPARE(ag.state().rules.cardCount(),rules.cardCount());QCOMPARE(ag.state().rules.decks,3);
+            QCOMPARE(ag.state().rules.matching,matching);
+            QCOMPARE(ag.state().rules.cancelRows,cancelRows);
+            for(int i=0;i<rules.cardCount()-1;++i)QVERIFY(h.act("open",i));sync(h,a);
+            for(int i=0;i<rules.cardCount()-1;++i){QVERIFY(a.act("open",i));QTRY_VERIFY(!a.pending());}
+            QVERIFY(h.act("draw"));QVERIFY(h.act("discard"));sync(h,a);
+            QVERIFY(a.act("draw"));QTRY_VERIFY(!a.pending());
+            QVERIFY(a.act("replace",rules.cardCount()-1));QTRY_VERIFY(!a.pending());sync(h,a);
+            QCOMPARE(ag.state().scores,hg.state().scores);QCOMPARE(hg.state().phase,Phase::HoleOver);
+            QVERIFY(h.act("next"));sync(h,a);QCOMPARE(ag.hidden(1),rules.cardCount());
+            QCOMPARE(ag.state().rules.cancelRows,cancelRows);
+        }
+    }
+
+    void guestRowOptionIsReadOnlyAndMatchesHost() {
+        Window host(false),guest(false);Rules rules{3,3,2,Matching::Columns,0,true};
+        QVERIFY(host.session().host({true},2,"Host",0,rules));
+        guest.session().join("127.0.0.1",host.session().port(),host.session().roomCode(),"Guest");
+        QTRY_VERIFY(guest.session().ready());const auto before=host.game().save();
+        QTimer::singleShot(30,[&]{
+            auto *d=qobject_cast<QDialog *>(QApplication::activeModalWidget());QVERIFY(d);
+            auto *rows=d->findChild<QCheckBox *>("cancelRows");QVERIFY(rows);QVERIFY(rows->isChecked());QVERIFY(!rows->isEnabled());
+            QTest::mouseClick(d->findChild<QDialogButtonBox *>()->button(QDialogButtonBox::Ok),Qt::LeftButton);
+        });
+        guest.findChild<QAction *>("gameOptions")->trigger();
+        QCOMPARE(guest.session().mode(),NetworkSession::Mode::Client);
+        QCOMPARE(host.game().save(),before);QVERIFY(guest.game().state().rules.cancelRows);
+    }
+
 };
 }
 QTEST_MAIN(Golf::NetworkTest)

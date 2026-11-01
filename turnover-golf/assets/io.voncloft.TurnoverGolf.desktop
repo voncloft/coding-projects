@@ -1,8 +1,8 @@
 [Desktop Entry]
 Type=Application
 Name=Turnover Golf
-GenericName=Eight-card Golf
-Comment=Eight-card golf for 2–4 players, with computers and online humans
+GenericName=Card Golf
+Comment=Card golf for 2–4 players with selectable layouts, decks, computers and online humans
 Exec=turnover-golf
 Icon=turnover-golf
 Terminal=false

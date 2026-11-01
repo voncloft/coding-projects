@@ -23,8 +23,8 @@ public:
     bool canAct() const;
     bool act(const QString &action,int argument=-1);
     void computerStep();
-    void offline(int opponents,int rounds);
-    bool host(const QVector<bool> &onlineOpponents,int rounds,const QString &name,quint16 port=45839);
+    void offline(int opponents,int rounds,const Rules &rules = {});
+    bool host(const QVector<bool> &onlineOpponents,int rounds,const QString &name,quint16 port=45839,const Rules &rules = {});
     void join(const QString &address,quint16 port,const QString &code,const QString &name);
     void reconnect();
     void stop();

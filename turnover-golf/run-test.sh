@@ -1,10 +1,10 @@
 #!/bin/sh
 set -eu
 turnover_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
-if [ -x "$turnover_dir/turnover-golf" ]; then
-    turnover_binary="$turnover_dir/turnover-golf"
-elif [ -x "$turnover_dir/build/turnover-golf" ]; then
+if [ -x "$turnover_dir/build/turnover-golf" ]; then
     turnover_binary="$turnover_dir/build/turnover-golf"
+elif [ -x "$turnover_dir/turnover-golf" ]; then
+    turnover_binary="$turnover_dir/turnover-golf"
 else
     printf '%s\n' 'Build Turnover Golf first, from this folder:' \
         '  cmake -S . -B build -DCMAKE_BUILD_TYPE=Release' \

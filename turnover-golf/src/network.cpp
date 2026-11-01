@@ -7,7 +7,7 @@
 #include <algorithm>
 
 namespace Golf {
-namespace { constexpr int FrameLimit=65536; constexpr int Protocol=1; }
+namespace { constexpr int FrameLimit=65536; constexpr int Protocol=3; }
 NetworkSession::NetworkSession(Game &game,QObject *parent):QObject(parent),g(game) {
     m_server.setMaxPendingConnections(8);
     connect(&m_server,&QTcpServer::newConnection,this,&NetworkSession::acceptConnections);
@@ -39,8 +39,8 @@ void NetworkSession::stop() {
     m_mode=Mode::Offline;m_seat=-1;m_revision=0;m_ready=false;m_pending=false;m_started=false;
     m_stopping=false;
 }
-void NetworkSession::offline(int opponents,int rounds){stop();g.newMatch(opponents,rounds);emit updated();}
-bool NetworkSession::host(const QVector<bool> &onlineOpponents,int rounds,const QString &name,quint16 port) {
+void NetworkSession::offline(int opponents,int rounds,const Rules &rules){stop();g.newMatch(opponents,rounds,rules);emit updated();}
+bool NetworkSession::host(const QVector<bool> &onlineOpponents,int rounds,const QString &name,quint16 port,const Rules &rules) {
     if(onlineOpponents.size()<1 || onlineOpponents.size()>4 || !onlineOpponents.contains(true)){m_error="Choose at least one online human seat.";return false;}
     stop();
     if(!m_server.listen(QHostAddress::Any,port)){m_error=m_server.errorString();emit updated();return false;}
@@ -51,7 +51,7 @@ bool NetworkSession::host(const QVector<bool> &onlineOpponents,int rounds,const 
         m_remote.append(onlineOpponents[i]);m_connected.append(!onlineOpponents[i]);m_tokens.append(QString{});
         names.append(onlineOpponents[i]?QString("Online player %1").arg(i+1):QString("Computer %1").arg(i+1));
     }
-    g.newMatch(onlineOpponents.size(),rounds);g.setNames(names);publish();return true;
+    g.newMatch(onlineOpponents.size(),rounds,rules);g.setNames(names);publish();return true;
 }
 void NetworkSession::join(const QString &address,quint16 port,const QString &code,const QString &name) {
     stop();m_mode=Mode::Client;m_address=address.trimmed();m_joinPort=port;m_code=code.trimmed().toUpper();m_name=cleanName(name);m_token.clear();m_error.clear();reconnect();
@@ -134,6 +134,7 @@ void NetworkSession::receive(QTcpSocket *socket,const QJsonObject &message) {
     publish();
 }
 bool NetworkSession::apply(int seat,const QString &action,int argument) {
+    if(action=="cpuTarget")return seat==0 && g.setCpuTarget(argument);
     if(action=="rounds")return seat==0 && g.setRounds(argument);
     if(!ready())return false;
     if(action=="next")return seat==0 && g.nextHole();
@@ -148,7 +149,7 @@ bool NetworkSession::apply(int seat,const QString &action,int argument) {
 }
 bool NetworkSession::act(const QString &action,int argument) {
     if(m_mode==Mode::Client) {
-        if(!canAct() || action=="next" || action=="rounds")return false;
+        if(!canAct() || action=="next" || action=="rounds" || action=="cpuTarget")return false;
         m_pending=true;send(m_client,{{"type","action"},{"revision",m_revision},{"action",action},{"argument",argument}});emit updated();return true;
     }
     if(!apply(0,action,argument))return false;
