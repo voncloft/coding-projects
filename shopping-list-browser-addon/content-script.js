@@ -1,0 +1,700 @@
+"use strict";
+
+(function () {
+  const browserApi = typeof browser !== "undefined"
+    ? browser
+    : (typeof chrome !== "undefined" ? chrome : null);
+  const CLICK_MAP_KEY = "clickedDbIdsByItemId";
+  const PANEL_ID = "walmart-price-updater-panel";
+  let panelElements = null;
+  let currentUrl = location.href;
+
+  if (!browserApi) {
+    return;
+  }
+
+  function parseJson(text) {
+    if (!text) {
+      return null;
+    }
+
+    try {
+      return JSON.parse(text);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function extractItemIdFromUrl(url) {
+    const match = (url || "").match(/\/(\d+)(?:[/?#]|$)/);
+    return match ? match[1] : null;
+  }
+
+  // Same aisle formats and product fields as the food importer. Only an actual
+  // aisle code is returned here; a category such as "Dairy" is not an aisle.
+  function extractAisleCode(text, allowBare = true) {
+    const value = String(text ?? "").trim();
+    for (const pattern of [
+      /\baisle(?:\s*[:#-])?\s*([a-z]?\d+[a-z0-9-]*)\b/i,
+      /\bin\s+([a-z]?\d+[a-z0-9-]*)\s+aisle\b/i,
+      /\blocation(?:\s*[:#-])?\s*([a-z]\d+[a-z0-9-]*)\b/i
+    ]) {
+      const match = value.match(pattern);
+      if (match) return match[1].toUpperCase();
+    }
+    return allowBare && /^[a-z]?\d+[a-z0-9-]*$/i.test(value)
+      ? value.toUpperCase() : null;
+  }
+
+  function extractAisleFromObject(value, depth = 0, aisleField = false) {
+    if (depth > 5 || value == null) return null;
+    if (typeof value === "string" || typeof value === "number") {
+      // Generic location/fulfillment fields can contain store IDs and ZIP codes.
+      return extractAisleCode(value, aisleField || /^[a-z]\d+[a-z0-9-]*$/i.test(String(value).trim()));
+    }
+    if (Array.isArray(value)) {
+      for (const entry of value) {
+        const found = extractAisleFromObject(entry, depth + 1, aisleField);
+        if (found) return found;
+      }
+      return null;
+    }
+    if (typeof value !== "object") return null;
+
+    const priorityKeys = [
+      "aisle", "aisleLocation", "storeAisle", "pickupAisle", "location",
+      "locationText", "storeLocation", "shelfLocation", "fulfillmentLabel",
+      "fulfillmentOptions", "fulfillmentSummary", "fulfillmentBadge"
+    ];
+    const keys = [...new Set([...priorityKeys, ...Object.keys(value)])];
+    for (const key of keys) {
+      if (!Object.prototype.hasOwnProperty.call(value, key)) continue;
+      if (!/(aisle|location|shelf|fulfillment)/i.test(key) &&
+          !(aisleField && /^(text|label|value|name|displayValue)$/i.test(key))) continue;
+      const found = extractAisleFromObject(value[key], depth + 1, aisleField || /aisle/i.test(key));
+      if (found) return found;
+    }
+    return null;
+  }
+
+  function extractAisleFromDom() {
+    const excluded = `#${PANEL_ID}, #walmart-food-import-helper-panel, script, style, noscript, [hidden], [aria-hidden="true"]`;
+    const selectors = [
+      '[data-testid*="aisle" i]', '[data-automation-id*="aisle" i]',
+      '[aria-label*="aisle" i]', '[data-testid*="location" i]',
+      '[data-automation-id*="location" i]'
+    ];
+    for (const selector of selectors) {
+      for (const node of document.querySelectorAll(selector)) {
+        if (node.closest(excluded)) continue;
+        const isAisle = selector.includes('"aisle"');
+        const readLabel = text => extractAisleCode(text,
+          isAisle || /^[a-z]\d+[a-z0-9-]*$/i.test(String(text || "").trim()));
+        const found = readLabel(node.getAttribute("aria-label")) ||
+          readLabel(node.innerText || node.textContent);
+        if (found) return found;
+      }
+    }
+
+    // Do not reread our own previous aisle display after a store/page change.
+    const root = document.body || document.documentElement;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const text = [];
+    let node;
+    while ((node = walker.nextNode())) {
+      if (!node.parentElement?.closest(excluded)) text.push(node.textContent);
+    }
+    return extractAisleCode(text.join(" "), false);
+  }
+
+  function extractDbIdFromHash(url) {
+    try {
+      const parsed = new URL(url || location.href);
+      const hash = parsed.hash.startsWith("#") ? parsed.hash.slice(1) : parsed.hash;
+      const params = new URLSearchParams(hash);
+      const dbId = params.get("dbid") || params.get("id");
+      if (dbId && /^\d+$/.test(dbId)) {
+        return dbId;
+      }
+
+      if (/^\d+$/.test(hash)) {
+        return hash;
+      }
+
+      return null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  async function getClickedDbId(itemId) {
+    if (!itemId) {
+      return null;
+    }
+
+    try {
+      const stored = await browserApi.storage.local.get({ [CLICK_MAP_KEY]: {} });
+      const mapped = stored[CLICK_MAP_KEY]?.[itemId];
+      return mapped && /^\d+$/.test(String(mapped)) ? String(mapped) : null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  async function rememberClickedDbId(url) {
+    const dbId = extractDbIdFromHash(url);
+    const itemId = extractItemIdFromUrl(url);
+
+    if (!dbId || !itemId) {
+      return;
+    }
+
+    const stored = await browserApi.storage.local.get({ [CLICK_MAP_KEY]: {} });
+    const updated = Object.assign({}, stored[CLICK_MAP_KEY], {
+      [itemId]: dbId
+    });
+    await browserApi.storage.local.set({ [CLICK_MAP_KEY]: updated });
+  }
+
+  async function rememberDbIdForItem(itemId, dbId) {
+    if (!itemId || !dbId || !/^\d+$/.test(String(dbId))) {
+      return;
+    }
+
+    const stored = await browserApi.storage.local.get({ [CLICK_MAP_KEY]: {} });
+    const updated = Object.assign({}, stored[CLICK_MAP_KEY], {
+      [itemId]: String(dbId)
+    });
+    await browserApi.storage.local.set({ [CLICK_MAP_KEY]: updated });
+  }
+
+  function installShoppingLinkTracker() {
+    if (location.hostname !== "voncloft.shopping.com") {
+      return;
+    }
+
+    document.addEventListener(
+      "click",
+      (event) => {
+        const anchor = event.target && event.target.closest
+          ? event.target.closest("a[href*='walmart.com']")
+          : null;
+        if (!anchor) {
+          return;
+        }
+
+        rememberClickedDbId(anchor.href).catch(() => {});
+      },
+      true
+    );
+  }
+
+  async function submitServerUpdate(dbId, price, department) {
+    const response = await browserApi.runtime.sendMessage({
+      type: "submitServerUpdate",
+      dbId: String(dbId),
+      price: String(price),
+      department,
+      context: {
+        source: "content-script",
+        pageUrl: location.href,
+        itemId: extractItemIdFromUrl(location.href),
+        dbId: String(dbId),
+        price: String(price),
+        department
+      }
+    });
+
+    if (!response || response.ok !== true) {
+      throw new Error(response?.error || "Server update failed.");
+    }
+
+    return response.data;
+  }
+
+  function setPanelStatus(message, tone) {
+    if (!panelElements) {
+      return;
+    }
+
+    panelElements.status.textContent = message;
+    panelElements.status.dataset.tone = tone || "neutral";
+    panelElements.status.style.color =
+      tone === "good" ? "#0f5132" : tone === "bad" ? "#842029" : "#4a5568";
+  }
+
+  function setPanelBusy(isBusy) {
+    if (!panelElements) {
+      return;
+    }
+
+    panelElements.button.disabled = isBusy;
+    panelElements.button.textContent = isBusy ? "Updating..." : "Update Server";
+  }
+
+  function setPanelOpen(isOpen) {
+    if (!panelElements) {
+      return;
+    }
+
+    panelElements.isOpen = Boolean(isOpen);
+    panelElements.panel.style.display = panelElements.isOpen ? "block" : "none";
+    panelElements.launcher.style.display = panelElements.isOpen ? "none" : "block";
+  }
+
+  function setLauncherLabel(text) {
+    if (!panelElements) {
+      return;
+    }
+
+    panelElements.launcher.textContent = text;
+  }
+
+  function createPanel() {
+    if (location.hostname !== "www.walmart.com") {
+      return null;
+    }
+
+    const existing = document.getElementById(PANEL_ID);
+    if (existing) {
+      return panelElements;
+    }
+
+    const launcher = document.createElement("button");
+    launcher.type = "button";
+    launcher.textContent = "Edit Price / Aisle";
+    launcher.style.position = "fixed";
+    launcher.style.left = "18px";
+    launcher.style.bottom = "68px";
+    launcher.style.zIndex = "2147483647";
+    launcher.style.border = "0";
+    launcher.style.borderRadius = "999px";
+    launcher.style.padding = "10px 14px";
+    launcher.style.background = "#0f766e";
+    launcher.style.color = "#ffffff";
+    launcher.style.fontFamily = "Arial, sans-serif";
+    launcher.style.fontSize = "13px";
+    launcher.style.fontWeight = "700";
+    launcher.style.boxShadow = "0 10px 28px rgba(15, 23, 42, 0.18)";
+    launcher.style.cursor = "pointer";
+
+    const panel = document.createElement("div");
+    panel.id = PANEL_ID;
+    panel.style.position = "fixed";
+    panel.style.left = "18px";
+    panel.style.bottom = "68px";
+    panel.style.zIndex = "2147483647";
+    panel.style.width = "260px";
+    panel.style.padding = "14px";
+    panel.style.border = "1px solid #d8dee8";
+    panel.style.borderRadius = "14px";
+    panel.style.background = "#fffaf0";
+    panel.style.boxShadow = "0 16px 40px rgba(15, 23, 42, 0.18)";
+    panel.style.fontFamily = "Arial, sans-serif";
+    panel.style.color = "#1f2937";
+    panel.style.display = "none";
+
+    const header = document.createElement("div");
+    header.style.display = "flex";
+    header.style.alignItems = "center";
+    header.style.justifyContent = "space-between";
+    header.style.gap = "10px";
+    header.style.marginBottom = "10px";
+
+    const title = document.createElement("div");
+    title.textContent = "walmart_price_updater";
+    title.style.fontSize = "14px";
+    title.style.fontWeight = "700";
+    title.style.flex = "1";
+    title.style.minWidth = "0";
+    title.style.wordBreak = "break-word";
+
+    const close = document.createElement("button");
+    close.type = "button";
+    close.textContent = "Close";
+    close.style.border = "1px solid #cbd5e1";
+    close.style.borderRadius = "10px";
+    close.style.padding = "6px 10px";
+    close.style.background = "#ffffff";
+    close.style.color = "#334155";
+    close.style.fontWeight = "700";
+    close.style.cursor = "pointer";
+    close.style.flexShrink = "0";
+
+    const meta = document.createElement("div");
+    meta.style.fontSize = "12px";
+    meta.style.lineHeight = "1.5";
+    meta.style.marginBottom = "10px";
+
+    const priceLine = document.createElement("div");
+    const aisleLine = document.createElement("div");
+    const dbIdLine = document.createElement("div");
+    const itemIdLine = document.createElement("div");
+    meta.append(priceLine, aisleLine, dbIdLine, itemIdLine);
+
+    const status = document.createElement("div");
+    status.style.fontSize = "12px";
+    status.style.lineHeight = "1.4";
+    status.style.minHeight = "34px";
+    status.style.marginBottom = "10px";
+
+    const actions = document.createElement("div");
+    actions.style.display = "flex";
+    actions.style.gap = "8px";
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = "Update Server";
+    button.style.flex = "1";
+    button.style.border = "0";
+    button.style.borderRadius = "10px";
+    button.style.padding = "10px 12px";
+    button.style.background = "#0f766e";
+    button.style.color = "#ffffff";
+    button.style.fontWeight = "700";
+    button.style.cursor = "pointer";
+
+    const refresh = document.createElement("button");
+    refresh.type = "button";
+    refresh.textContent = "Refresh";
+    refresh.style.border = "1px solid #cbd5e1";
+    refresh.style.borderRadius = "10px";
+    refresh.style.padding = "10px 12px";
+    refresh.style.background = "#ffffff";
+    refresh.style.color = "#334155";
+    refresh.style.cursor = "pointer";
+
+    actions.append(button, refresh);
+    header.append(title, close);
+    panel.append(header, meta, status, actions);
+    document.documentElement.appendChild(launcher);
+    document.documentElement.appendChild(panel);
+
+    panelElements = {
+      launcher,
+      panel,
+      priceLine,
+      aisleLine,
+      dbIdLine,
+      itemIdLine,
+      status,
+      button,
+      refresh,
+      close,
+      isOpen: false
+    };
+
+    launcher.addEventListener("click", () => {
+      setPanelOpen(true);
+      refreshInjectedPanel().catch((error) => {
+        setPanelStatus(error.message || String(error), "bad");
+      });
+    });
+
+    close.addEventListener("click", () => {
+      setPanelOpen(false);
+    });
+
+    return panelElements;
+  }
+
+  function renderPanelData(data) {
+    if (!panelElements) {
+      return;
+    }
+
+    panelElements.priceLine.textContent = `Price: ${data?.price ? `$${data.price}` : "not found"}`;
+    panelElements.aisleLine.textContent = `Aisle: ${data?.department || "not found (keep existing)"}`;
+    panelElements.dbIdLine.textContent = `DB ID: ${data?.dbId || "missing"}`;
+    panelElements.itemIdLine.textContent = `Walmart Item ID: ${data?.itemId || "missing"}`;
+
+    if (data?.price && data?.dbId) {
+      setPanelStatus("Ready to update the server.", "good");
+    } else if (data?.price) {
+      setPanelStatus("Price found, but DB ID is missing.", "bad");
+    } else {
+      setPanelStatus("Waiting for Walmart price data on this page.", "neutral");
+    }
+  }
+
+  function formatPrice(value) {
+    if (value === null || value === undefined || value === "") {
+      return null;
+    }
+
+    const number = Number(value);
+    if (!Number.isFinite(number)) {
+      return null;
+    }
+
+    return number.toFixed(2);
+  }
+
+  function getNextData() {
+    return parseJson(document.getElementById("__NEXT_DATA__")?.textContent || "");
+  }
+
+  function getJsonLdBlocks() {
+    return Array.from(document.querySelectorAll('script[type="application/ld+json"]'))
+      .map((node) => parseJson(node.textContent))
+      .filter(Boolean);
+  }
+
+  function findProductJsonLd(value) {
+    if (!value) {
+      return null;
+    }
+
+    if (Array.isArray(value)) {
+      for (const item of value) {
+        const result = findProductJsonLd(item);
+        if (result) {
+          return result;
+        }
+      }
+      return null;
+    }
+
+    if (typeof value !== "object") {
+      return null;
+    }
+
+    if (value["@type"] === "Product") {
+      return value;
+    }
+
+    for (const nested of Object.values(value)) {
+      const result = findProductJsonLd(nested);
+      if (result) {
+        return result;
+      }
+    }
+
+    return null;
+  }
+
+  function extractFromProductData(nextData) {
+    const product = nextData?.props?.pageProps?.initialData?.data?.product;
+    if (!product) {
+      return null;
+    }
+
+    const variantPriceInfo =
+      product.id && product.variantsMap ? product.variantsMap[product.id]?.priceInfo : null;
+    const priceInfo = product.priceInfo || variantPriceInfo;
+    const currentPrice = priceInfo?.currentPrice;
+    const rawPrice =
+      currentPrice?.price ??
+      currentPrice?.priceString ??
+      currentPrice?.priceDisplay ??
+      null;
+
+    return {
+      price: formatPrice(rawPrice),
+      title: product.name || product.productName || null,
+      itemId: extractItemIdFromUrl(location.href),
+      dbId: extractDbIdFromHash(location.href),
+      department: extractAisleFromObject(product),
+      source: "product"
+    };
+  }
+
+  function extractFromSearchResults(nextData) {
+    const itemId = extractItemIdFromUrl(location.href);
+    if (!itemId) {
+      return null;
+    }
+
+    const stacks = nextData?.props?.pageProps?.initialData?.searchResult?.itemStacks || [];
+    for (const stack of stacks) {
+      for (const item of stack.items || []) {
+        if (String(item.usItemId) !== itemId) {
+          continue;
+        }
+
+        const priceInfo = item.priceInfo || {};
+        const rawPrice =
+          priceInfo.linePriceDisplay ??
+          priceInfo.linePrice ??
+          priceInfo.minPrice ??
+          null;
+
+        return {
+          price: formatPrice(rawPrice),
+          title: item.name || null,
+          itemId,
+          dbId: extractDbIdFromHash(location.href),
+          department: extractAisleFromObject(item),
+          source: "search"
+        };
+      }
+    }
+
+    return null;
+  }
+
+  function extractFromJsonLd() {
+    for (const block of getJsonLdBlocks()) {
+      const product = findProductJsonLd(block);
+      if (!product) {
+        continue;
+      }
+
+      const offers = product.offers;
+      const offer = Array.isArray(offers) ? offers[0] : offers;
+      const rawPrice = offer?.price ?? null;
+
+      return {
+        price: formatPrice(rawPrice),
+        title: product.name || null,
+        itemId: extractItemIdFromUrl(location.href),
+        dbId: extractDbIdFromHash(location.href),
+        department: extractAisleFromObject(product),
+        source: "json-ld"
+      };
+    }
+
+    return null;
+  }
+
+  async function extractPageData() {
+    const nextData = getNextData();
+    const pageAisle = extractAisleFromDom();
+    const fromProduct = extractFromProductData(nextData);
+    if (fromProduct?.price) {
+      fromProduct.department = pageAisle || fromProduct.department;
+      fromProduct.dbId = fromProduct.dbId || await getClickedDbId(fromProduct.itemId);
+      return fromProduct;
+    }
+
+    const fromSearch = extractFromSearchResults(nextData);
+    if (fromSearch?.price) {
+      fromSearch.department = pageAisle || fromSearch.department;
+      fromSearch.dbId = fromSearch.dbId || await getClickedDbId(fromSearch.itemId);
+      return fromSearch;
+    }
+
+    const fromJsonLd = extractFromJsonLd();
+    if (fromJsonLd?.price) {
+      fromJsonLd.department = pageAisle || fromJsonLd.department;
+      fromJsonLd.dbId = fromJsonLd.dbId || await getClickedDbId(fromJsonLd.itemId);
+      return fromJsonLd;
+    }
+
+    const itemId = extractItemIdFromUrl(location.href);
+    return {
+      price: null,
+      title: document.title || null,
+      itemId,
+      dbId: extractDbIdFromHash(location.href) || await getClickedDbId(itemId),
+      department: pageAisle || fromProduct?.department || fromSearch?.department || fromJsonLd?.department || null,
+      source: "none"
+    };
+  }
+
+  async function refreshInjectedPanel() {
+    if (location.hostname !== "www.walmart.com") {
+      return;
+    }
+
+    createPanel();
+    const data = await extractPageData();
+    renderPanelData(data);
+  }
+
+  async function updateServerFromPage() {
+    createPanel();
+    setPanelBusy(true);
+    setPanelStatus("Reading Walmart page...", "neutral");
+
+    try {
+      const data = await extractPageData();
+      renderPanelData(data);
+
+      if (!data.price) {
+        throw new Error("Price not found on this page.");
+      }
+
+      let dbId = data.dbId;
+      if (!dbId) {
+        const entered = window.prompt("Enter items.ID for this product:");
+        if (!entered) {
+          setPanelStatus("Update canceled.", "neutral");
+          return;
+        }
+        if (!/^\d+$/.test(entered)) {
+          throw new Error("items.ID must be numeric.");
+        }
+        dbId = entered;
+        await rememberDbIdForItem(data.itemId, dbId);
+      }
+
+      const response = await submitServerUpdate(dbId, data.price, data.department);
+      await rememberDbIdForItem(data.itemId, dbId);
+      renderPanelData({ ...data, dbId });
+      const affectedRows = typeof response?.affected_rows !== "undefined"
+        ? ` affected=${response.affected_rows}.`
+        : "";
+      const aisleMessage = data.department ? ` Aisle ${data.department} saved.` : " Existing aisle kept.";
+      setPanelStatus(`Updated ID ${dbId} to $${data.price}.${aisleMessage}${affectedRows}`, "good");
+      setLauncherLabel("Updated");
+      setPanelOpen(false);
+      window.setTimeout(() => {
+        setLauncherLabel("Edit Price / Aisle");
+      }, 1800);
+    } catch (error) {
+      setPanelStatus(error.message || String(error), "bad");
+    } finally {
+      setPanelBusy(false);
+    }
+  }
+
+  function installWalmartUpdatePanel() {
+    if (location.hostname !== "www.walmart.com") {
+      return;
+    }
+
+    createPanel();
+    if (!panelElements) {
+      return;
+    }
+
+    panelElements.button.addEventListener("click", () => {
+      updateServerFromPage().catch(() => {});
+    });
+
+    panelElements.refresh.addEventListener("click", () => {
+      refreshInjectedPanel().catch((error) => {
+        setPanelStatus(error.message || String(error), "bad");
+      });
+    });
+
+    window.setInterval(() => {
+      if (location.href === currentUrl) {
+        return;
+      }
+
+      currentUrl = location.href;
+      if (panelElements.isOpen) {
+        refreshInjectedPanel().catch((error) => {
+          setPanelStatus(error.message || String(error), "bad");
+        });
+      }
+    }, 1500);
+  }
+
+  installShoppingLinkTracker();
+  installWalmartUpdatePanel();
+
+  browserApi.runtime.onMessage.addListener((message) => {
+    if (message?.type !== "getWalmartData") {
+      return undefined;
+    }
+
+    return extractPageData().then((data) => ({
+      ok: true,
+      url: location.href,
+      ...data
+    }));
+  });
+})();

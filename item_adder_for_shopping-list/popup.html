@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Walmart Food Import Helper</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <h1>Walmart Food Import</h1>
+          <div id="version" class="version"></div>
+          <div id="serverSummary" class="version"></div>
+        </div>
+        <div class="actions compact">
+          <button id="settings" type="button" class="secondary">Settings</button>
+          <button id="refresh" type="button" class="secondary">Refresh</button>
+        </div>
+      </header>
+
+      <section class="panel">
+        <div id="status" class="status">Checking current tab...</div>
+
+        <div class="field">
+          <label for="item">Item Name</label>
+          <textarea id="item" rows="2"></textarea>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="price">Price</label>
+            <input id="price" type="text" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="itemId">Walmart Item ID</label>
+            <input id="itemId" type="text" readonly>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="dept">Department</label>
+          <input id="dept" type="text">
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="servings">Servings</label>
+            <input id="servings" type="text" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="calories">Calories</label>
+            <input id="calories" type="text" inputmode="decimal">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="protein">Protein</label>
+            <input id="protein" type="text" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="fat">Fat</label>
+            <input id="fat" type="text" inputmode="decimal">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="carbs">Carbohydrates</label>
+            <input id="carbs" type="text" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="fiber">Fiber</label>
+            <input id="fiber" type="text" inputmode="decimal">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="url">URL</label>
+          <textarea id="url" rows="2"></textarea>
+        </div>
+
+        <div class="actions">
+          <button id="saveCurrent" type="button">Add To Database</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

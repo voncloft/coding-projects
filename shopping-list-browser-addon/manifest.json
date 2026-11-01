@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+  "name": "walmart_price_updater",
+  "version": "1.9",
+  "description": "Update shopping-list prices and product aisles from your normal Walmart Firefox session.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "downloads",
+    "clipboardWrite",
+    "http://*/*",
+    "https://*/*",
+    "https://www.walmart.com/*",
+    "http://voncloft.shopping.com/*"
+  ],
+  "browser_action": {
+    "default_title": "walmart_price_updater",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.walmart.com/*",
+        "http://voncloft.shopping.com/*"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "applications": {
+    "gecko": {
+      "id": "walmart_price_updater@local"
+    }
+  }
+}

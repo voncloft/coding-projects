@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+  "name": "Walmart Food Import Helper",
+  "version": "1.0",
+  "description": "Capture Walmart product data and submit it through shopping-list-website's add_food_to_db.php flow.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "downloads",
+    "http://*/*",
+    "https://*/*",
+    "https://www.walmart.com/*",
+    "http://voncloft.shopping.com/*"
+  ],
+  "browser_action": {
+    "default_title": "Walmart Food Import Helper",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.walmart.com/*"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "applications": {
+    "gecko": {
+      "id": "walmart-food-import-helper@local"
+    }
+  }
+}

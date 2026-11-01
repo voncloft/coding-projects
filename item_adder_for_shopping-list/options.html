@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Walmart Food Import Helper Settings</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <div>
+          <h1>Walmart Food Import Helper Settings</h1>
+          <div id="version" class="meta"></div>
+        </div>
+      </header>
+
+      <section class="panel">
+        <div id="status" class="status">Configure where the addon POSTs item data.</div>
+
+        <div class="field">
+          <label for="serverBaseUrl">Server Base URL</label>
+          <input id="serverBaseUrl" type="url" placeholder="http://voncloft.shopping.com">
+        </div>
+
+        <div class="field">
+          <label for="addEndpoint">Add Item Endpoint</label>
+          <input id="addEndpoint" type="text" placeholder="/scripts/add_food_to_db.php">
+        </div>
+
+        <div class="actions">
+          <button id="saveSettings" type="button">Save Settings</button>
+          <button id="resetSettings" type="button" class="secondary">Reset Defaults</button>
+          <button id="downloadLogs" type="button" class="secondary">Download Logs</button>
+          <button id="clearLogs" type="button" class="secondary">Clear Logs</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>

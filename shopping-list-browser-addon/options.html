@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>walmart_price_updater Settings</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <div>
+          <h1>walmart_price_updater Settings</h1>
+          <div id="version" class="meta"></div>
+        </div>
+      </header>
+
+      <section class="panel">
+        <div id="status" class="status">Load or save your server settings here.</div>
+
+        <div class="field">
+          <label for="serverBaseUrl">Server Base URL</label>
+          <input id="serverBaseUrl" type="url" placeholder="http://voncloft.shopping.com">
+        </div>
+
+        <div class="field">
+          <label for="priceEndpoint">Price and Aisle Update Endpoint</label>
+          <input id="priceEndpoint" type="text" placeholder="/ajax/edit_price.php">
+        </div>
+
+        <label class="checkbox">
+          <input id="autoSubmit" type="checkbox">
+          <span>When I click Save Current Item, update the price and detected aisle on the server</span>
+        </label>
+
+        <div class="actions">
+          <button id="saveSettings" type="button">Save Settings</button>
+          <button id="testSettings" type="button" class="secondary">Test Endpoint</button>
+          <button id="downloadLogs" type="button" class="secondary">Download Logs</button>
+          <button id="clearLogs" type="button" class="secondary">Clear Logs</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>
