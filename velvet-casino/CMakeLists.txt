@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 cmake_minimum_required(VERSION 3.20)
-project(VelvetCasino VERSION 1.0.17 LANGUAGES CXX)
+project(VelvetCasino VERSION 1.0.18 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
@@ -10,8 +10,8 @@ find_package(Qt6 6.4 REQUIRED COMPONENTS Widgets Network Multimedia)
 add_library(casino_core src/game.cpp)
 target_include_directories(casino_core PUBLIC src)
 target_link_libraries(casino_core PUBLIC Qt6::Core)
-# Default builds contain freely redistributable CC0 recordings. A local optional
-# sound pack is embedded into the game, never downloaded at build/run time.
+# Default builds embed the selected game recordings from assets/. Local and
+# packaged builds use the same files; no downloads or local-only pack is needed.
 set(CASINO_SOUND_DIR "" CACHE PATH "Optional folder containing six custom WAV effects and intro.wav")
 set(sound_qrc "<RCC><qresource prefix=\"/sounds\">\n")
 foreach(sound chip-bet chip-payout chip-allin card-deal card-shuffle deck-tap intro)

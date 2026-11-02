@@ -1,3 +1,38 @@
+Velvet Casino 1.0.18 validation — 2026-11-02
+
+Identical audio in local and packaged builds
+- Replaced the default alternate recordings with the exact seven WAVs from
+  the original selected local pack. assets/provenance.json records their
+  original download and normalized output hashes, durations, gain and trim.
+- The default is assets/*.wav in both ordinary builds and the existing
+  spkgbuild. No extra option, download or ignored local directory is needed.
+- Updated the audio notices to retain the selected recordings' separate
+  Pixabay Content License and credits. CC0 maintenance tools now generate
+  optional alternatives in build/cc0-sounds/ without replacing game assets.
+- Version is 1.0.18; network protocol remains 10.
+
+Verification
+- All seven WAV SHA-256 hashes match the original local pack, the Desktop
+  project's default assets and the clean public-source package snapshot.
+- The entire compiled audio resource array is byte-identical in the original
+  local 1.0.16 executable, rebuilt Desktop 1.0.18 executable and staged
+  package 1.0.18 executable: 4,324,810 bytes; SHA-256:
+  14b693c712926af16c86ab81b817c6df28b9606011b6115247a7c41ff7cb5fd4
+- Clean public-source copy excludes build/ and assets/local-sounds/. The
+  current spkgbuild build() function compiles and stages it successfully
+  without modification, including its empty CASINO_SOUND_DIR setting.
+- Both rebuilt binaries report 1.0.18; the package contains audio notices.
+- Full default-build suite with actual audio capture: 89 passed, 0 failed,
+  0 skipped, 102.424 seconds. Intro and all effects produced output:
+  peak 14777; 353746 samples above magnitude 100; 41 production streams.
+  Temporary capture sink only; no mute, volume or audio-role overrides.
+  This measures generated audio, not physical speaker playback.
+- Asset-maintenance scripts parse successfully. git diff --check passes.
+- Installed 1.0.17 and package recipe are unchanged. Upload the source
+  changes, refresh the recipe to the new commit, and reinstall normally.
+
+Previous release validation follows.
+
 Velvet Casino 1.0.17 validation — 2026-11-02
 
 Startup music in the default GitHub/package build

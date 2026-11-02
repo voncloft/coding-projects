@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (C) 2026 Velvet Casino contributors
-"""Import separately downloaded Pixabay recordings into a git-ignored local pack.
+"""Regenerate the game's selected WAV assets from separately downloaded originals.
 
 Use the download buttons on the source pages in licenses/Pixabay-Sounds.md.
 Requires Python 3 and FFmpeg for conversion only; neither is bundled by this tool.
@@ -29,7 +29,7 @@ SOUNDS = {
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('downloads', type=Path)
-    parser.add_argument('--output', type=Path, default=Path(__file__).resolve().parents[1] / 'assets/local-sounds')
+    parser.add_argument('--output', type=Path, default=Path(__file__).resolve().parents[1] / 'assets')
     args = parser.parse_args()
     missing = [name for name in SOUNDS.values() if not (args.downloads / name).is_file()]
     if missing:

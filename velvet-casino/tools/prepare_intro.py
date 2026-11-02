@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (C) 2026 Velvet Casino contributors
-"""Convert the included CC0 Freesound preview to the embedded setup intro.
+"""Convert the alternate CC0 Freesound preview to build/cc0-sounds/intro.wav.
 
-Requires FFmpeg only when regenerating assets/intro.wav, not for normal builds.
+Requires FFmpeg only for this optional conversion, not for normal builds.
+This does not overwrite the game's selected default intro.
 See licenses/Freesound-Intro.txt for source, author and license information.
 """
 from array import array
@@ -17,7 +18,8 @@ import wave
 def main():
     root = Path(__file__).resolve().parents[1]
     source = root / 'assets/source/455017_9182239-hq.mp3'
-    target = root / 'assets/intro.wav'
+    target = root / 'build/cc0-sounds/intro.wav'
+    target.parent.mkdir(parents=True, exist_ok=True)
     raw = subprocess.check_output([
         'ffmpeg', '-nostdin', '-v', 'error', '-i', str(source),
         '-ac', '1', '-ar', '44100', '-f', 's16le', '-c:a', 'pcm_s16le', '-'])

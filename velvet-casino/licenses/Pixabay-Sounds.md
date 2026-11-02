@@ -1,8 +1,10 @@
-# Optional Pixabay table sounds
+# Selected Velvet Casino game audio
 
-These are the recordings available for the local Velvet Casino 1.0.17 build.
-Downloaded on 2026-11-02 using each page's download button. They are separate
-assets under the **Pixabay Content License**, not GPL-3.0-or-later or CC0.
+These seven recordings are the default audio in Velvet Casino 1.0.18.
+They are the exact normalized WAV files used by the original local build,
+now included in `assets/` so normal source and package builds sound alike.
+Original downloads were obtained on 2026-11-02 through the source pages.
+The audio retains the **Pixabay Content License**, separately from GPL or CC0.
 
 | Cue | Recording | Creator credited by Pixabay |
 | --- | --- | --- |
@@ -17,53 +19,40 @@ assets under the **Pixabay Content License**, not GPL-3.0-or-later or CC0.
 AllInPushChips was selected from the user's poker-chips search link because it
 specifically records pushing chips forward for an all-in bet.
 
-## Terms and distribution
+## Distribution with the game
 
-[Pixabay license summary](https://pixabay.com/service/license-summary/) and
-[full terms, section 5](https://pixabay.com/service/terms/) were checked on
-2026-11-02. The terms permit use and adaptation in creative works, including
-commercial projects, without mandatory attribution, but prohibit distribution
-of the content on a standalone basis. Attribution is supplied here anyway.
-The source pages identify these files as available under that license; they
-are not treated as public domain merely because downloading is free.
+[License summary](https://pixabay.com/service/license-summary/) and
+[full terms, section 5](https://pixabay.com/service/terms/) checked 2026-11-02.
+The license allows incorporating recordings into creative projects and
+prohibits distributing them on their own. The WAVs are functional assets
+integrated with Velvet Casino's game actions and setup screen. Keep this
+notice with the complete game; do not publish these files as a separate
+sound collection. Credit does not imply endorsement by the creators or Pixabay.
+The application code remains GPL-3.0-or-later; the recordings are not relicensed.
 
-The custom executable incorporates the sounds into interactive game actions.
-The downloaded MP3s and converted WAVs must not be published as a standalone
-sound pack. In particular, this repository keeps `assets/local-sounds/` ignored
-and supplies CC0 substitutes for its public source build. Do not force-add the
-local pack to Git. The application source remains GPL-3.0-or-later. Keep this
-notice with a custom build; no creator or Pixabay endorsement is implied.
+## Provenance and reproduction
 
-## Reproduce the local pack
+`assets/provenance.json` records original download filenames, source SHA-256
+hashes, output WAV hashes, durations, trimming and gain. Each default WAV
+matches the previously selected local pack byte for byte, including the intro.
+All seven files are embedded during an ordinary build. No custom CMake option,
+network access, Python, FFmpeg, or ignored local directory is needed to build
+or run the game.
 
-Download all seven files from the linked pages into one directory, retaining
-Pixabay's filenames. Then run from the project directory:
+For asset maintenance only, download the seven originals from the source pages
+and run `python3 tools/import_pixabay_sounds.py /path/to/downloads --output assets`.
+The converter uses FFmpeg to decode mono 44,100 Hz signed 16-bit PCM, trim only
+outer silence with short margins and normalize each peak to 82 percent.
+It preserves the recordings rather than synthesizing or pitch-shifting them.
+Original MP3 downloads are not included. The historical `assets/local-sounds/`
+copy remains ignored and is not consulted by normal builds.
 
-```sh
-python3 tools/import_pixabay_sounds.py /path/to/downloaded-mp3s
-cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCASINO_SOUND_DIR="$PWD/assets/local-sounds"
-cmake --build build -j2
-```
+## Alternate CC0 recordings
 
-The importer requires a local FFmpeg executable but does not bundle it. It
-decodes to mono 44,100 Hz signed 16-bit PCM, removes only outer silence with
-short margins, and adjusts each recording's peak to 82% for consistent levels.
-It does not synthesize or pitch-shift the recordings. The game loops the intro only while the setup dialog remains open. Original downloads
-remain untouched. `assets/local-sounds/provenance.json` records source/output
-SHA-256 checksums, timing and gain. Normal builds need neither Python nor FFmpeg.
-
-To restore the public CC0 pack in an existing build:
-
-```sh
-cmake -S . -B build -DCASINO_SOUND_DIR=
-cmake --build build -j2
-```
-
-The public CC0 build includes the six table effects and the same intro tune,
-downloaded independently from the author's CC0 Freesound release. See
-[Freesound-Intro.txt](Freesound-Intro.txt) for its provenance. The optional
-Pixabay intro still overrides that default when a custom pack is selected.
-
-An incomplete custom pack fails configuration rather than silently substituting
-some recordings. All seven selected WAVs are embedded; no network access or loose
-audio files are required when running the built game.
+The retained Kenney source effects and the separate Freesound source of the
+intro are optional alternatives, not the game's defaults. Their notices are
+in `Kenney-Casino-Audio.txt` and `Freesound-Intro.txt`. Running
+`tools/prepare_chip_sounds.py` and `tools/prepare_intro.py` generates that
+alternate pack in ignored `build/cc0-sounds/` without changing `assets/*.wav`.
+An explicitly supplied `CASINO_SOUND_DIR` still selects a complete custom pack;
+ordinary builds and the existing package recipe need no such setting.
