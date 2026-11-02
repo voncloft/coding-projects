@@ -6,7 +6,6 @@ A native Qt 6 desktop casino with play chips, computer opponents, and private ne
 
 Run `./run.sh` to build if needed and launch. The startup dialog asks you to choose Blackjack or Poker. The local Linux executable is `build/voncloft-casino`.
 
-Existing `velvet-casino` commands and desktop-file IDs remain compatible aliases for package upgrades. The first launch imports your old profile, bankroll and preferences into the new application settings; an existing voncloft-casino profile is never overwritten. The source repository is now `voncloft/Voncloft-Casino`.
 
 For a computer-only table, set every active seat to **Computer**. For solo play, keep the first seat as **You on this computer** and fill the other seats with computers. Blackjack deals automatically as soon as every funded player has confirmed a bet. Computer-only blackjack tables run successive rounds automatically. Draw and stud deal automatically once every funded player has posted the ante; computers post theirs and human seats confirm their own. Hold’em retains **Auto-deal next hand**. Poker betting actions and streets always advance automatically. **Pause** stops the table.
 
