@@ -1,0 +1,64 @@
+Velvet Casino third-party notices
+
+DEFAULT TABLE AUDIO (CC0)
+Author: Kenney Vleugels (Kenney.nl)
+Pack: Casino Audio 1.1
+Source: https://kenney.nl/assets/casino-audio
+License: Creative Commons Zero 1.0 Universal (CC0-1.0)
+License terms: https://creativecommons.org/publicdomain/zero/1.0/
+Pack notice: licenses/Kenney-Casino-Audio.txt
+
+Included source files:
+  assets/source/chips-collide-1.ogg
+  assets/source/chips-handle-1.ogg
+  assets/source/chips-handle-2.ogg
+  assets/source/card-slide-1.ogg
+  assets/source/card-shuffle.ogg
+  assets/source/card-place-1.ogg
+
+Derived embedded assets:
+  assets/chip-bet.wav     from chips-collide-1.ogg
+  assets/chip-payout.wav  from chips-handle-1.ogg
+  assets/chip-allin.wav   from chips-handle-2.ogg
+  assets/card-deal.wav    from card-slide-1.ogg
+  assets/card-shuffle.wav from card-shuffle.ogg
+  assets/deck-tap.wav     from card-place-1.ogg
+
+Changes: decoded to mono, 44,100 Hz, signed 16-bit PCM WAV and discarded
+source container metadata. No synthesized tones, pitch shifting, looping, or
+repeated artificial collision pattern is added. Reproduce the conversion
+with python3 tools/prepare_chip_sounds.py (requires FFmpeg).
+
+The WAVs are compiled into the executable using a CMake-generated sounds.qrc. There
+is no runtime download. These CC0 audio files and their included originals
+may be redistributed with the application and its GitHub source. Their CC0
+status is retained separately from the application's GPL-3.0-or-later license.
+No endorsement by Kenney is implied.
+
+OPTIONAL LOCAL PIXABAY AUDIO
+The optional pack replaces the six default recordings with user-selected
+Pixabay recordings and adds a setup intro. Version 1.0.8 uses OxidVideos
+Shuffling Deck of Cards (522518) and annoyedCactus 8bit Music for Game (68698). Source links, authors, license terms and import/build
+instructions are in licenses/Pixabay-Sounds.md. These recordings are under
+the Pixabay Content License, not GPL or CC0. Standalone MP3/WAV recordings
+are not included in the GitHub source. Local converted WAVs are git-ignored;
+a custom build embeds them in the game. The public source builds without them.
+
+QT
+The application dynamically links against system Qt 6 Core, Widgets, GUI,
+Network and Multimedia, with Qt Test used by the test suite. Qt is a
+separate dependency and is not bundled in this source tree or local build.
+See the licenses accompanying your Qt distribution and:
+https://www.qt.io/development/open-source-lgpl-obligations
+
+RELEASE DEPENDENCIES
+The local development machine's FFmpeg reports that nonfree components
+make that FFmpeg build nonredistributable. Do not bundle that local FFmpeg
+build or its nonfree libraries in an app release. Using it to convert these
+CC0 recordings does not change the recordings' CC0 license.
+
+The repository includes build instructions and uses system dependencies.
+For a self-contained binary release, use redistributable Qt/media builds
+and provide the licenses and corresponding source required by those builds.
+The project's LICENSE applies to this project's material; it does not
+relicense third-party libraries.
