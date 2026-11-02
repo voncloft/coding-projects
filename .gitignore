@@ -68,6 +68,6 @@ Thumbs.db
 # Optional local archives are not part of the GitHub backup
 /outdated/
 
-# Turnover Golf also keeps its own upstream repository
+# Standalone game projects keep their own Git history
 /turnover-golf/.git/
-/velvet-casino/.git/
+/voncloft-casino/.git/

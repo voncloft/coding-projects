@@ -1,0 +1,32 @@
+voncloft-casino alternate CC0 setup music
+
+Title: 8bit Music for Game
+Author: annoyedCactus
+Original publication: 2018-12-26
+Source: https://freesound.org/people/annoyedCactus/sounds/455017/
+License: Creative Commons Zero 1.0 Universal (CC0-1.0)
+License terms: https://creativecommons.org/publicdomain/zero/1.0/
+Source page and CC0 designation checked: 2026-11-02
+
+Included source: assets/source/455017_9182239-hq.mp3
+Downloaded directly from Freesound's high-quality preview:
+https://cdn.freesound.org/previews/455/455017_9182239-hq.mp3
+SHA-256: b8d3523ecf40c6c275bf091da4e4191af1b0a4178495084e0ffcc95a333a836f
+
+Optional generated file: build/cc0-sounds/intro.wav
+SHA-256: cb8c4d755cb9928383249bbf12d1d0eb678b6b3e5d332cdb211f98d78bf08ae1
+
+Changes: decoded to mono 44,100 Hz signed 16-bit PCM WAV, removed only
+outer silence with short margins, and normalized the peak to 82 percent.
+The 43.5162-second recording is otherwise unmodified. No synthesized notes
+or pitch shifting. The application loops playback while setup is open.
+Reproduce with: python3 tools/prepare_intro.py (requires FFmpeg).
+Normal builds use assets/intro.wav from the selected Pixabay recording;
+they need no conversion or downloads. This alternate conversion leaves
+that default file untouched.
+
+These files are sourced directly from the author's CC0 Freesound release,
+independently of the selected Pixabay download of the same composition.
+The included source MP3 and derived WAV may be redistributed in the GitHub
+source and executable under CC0. They are not relicensed under the game's
+GPL license. No endorsement by annoyedCactus or Freesound is implied.
