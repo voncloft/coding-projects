@@ -1,3 +1,35 @@
+Velvet Casino 1.0.17 validation — 2026-11-02
+
+Startup music in the default GitHub/package build
+- Included annoyedCactus's 8bit Music for Game, downloaded directly from
+  the author's CC0 Freesound release, with source MP3, derived intro.wav,
+  attribution, SHA-256 checksums and a reproducible conversion script.
+- Default CMake resources now include all seven recordings. No special
+  CMake flag, local sound folder, runtime download or player is required.
+- Missing recordings fail configuration. The setup lifecycle regression
+  now requires a playable intro instead of skipping the public build.
+- Version is 1.0.17; network protocol remains 10.
+
+Verification
+- Rebuilt /home/von/Desktop/coding-projects/velvet-casino/build from that
+  source location with the default audio pack. Binary reports 1.0.17.
+- Plain cmake configuration with no options embeds all seven WAVs.
+- Clean public-source snapshot excludes build/ and assets/local-sounds/.
+  The existing spkgbuild build() function built and staged it successfully
+  with its unchanged options, including an empty CASINO_SOUND_DIR.
+- Staged package binary reports 1.0.17 and includes the intro license notice.
+- Full default-pack suite with actual audio capture: 89 passed, 0 failed,
+  0 skipped, 104.651 seconds. Startup intro and all effects produced audio:
+  peak 15576; 267606 samples above magnitude 100; 40 production streams.
+  Temporary capture sink only; no mute, volume or audio-role overrides.
+- Audio capture verifies generated output, not physical speakers.
+- Optional custom-pack configuration still selects all seven local WAVs.
+- git diff --check passes. Installed binary and package recipe unchanged;
+  upload these source changes and refresh the recipe to the new commit
+  before the normal package rebuild/reinstall.
+
+Previous release validation follows.
+
 Velvet Casino 1.0.16 validation — 2026-11-02
 
 Changes verified

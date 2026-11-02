@@ -715,7 +715,7 @@ private slots:
     }
     void setupIntroStartsAndStops() {
         Window w(false,false);auto *sounds=w.findChild<ChipSounds *>();sounds->setVolume(0);sounds->setEnabled(true);QSignalSpy played(sounds,&ChipSounds::cueRequested);
-        if(!sounds->introReady())QSKIP("The optional Pixabay intro is absent from the CC0-only build.");
+        QVERIFY2(sounds->introReady(),"Every build must embed a playable setup intro, including the default GitHub sound pack.");
         QTimer::singleShot(100,&w,[&]{auto *dialog=w.findChild<QDialog *>("setupDialog");if(dialog)dialog->reject();});w.setup();QCOMPARE(played.size(),1);QCOMPARE(played[0][0].toString(),QString("intro"));
         sounds->setEnabled(false);QTimer::singleShot(100,&w,[&]{auto *dialog=w.findChild<QDialog *>("setupDialog");if(dialog)dialog->reject();});w.setup();QCOMPARE(played.size(),1);
         sounds->setEnabled(true);QTimer::singleShot(100,&w,[&]{auto *dialog=w.findChild<QDialog *>("setupDialog");if(dialog)dialog->findChild<QPushButton *>("primary")->click();});w.setup();QCOMPARE(played.size(),2);QVERIFY(!sounds->isBusy());

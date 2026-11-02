@@ -35,9 +35,25 @@ may be redistributed with the application and its GitHub source. Their CC0
 status is retained separately from the application's GPL-3.0-or-later license.
 No endorsement by Kenney is implied.
 
+DEFAULT SETUP MUSIC (CC0)
+Title: 8bit Music for Game
+Author: annoyedCactus
+Source: https://freesound.org/people/annoyedCactus/sounds/455017/
+License: Creative Commons Zero 1.0 Universal (CC0-1.0)
+License terms: https://creativecommons.org/publicdomain/zero/1.0/
+Included source: assets/source/455017_9182239-hq.mp3
+Derived embedded asset: assets/intro.wav
+Full provenance, checksums and conversion details: licenses/Freesound-Intro.txt
+
+Downloaded directly from the author's CC0 Freesound release. Both files may
+be included in the GitHub source and executable. The normal public build
+embeds the intro even when CASINO_SOUND_DIR is empty. This is independent
+of the optional Pixabay sound pack. No creator or Freesound endorsement
+is implied; the recording retains its CC0 license.
+
 OPTIONAL LOCAL PIXABAY AUDIO
 The optional pack replaces the six default recordings with user-selected
-Pixabay recordings and adds a setup intro. Version 1.0.8 uses OxidVideos
+Pixabay recordings and overrides the setup intro. Version 1.0.8 uses OxidVideos
 Shuffling Deck of Cards (522518) and annoyedCactus 8bit Music for Game (68698). Source links, authors, license terms and import/build
 instructions are in licenses/Pixabay-Sounds.md. These recordings are under
 the Pixabay Content License, not GPL or CC0. Standalone MP3/WAV recordings

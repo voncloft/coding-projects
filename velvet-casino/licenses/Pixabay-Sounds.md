@@ -1,6 +1,6 @@
 # Optional Pixabay table sounds
 
-These are the recordings selected for the local Velvet Casino 1.0.16 build.
+These are the recordings available for the local Velvet Casino 1.0.17 build.
 Downloaded on 2026-11-02 using each page's download button. They are separate
 assets under the **Pixabay Content License**, not GPL-3.0-or-later or CC0.
 
@@ -59,7 +59,10 @@ cmake -S . -B build -DCASINO_SOUND_DIR=
 cmake --build build -j2
 ```
 
-The public CC0 build includes the six table effects and no intro music.
+The public CC0 build includes the six table effects and the same intro tune,
+downloaded independently from the author's CC0 Freesound release. See
+[Freesound-Intro.txt](Freesound-Intro.txt) for its provenance. The optional
+Pixabay intro still overrides that default when a custom pack is selected.
 
 An incomplete custom pack fails configuration rather than silently substituting
 some recordings. All seven selected WAVs are embedded; no network access or loose

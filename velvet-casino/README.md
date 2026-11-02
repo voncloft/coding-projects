@@ -1,4 +1,4 @@
-# Velvet Casino 1.0.16
+# Velvet Casino 1.0.17
 
 A native Qt 6 desktop casino with play chips, computer opponents, and private network tables.
 
@@ -51,9 +51,9 @@ Six embedded recordings cover placing chips, going all in, payouts, dealing a ca
 
 A new or replenished blackjack shoe plays **shuffle → deck tap → dealt cards**; ordinary rounds from the same shoe begin with dealing. Poker reshuffles its single deck each new hand. Cards appear **one at a time**, synchronized with their dealing sound, at roughly 380 ms intervals. Payouts wait for the final card. Hits, doubles, splits, draw replacements, stud streets, and hold’em community cards produce dealing sounds; burn cards do not. Player actions, including remote actions, wait until the deal finishes. Computer turns and auto-deal also wait. Dealing remains animated when sounds are muted.
 
-**Settings → Table sounds** enables or mutes the effects and setup music, remembering the choice. Muting stops audio immediately while card animation continues. Network players receive ordered per-card events with other players’ downcards redacted. Refreshes, initial joins, new tables, and reconnects do not replay history. Every participant must run 1.0.16 / network protocol 10.
+**Settings → Table sounds** enables or mutes the effects and setup music, remembering the choice. Muting stops audio immediately while card animation continues. Network players receive ordered per-card events with other players’ downcards redacted. Refreshes, initial joins, new tables, and reconnects do not replay history. Every participant must support network protocol 10; this release is 1.0.17.
 
-The default GitHub build includes Kenney Casino Audio recordings under CC0. This machine's build uses the requested Pixabay recordings, including **AllInPushChips** by joeyed and the replacement **Shuffling Deck of Cards** by OxidVideos. **8bit Music for Game** by annoyedCactus plays quietly and loops while the table-setup dialog is open, then stops on Open table, Join table, or Cancel. The optional Pixabay pack supplies this intro; the CC0-only public build has no setup music. All sounds are embedded in the executable, with no runtime downloads or external audio player. See [third-party notices](THIRD_PARTY_NOTICES.txt) and the [Pixabay pack instructions](licenses/Pixabay-Sounds.md) for sources, terms, and reproducible local import.
+The default GitHub build includes six Kenney Casino Audio effects and **8bit Music for Game** by annoyedCactus, all under CC0. The intro comes directly from the author's Freesound release and is included in `assets/intro.wav`, so ordinary builds and `spkgbuild` packages with an empty `CASINO_SOUND_DIR` include startup music. It plays quietly and loops while the table-setup dialog is open, then stops on Open table, Join table, or Cancel. The optional local Pixabay pack can still replace all seven recordings, including **AllInPushChips** by joeyed and **Shuffling Deck of Cards** by OxidVideos. All sounds are embedded in the executable, with no runtime downloads or external audio player. See [third-party notices](THIRD_PARTY_NOTICES.txt), [intro provenance](licenses/Freesound-Intro.txt), and the [Pixabay pack instructions](licenses/Pixabay-Sounds.md).
 
 Playback uses Qt Multimedia's normal application audio, so muting desktop notification sounds does not mute the game. The app's toggle and normal application/output volume controls still apply.
 
@@ -71,7 +71,7 @@ Each player owns a chip inventory, issued once as a mixed starting stack. Bettin
 
 Use **Exchange** in the chip row or **Settings → Exchange chips** to choose how your available balance is divided among the five colors. Set the number of each chip you want; the dialog shows the total and any remainder as change, including half units. **Clear counts** starts from zero, and **Fill remaining** fills the unassigned amount using the configured denominations. **Exchange** updates your actual stacks immediately without changing your balance, existing bets, cards or turn. Cancel keeps the previous stacks. Network exchanges are verified by the host; stale requests and totals above your balance are rejected. For example, with red 1, blue 5, green 10 and yellow 100, an 8,000 balance can be 100 red + 100 blue + 40 green + 70 yellow. Five green + nineteen blue + five red totals 150.
 
-Values persist between launches and new tables. On a network table, the host chooses the values and shares them with every client, including after reconnection; clients can view them in Settings. All participants must use version 1.0.16 supporting network protocol 10.
+Values persist between launches and new tables. On a network table, the host chooses the values and shares them with every client, including after reconnection; clients can view them in Settings. All participants must support network protocol 10; this release is 1.0.17.
 
 ## Local profile and cash-out
 
@@ -111,13 +111,17 @@ Rule references: [Bicycle blackjack](https://bicyclecards.com/how-to-play/blackj
 
 Velvet Casino's original application source, tests, build scripts, documentation and artwork are licensed under the **GNU General Public License, version 3 or (at your option) any later version** (`GPL-3.0-or-later`). Copyright (C) 2026 Velvet Casino contributors. See [LICENSE](LICENSE) for the complete terms. This program is distributed without any warranty, including the implied warranties of merchantability or fitness for a particular purpose.
 
-The default bundled recordings and derived WAV files retain **CC0-1.0** from Kenney. They may be included with the executable and GitHub source. See [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt) and the [audio license notice](licenses/Kenney-Casino-Audio.txt).
+The default bundled recordings and derived WAV files retain **CC0-1.0** from Kenney (table effects) and annoyedCactus (intro music). They may be included with the executable and GitHub source. See [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt), the [table-audio notice](licenses/Kenney-Casino-Audio.txt), and the [intro notice](licenses/Freesound-Intro.txt).
 
 The optional Pixabay recordings retain the separate Pixabay Content License and are not relicensed under GPL or CC0. Their standalone MP3/WAV files are excluded from GitHub; the public source builds with the included CC0 recordings. See [Pixabay pack instructions](licenses/Pixabay-Sounds.md).
 
 For GitHub, commit this source directory and the included CC0 audio/license files; `build/` and `assets/local-sounds/` are ignored. Publish the corresponding source with GPL binary releases. Qt and media libraries are external dependencies with their own licenses. This machine's FFmpeg build reports nonredistributable components, so do not bundle that local FFmpeg build in releases; use redistributable dependencies if preparing a standalone package.
 
 ## Changelog
+
+### 1.0.17
+
+Included the original setup tune from annoyedCactus's CC0 Freesound release in the public source. Default builds, including `spkgbuild` with an empty `CASINO_SOUND_DIR`, now embed all six effects and the intro. Missing audio files fail configuration; the setup lifecycle test now fails instead of skipping if the intro is missing. Added source attribution, checksums and a reproducible conversion script. Optional custom packs still override all seven sounds. Network protocol remains 10.
 
 ### 1.0.16
 
